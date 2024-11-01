@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" prefWidth="1440" prefHeight="1024" styleClass="v13_13" fx:controller="edu.farmingdale.autobodyshopapplicationproject.HelloController">
+    <stylesheets>
+        <URL value="@home.css" />
+    </stylesheets>
+    <ImageView fx:id="v13_14" fitWidth="315" fitHeight="270" layoutX="33" layoutY="33" styleClass="v13_14"/>
+
+    <Label layoutX="594" layoutY="911" styleClass="v13_27" text="1 Wyandanch Ave.,\nWyandanch, NY 11978\n(631) 253-4335"/>
+
+    <ImageView fx:id="v13_28" fitWidth="820" fitHeight="526" layoutX="587" layoutY="285" styleClass="v13_28"/>
+
+    <Label layoutX="91" layoutY="360" styleClass="v13_29" text="Your One-Stop Shop for\nAuto Repair and Services"/>
+
+    <Label layoutX="56" layoutY="596" styleClass="v14_2" text="Since 1995, Solution Auto Body has provided exceptional auto repair and restoration services to the Long Island community, with a dedicated team focused on quality and customer satisfaction."/>
+
+    <Pane layoutX="389" layoutY="33" prefWidth="132" prefHeight="70" styleClass="v14_3">
+        <Label layoutX="15" layoutY="13" styleClass="v14_4" text="Home"/>
+    </Pane>
+
+    <Pane layoutX="549" layoutY="33" prefWidth="205" prefHeight="70" styleClass="v14_6">
+        <Label layoutX="12" layoutY="13" styleClass="v14_7" text="Services +"/>
+    </Pane>
+
+    <Pane layoutX="960" layoutY="34" prefWidth="183" prefHeight="70" styleClass="v14_9">
+        <Label layoutX="12" layoutY="13" styleClass="v14_10" text="About Us"/>
+    </Pane>
+
+    <Pane layoutX="782" layoutY="34" prefWidth="150" prefHeight="70" styleClass="v14_12">
+        <Label layoutX="15" layoutY="13" styleClass="v14_13" text="Gallery"/>
+    </Pane>
+
+    <Pane layoutX="1171" layoutY="34" prefWidth="210" prefHeight="70" styleClass="v14_15">
+        <Label layoutX="9" layoutY="13" styleClass="v14_16" text="Contact Us"/>
+    </Pane>
+
+    <Pane layoutX="189" layoutY="740" prefWidth="295" prefHeight="58" styleClass="v14_19">
+        <Label layoutX="24" layoutY="14" styleClass="v14_20" text="Schedule an Appointment"/>
+    </Pane>
+</AnchorPane>

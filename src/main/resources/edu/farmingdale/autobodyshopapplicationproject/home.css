@@ -1,0 +1,63 @@
+* {
+    -fx-box-sizing: border-box;
+}
+
+.v13_13 {
+    -fx-background-color: rgba(30,29,29,1);
+}
+
+.v13_14 {
+    -fx-image: url("v13_14.png"); /* Ensure the image is in the correct resources directory */
+}
+
+.v13_27 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 24px;
+    -fx-text-alignment: center;
+}
+
+.v13_28 {
+    -fx-image: url("v13_28.png"); /* Ensure the image is in the correct resources directory */
+}
+
+.v13_29 {
+    -fx-text-fill: white;
+    -fx-font-family: "Oswald";
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+
+.v14_2 {
+    -fx-text-fill: white;
+    -fx-font-family: "Oswald";
+    -fx-font-size: 24px;
+    -fx-text-alignment: left;
+}
+
+.v14_3, .v14_6, .v14_9, .v14_12, .v14_15 {
+    -fx-background-color: rgba(31,29,29,1);
+    -fx-background-radius: 50px;
+}
+
+.v14_4, .v14_7, .v14_10, .v14_13, .v14_16 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 36px;
+}
+
+.v14_19 {
+    -fx-background-color: rgba(0,0,0,0.64);
+    -fx-background-radius: 8px;
+    -fx-padding: 14px 24px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 1, 0.5, 0, 1);
+}
+
+.v14_20 {
+    -fx-text-fill: rgba(197,211,8,0.99);
+    -fx-font-family: "Inter";
+    -fx-font-size: 20px;
+    -fx-font-weight: medium;
+    -fx-text-alignment: center;
+}
