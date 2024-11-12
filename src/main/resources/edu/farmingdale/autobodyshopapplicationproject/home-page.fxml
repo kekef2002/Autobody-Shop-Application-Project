@@ -31,9 +31,7 @@
              <MenuItem fx:id="collisionrepairsbutton" mnemonicParsing="false" onAction="#onCollisionRepairsButtonClick" text="Collision Repairs" />
              <MenuItem fx:id="autorepairsmaintenancebutton" mnemonicParsing="false" onAction="#onAutoRepairsMaintenanceButtonClick" text="Auto Repairs and Maintenance" />
                <MenuItem fx:id="celdbutton" mnemonicParsing="false" onAction="#onCELDButtonClick" text="CELD" />
-               <MenuItem fx:id="aboutusbutton" mnemonicParsing="false" onAction="#onAboutUsButtonClick" text="About Us" />
                <MenuItem fx:id="autoglassreplacementbutton" mnemonicParsing="false" onAction="#onAutoGlassReplacementButtonClick" text="Auto Glass Replacement" />
-               <MenuItem fx:id="gallerybutton" mnemonicParsing="false" onAction="#onGalleryButtonClick" text="Gallery" />
            </items>
             <font>
                <Font size="24.0" />
