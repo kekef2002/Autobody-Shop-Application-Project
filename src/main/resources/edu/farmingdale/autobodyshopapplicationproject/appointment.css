@@ -44,7 +44,7 @@
 .v30_20, .v33_8 {
     -fx-background-color: rgba(32,98,95,1);
     -fx-background-radius: 8px;
-    -fx-padding: 14px 24px;
+    -fx-padding: 1px 14px;
     -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 1, 0.5, 0, 1);
 }
 

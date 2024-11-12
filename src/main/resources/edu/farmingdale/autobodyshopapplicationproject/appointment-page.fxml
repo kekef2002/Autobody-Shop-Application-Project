@@ -4,9 +4,11 @@
 <?import java.net.URL?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -29,46 +31,46 @@
         <Label layoutX="26" layoutY="84" styleClass="v16_247" text="Address" />
         <Label layoutX="407" layoutY="84" styleClass="v33_14" text="Apt. # / Unit # (Optional)" />
 
-        <TextField layoutX="27" layoutY="48" prefHeight="28" prefWidth="240" styleClass="v16_270" />
-        <TextField layoutX="334" layoutY="48" prefHeight="28" prefWidth="240" styleClass="v16_271" />
-        <TextField layoutX="277" layoutY="48" prefHeight="28" prefWidth="46" styleClass="v167_6" />
+        <TextField fx:id="firstnametextfield" layoutX="27" layoutY="48" prefHeight="28" prefWidth="240" styleClass="v16_270" />
+        <TextField fx:id="lastnametextfield" layoutX="334" layoutY="48" prefHeight="28" prefWidth="240" styleClass="v16_271" />
+        <TextField fx:id="mitextfield" layoutX="277" layoutY="48" prefHeight="28" prefWidth="46" styleClass="v167_6" />
 
-        <TextField layoutX="27" layoutY="110" prefHeight="28" prefWidth="364" styleClass="v16_273" />
+        <TextField fx:id="addresstextfield" layoutX="27" layoutY="110" prefHeight="28" prefWidth="364" styleClass="v16_273" />
 
         <Label layoutX="27" layoutY="146" styleClass="v16_248" text="City" />
-        <TextField layoutX="27" layoutY="172" prefHeight="28" prefWidth="200" styleClass="v16_275" />
+        <TextField fx:id="citytextfield" layoutX="27" layoutY="172" prefHeight="28" prefWidth="200" styleClass="v16_275" />
         <Label layoutX="246" layoutY="146" styleClass="v16_249" text="State" />
-        <TextField layoutX="246" layoutY="172" prefHeight="28" prefWidth="46" styleClass="v23_277" />
+        <TextField fx:id="statetextfield" layoutX="246" layoutY="172" prefHeight="28" prefWidth="46" styleClass="v23_277" />
         <Label layoutX="306" layoutY="146" styleClass="v16_250" text="Zip Code" />
-        <TextField layoutX="306" layoutY="172" prefHeight="28" prefWidth="85" styleClass="v23_279" />
+        <TextField fx:id="zipcodetextfield" layoutX="306" layoutY="172" prefHeight="28" prefWidth="85" styleClass="v23_279" />
 
         <Label layoutX="27" layoutY="208" styleClass="v16_251" text="Email" />
-        <TextField layoutX="27" layoutY="234" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+        <TextField fx:id="emailtextfield" layoutX="27" layoutY="234" prefHeight="28" prefWidth="265" styleClass="v30_2" />
         <Label layoutX="306" layoutY="208" styleClass="v16_253" text="Telephone" />
-        <TextField layoutX="306" layoutY="234" prefHeight="28" prefWidth="265" styleClass="v30_4" />
-
-        <Pane layoutX="449" layoutY="778" prefHeight="34" prefWidth="122" styleClass="v30_20">
-            <Label layoutX="21" layoutY="1" styleClass="v30_21" text="Submit" />
-        </Pane>
-        <Pane layoutX="26" layoutY="778" prefHeight="34" prefWidth="122" styleClass="v33_8">
-            <Label layoutX="31" layoutY="1" styleClass="v33_9" text="Clear" />
-        </Pane>
-      <TextField layoutX="407.0" layoutY="110.0" prefHeight="28" prefWidth="164.0" styleClass="v30_4" />
-      <TextField layoutX="407.0" layoutY="172.0" prefHeight="28" prefWidth="164.0" styleClass="v30_4" />
+        <TextField fx:id="telephonetextfield" layoutX="306" layoutY="234" prefHeight="28" prefWidth="265" styleClass="v30_4" />
+      <Button fx:id="clearbutton" layoutX="26.0" layoutY="778.0" minHeight="34.0" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="34.0" prefWidth="122.0" text="Clear" textAlignment="CENTER" textFill="#fffbfb">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <styleClass>
+            <String fx:value="v33_8" />
+            <String fx:value="v33_9" />
+         </styleClass>
+      </Button>
+      <TextField fx:id="apttextfield" layoutX="407.0" layoutY="110.0" prefHeight="28" prefWidth="164.0" styleClass="v30_4" />
+      <TextField fx:id="preferredtextfield" layoutX="407.0" layoutY="172.0" prefHeight="28" prefWidth="164.0" styleClass="v30_4" />
       <Label layoutX="407.0" layoutY="146.0" styleClass="v16_253" text="Preferred contact method?" />
-      <TextField layoutX="27.0" layoutY="296.0" prefHeight="28" prefWidth="100.0" styleClass="v30_2" />
-      <TextField layoutX="148.0" layoutY="358.0" prefHeight="28" prefWidth="145.0" styleClass="v30_2" />
-      <TextField layoutX="306.0" layoutY="296.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-      <TextField layoutX="27.0" layoutY="358.0" prefHeight="28" prefWidth="100.0" styleClass="v30_2" />
-      <TextField layoutX="148.0" layoutY="296.0" prefHeight="28" prefWidth="145.0" styleClass="v30_2" />
-      <TextField layoutX="306.0" layoutY="358.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-      <TextField layoutX="306.0" layoutY="420.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-      <TextField layoutX="27.0" layoutY="420.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-      <TextField layoutX="27.0" layoutY="482.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-      <TextField layoutX="306.0" layoutY="482.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-      <TextField layoutX="27.0" layoutY="544.0" prefHeight="212.0" prefWidth="544.0" styleClass="v30_2" />
+      <TextField fx:id="licenseplatetextfield" layoutX="27.0" layoutY="296.0" prefHeight="28" prefWidth="122.0" styleClass="v30_2" />
+      <TextField fx:id="maketextfield" layoutX="148.0" layoutY="358.0" prefHeight="28" prefWidth="145.0" styleClass="v30_2" />
+      <TextField fx:id="mileagetextfield" layoutX="306.0" layoutY="296.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+      <TextField fx:id="yeartextfield" layoutX="27.0" layoutY="358.0" prefHeight="28" prefWidth="100.0" styleClass="v30_2" />
+      <TextField fx:id="licenseplatestatetextfield" layoutX="179.0" layoutY="296.0" prefHeight="28" prefWidth="114.0" styleClass="v30_2" />
+      <TextField fx:id="modeltextfield" layoutX="306.0" layoutY="358.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+      <TextField fx:id="servicerequestedtextfield" layoutX="306.0" layoutY="420.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+      <TextField fx:id="selecttransportneedstextfield" layoutX="27.0" layoutY="420.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+      <TextField fx:id="appointmenttimetextfield" layoutX="306.0" layoutY="482.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
       <Label layoutX="27.0" layoutY="270.0" styleClass="v16_251" text="License Plate" />
-      <Label layoutX="148.0" layoutY="270.0" styleClass="v16_251" text="License Plate State" />
+      <Label layoutX="179.0" layoutY="270.0" styleClass="v16_251" text="License Plate State" />
       <Label layoutX="307.0" layoutY="270.0" styleClass="v16_251" text="Mileage" />
       <Label layoutX="27.0" layoutY="332.0" styleClass="v16_251" text="Year" />
       <Label layoutX="148.0" layoutY="332.0" styleClass="v16_251" text="Make" />
@@ -78,6 +80,17 @@
       <Label layoutX="27.0" layoutY="456.0" styleClass="v16_251" text="Appointment Date" />
       <Label layoutX="306.0" layoutY="456.0" styleClass="v16_251" text="Appointment Time" />
       <Label layoutX="27.0" layoutY="518.0" styleClass="v16_251" text="Customer Comments / Special Requests" />
+      <Button fx:id="clearbutton1" layoutX="449.0" layoutY="778.0" minHeight="34.0" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="34.0" prefWidth="122.0" text="Submit" textAlignment="CENTER" textFill="#fffbfb">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <styleClass>
+            <String fx:value="v33_8" />
+            <String fx:value="v33_9" />
+         </styleClass>
+      </Button>
+      <DatePicker fx:id="appointment_date" layoutX="27.0" layoutY="482.0" onAction="#onAppointmentDateButtonClick" prefHeight="28.0" prefWidth="265.0" />
+      <TextArea fx:id="customer_comments" layoutX="27.0" layoutY="544.0" prefHeight="212.0" prefWidth="544.0" wrapText="true" />
     </Pane>
 
     <!-- Navigation Menu -->
