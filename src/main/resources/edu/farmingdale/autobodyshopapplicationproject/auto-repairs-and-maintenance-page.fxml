@@ -5,8 +5,15 @@
 <?import javafx.scene.image.*?>
 
 <?import javafx.scene.control.Label?>
+<?import java.net.URL?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml" prefWidth="1024" prefHeight="2246" styleClass="v15_66">
     <ImageView fx:id="v15_67" fitWidth="315" fitHeight="270" layoutX="33" layoutY="33" styleClass="v15_67"/>
+
+    <stylesheets>
+        <URL value="@auto-repairs-and-maintenance.css" />
+    </stylesheets>
+
+
     
     <Label layoutX="594" layoutY="2133" styleClass="v15_68" text="1 Wyandanch Ave., Wyandanch, NY 11978 (631) 253-4335"/>
     

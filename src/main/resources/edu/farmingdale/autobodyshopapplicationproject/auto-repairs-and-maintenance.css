@@ -7,7 +7,7 @@
 }
 
 .v15_67 {
-    -fx-image: url("v15_67.png"); /* Ensure the image is in the correct resources directory */
+    -fx-image: url("/Users/cmaradiaga/IdeaProjects/Autobody-Shop-Application-Project/src/main/resources/edu/farmingdale/autobodyshopapplicationproject/images/v15_67.png"); /* Ensure the image is in the correct resources directory */
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
     -fx-background-size: cover;
