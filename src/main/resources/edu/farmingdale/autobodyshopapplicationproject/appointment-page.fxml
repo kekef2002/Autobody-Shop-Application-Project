@@ -4,94 +4,133 @@
 <?import java.net.URL?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1024" prefWidth="1440" styleClass="v15_226" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.HelloController">
+<AnchorPane prefHeight="1024" prefWidth="1440" styleClass="v15_226" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.AppointmentController">
     <stylesheets>
         <URL value="@appointment.css" />
     </stylesheets>
     <ImageView fx:id="v15_227" fitHeight="154" fitWidth="202" layoutX="33" layoutY="33" styleClass="v15_227" />
 
     <Label layoutX="1116.0" layoutY="129.0" styleClass="v15_228" text="1 Wyandanch Ave.,&#10;Wyandanch, NY 11978&#10;(631) 253-4335" textAlignment="CENTER" />
-
-    <!-- Customer Form Background -->
-    <Pane layoutX="420" layoutY="129" prefHeight="827" prefWidth="600" styleClass="v15_242">
-        <Label layoutX="27" layoutY="22" styleClass="v16_245" text="First Name" />
-      <Label layoutX="277.0" layoutY="22.0" styleClass="v16_245" text="M.I" />
-        <Label layoutX="335" layoutY="22" styleClass="v16_246" text="Last Name" />
-        <Label layoutX="26" layoutY="84" styleClass="v16_247" text="Address" />
-        <Label layoutX="407" layoutY="84" styleClass="v33_14" text="Apt. # / Unit # (Optional)" />
-
-        <TextField fx:id="firstnametextfield" layoutX="27" layoutY="48" prefHeight="28" prefWidth="240" styleClass="v16_270" />
-        <TextField fx:id="lastnametextfield" layoutX="334" layoutY="48" prefHeight="28" prefWidth="240" styleClass="v16_271" />
-        <TextField fx:id="mitextfield" layoutX="277" layoutY="48" prefHeight="28" prefWidth="46" styleClass="v167_6" />
-
-        <TextField fx:id="addresstextfield" layoutX="27" layoutY="110" prefHeight="28" prefWidth="364" styleClass="v16_273" />
-
-        <Label layoutX="27" layoutY="146" styleClass="v16_248" text="City" />
-        <TextField fx:id="citytextfield" layoutX="27" layoutY="172" prefHeight="28" prefWidth="200" styleClass="v16_275" />
-        <Label layoutX="246" layoutY="146" styleClass="v16_249" text="State" />
-        <TextField fx:id="statetextfield" layoutX="246" layoutY="172" prefHeight="28" prefWidth="46" styleClass="v23_277" />
-        <Label layoutX="306" layoutY="146" styleClass="v16_250" text="Zip Code" />
-        <TextField fx:id="zipcodetextfield" layoutX="306" layoutY="172" prefHeight="28" prefWidth="85" styleClass="v23_279" />
-
-        <Label layoutX="27" layoutY="208" styleClass="v16_251" text="Email" />
-        <TextField fx:id="emailtextfield" layoutX="27" layoutY="234" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-        <Label layoutX="306" layoutY="208" styleClass="v16_253" text="Telephone" />
-        <TextField fx:id="telephonetextfield" layoutX="306" layoutY="234" prefHeight="28" prefWidth="265" styleClass="v30_4" />
-      <Button fx:id="clearbutton" layoutX="26.0" layoutY="778.0" minHeight="34.0" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="34.0" prefWidth="122.0" text="Clear" textAlignment="CENTER" textFill="#fffbfb">
-         <font>
-            <Font size="24.0" />
-         </font>
-         <styleClass>
-            <String fx:value="v33_8" />
-            <String fx:value="v33_9" />
-         </styleClass>
-      </Button>
-      <TextField fx:id="apttextfield" layoutX="407.0" layoutY="110.0" prefHeight="28" prefWidth="164.0" styleClass="v30_4" />
-      <TextField fx:id="preferredtextfield" layoutX="407.0" layoutY="172.0" prefHeight="28" prefWidth="164.0" styleClass="v30_4" />
-      <Label layoutX="407.0" layoutY="146.0" styleClass="v16_253" text="Preferred contact method?" />
-      <TextField fx:id="licenseplatetextfield" layoutX="27.0" layoutY="296.0" prefHeight="28" prefWidth="122.0" styleClass="v30_2" />
-      <TextField fx:id="maketextfield" layoutX="148.0" layoutY="358.0" prefHeight="28" prefWidth="145.0" styleClass="v30_2" />
-      <TextField fx:id="mileagetextfield" layoutX="306.0" layoutY="296.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-      <TextField fx:id="yeartextfield" layoutX="27.0" layoutY="358.0" prefHeight="28" prefWidth="100.0" styleClass="v30_2" />
-      <TextField fx:id="licenseplatestatetextfield" layoutX="179.0" layoutY="296.0" prefHeight="28" prefWidth="114.0" styleClass="v30_2" />
-      <TextField fx:id="modeltextfield" layoutX="306.0" layoutY="358.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-      <TextField fx:id="servicerequestedtextfield" layoutX="306.0" layoutY="420.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-      <TextField fx:id="selecttransportneedstextfield" layoutX="27.0" layoutY="420.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-      <TextField fx:id="appointmenttimetextfield" layoutX="306.0" layoutY="482.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-      <Label layoutX="27.0" layoutY="270.0" styleClass="v16_251" text="License Plate" />
-      <Label layoutX="179.0" layoutY="270.0" styleClass="v16_251" text="License Plate State" />
-      <Label layoutX="307.0" layoutY="270.0" styleClass="v16_251" text="Mileage" />
-      <Label layoutX="27.0" layoutY="332.0" styleClass="v16_251" text="Year" />
-      <Label layoutX="148.0" layoutY="332.0" styleClass="v16_251" text="Make" />
-      <Label layoutX="306.0" layoutY="332.0" styleClass="v16_251" text="Model" />
-      <Label layoutX="27.0" layoutY="394.0" styleClass="v16_251" text="Select Transportation Needs" />
-      <Label layoutX="306.0" layoutY="394.0" styleClass="v16_251" text="Service Requested" />
-      <Label layoutX="27.0" layoutY="456.0" styleClass="v16_251" text="Appointment Date" />
-      <Label layoutX="306.0" layoutY="456.0" styleClass="v16_251" text="Appointment Time" />
-      <Label layoutX="27.0" layoutY="518.0" styleClass="v16_251" text="Customer Comments / Special Requests" />
-      <Button fx:id="clearbutton1" layoutX="449.0" layoutY="778.0" minHeight="34.0" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="34.0" prefWidth="122.0" text="Submit" textAlignment="CENTER" textFill="#fffbfb">
-         <font>
-            <Font size="24.0" />
-         </font>
-         <styleClass>
-            <String fx:value="v33_8" />
-            <String fx:value="v33_9" />
-         </styleClass>
-      </Button>
-      <DatePicker fx:id="appointment_date" layoutX="27.0" layoutY="482.0" onAction="#onAppointmentDateButtonClick" prefHeight="28.0" prefWidth="265.0" />
-      <TextArea fx:id="customer_comments" layoutX="27.0" layoutY="544.0" prefHeight="212.0" prefWidth="544.0" wrapText="true" />
-    </Pane>
+   <Group layoutX="420.0" layoutY="129.0">
+      <children>
+      
+          <!-- Customer Form Background -->
+          <Pane prefHeight="827" prefWidth="600" styleClass="v15_242">
+              <Label layoutX="27" layoutY="22" styleClass="v16_245" text="First Name" />
+            <Label layoutX="277.0" layoutY="22.0" styleClass="v16_245" text="M.I" />
+              <Label layoutX="335" layoutY="22" styleClass="v16_246" text="Last Name" />
+              <Label layoutX="26" layoutY="84" styleClass="v16_247" text="Address" />
+              <Label layoutX="407" layoutY="84" styleClass="v33_14" text="Apt. # / Unit # (Optional)" />
+      
+              <TextField fx:id="first_name_text_field" layoutX="27" layoutY="48" prefHeight="28" prefWidth="240" styleClass="v16_270" />
+              <TextField fx:id="last_name_text_field" layoutX="334" layoutY="48" prefHeight="28" prefWidth="240" styleClass="v16_271" />
+              <TextField fx:id="mi_text_field" layoutX="277" layoutY="48" prefHeight="28" prefWidth="46" styleClass="v167_6" />
+      
+              <TextField fx:id="address_text_field" layoutX="27" layoutY="110" prefHeight="28" prefWidth="364" styleClass="v16_273" />
+      
+              <Label layoutX="27" layoutY="146" styleClass="v16_248" text="City" />
+              <TextField fx:id="city_text_field" layoutX="27" layoutY="172" prefHeight="28" prefWidth="168.0" styleClass="v16_275" />
+              <Label layoutX="246" layoutY="146" styleClass="v16_249" text="State" />
+            <Group layoutX="222.0" layoutY="172.0">
+               <children>
+                    <TextField onScroll="#onStateScrolldown" prefHeight="28" prefWidth="70.0" styleClass="v23_277" />
+                  <ComboBox fx:id="state_text_dropdown" layoutX="2.0" layoutY="1.0" prefHeight="26.0" prefWidth="66.0" />
+               </children>
+            </Group>
+              <Label layoutX="306" layoutY="146" styleClass="v16_250" text="Zip Code" />
+              <TextField fx:id="zip_code_text_field" layoutX="306" layoutY="172" prefHeight="28" prefWidth="85" styleClass="v23_279" />
+      
+              <Label layoutX="27" layoutY="208" styleClass="v16_251" text="Email" />
+              <TextField fx:id="email_text_field" layoutX="27" layoutY="234" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+              <Label layoutX="306" layoutY="208" styleClass="v16_253" text="Telephone" />
+              <TextField fx:id="telephone_text_field" layoutX="306" layoutY="234" prefHeight="28" prefWidth="265" styleClass="v30_4" />
+            <Button fx:id="clearbutton" layoutX="26.0" layoutY="778.0" minHeight="34.0" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="34.0" prefWidth="122.0" text="Clear" textAlignment="CENTER" textFill="#fffbfb">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="v33_8" />
+                  <String fx:value="v33_9" />
+               </styleClass>
+            </Button>
+            <TextField fx:id="apt_text_field" layoutX="407.0" layoutY="110.0" prefHeight="28" prefWidth="164.0" styleClass="v30_4" />
+            <Group layoutX="407.0" layoutY="172.0">
+               <children>
+                  <TextField editable="false" prefHeight="28" prefWidth="164.0" styleClass="v30_4" />
+                  <ChoiceBox fx:id="preferred_contact_dropdown" layoutX="1.0" layoutY="1.0" onScroll="#onPreferredContactScrolldown" prefWidth="162.0" />
+               </children>
+            </Group>
+            <Label layoutX="407.0" layoutY="146.0" styleClass="v16_253" text="Preferred contact method?" />
+            <TextField fx:id="license_plate_text_field" layoutX="27.0" layoutY="296.0" prefHeight="28" prefWidth="122.0" styleClass="v30_2" />
+            <TextField fx:id="make_text_field" layoutX="148.0" layoutY="358.0" prefHeight="28" prefWidth="145.0" styleClass="v30_2" />
+            <TextField fx:id="mileage_text_field" layoutX="306.0" layoutY="296.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+            <TextField fx:id="year_text_field" layoutX="27.0" layoutY="358.0" prefHeight="28" prefWidth="100.0" styleClass="v30_2" />
+            <TextField fx:id="license_plate_state_text_field" layoutX="179.0" layoutY="296.0" prefHeight="28" prefWidth="114.0" styleClass="v30_2" />
+            <TextField fx:id="model_text_field" layoutX="306.0" layoutY="358.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+            <Group layoutX="27.0" layoutY="420.0">
+               <children>
+                  <TextField editable="false" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+                  <ComboBox fx:id="select_transport_needs_dropdown" layoutX="1.0" layoutY="1.0" onScroll="#onSelectTransportNeedsScrolldown" prefHeight="26.0" prefWidth="263.0" styleClass="v30_3" />
+               </children>
+            </Group>
+            <TextField fx:id="appointment_time_dropdown" layoutX="306.0" layoutY="482.0" onScroll="#onAppointmenTimeScrolldown" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+            <ChoiceBox layoutX="307.0" layoutY="483.0" prefHeight="26.0" prefWidth="263.0" />
+            <Label layoutX="27.0" layoutY="270.0" styleClass="v16_251" text="License Plate" />
+            <Label layoutX="179.0" layoutY="270.0" styleClass="v16_251" text="License Plate State" />
+            <Label layoutX="307.0" layoutY="270.0" styleClass="v16_251" text="Mileage" />
+            <Label layoutX="27.0" layoutY="332.0" styleClass="v16_251" text="Year" />
+            <Label layoutX="148.0" layoutY="332.0" styleClass="v16_251" text="Make" />
+            <Label layoutX="306.0" layoutY="332.0" styleClass="v16_251" text="Model" />
+            <Label layoutX="27.0" layoutY="394.0" styleClass="v16_251" text="Select Transportation Needs" />
+            <Label layoutX="306.0" layoutY="394.0" styleClass="v16_251" text="Service Requested" />
+            <Label layoutX="27.0" layoutY="456.0" styleClass="v16_251" text="Appointment Date" />
+            <Label layoutX="306.0" layoutY="456.0" styleClass="v16_251" text="Appointment Time" />
+            <Label layoutX="27.0" layoutY="518.0" styleClass="v16_251" text="Customer Comments / Special Requests" />
+            <Button fx:id="clearbutton1" layoutX="449.0" layoutY="778.0" minHeight="34.0" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="34.0" prefWidth="122.0" text="Submit" textAlignment="CENTER" textFill="#fffbfb">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="v33_8" />
+                  <String fx:value="v33_9" />
+               </styleClass>
+            </Button>
+            <Group layoutX="28.0" layoutY="543.0">
+               <children>
+                  <TextField editable="false" prefHeight="212.0" prefWidth="544.0" styleClass="v30_4" />
+                  <TextArea fx:id="customer_comments" layoutX="1.0" layoutY="1.0" prefHeight="210.0" prefWidth="542.0" wrapText="true" />
+               </children>
+            </Group>
+            <Group layoutX="306.0" layoutY="420.0">
+               <children>
+                  <TextField editable="false" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+                  <ComboBox fx:id="service_request_dropdown" layoutX="1.0" layoutY="1.0" onScroll="#onServiceRequestScrolldown" prefHeight="26.0" prefWidth="263.0" styleClass="v30_3" />
+               </children>
+            </Group>
+            <Group layoutX="27.0" layoutY="482.0">
+               <children>
+                  <TextField editable="false" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+                  <DatePicker fx:id="appointment_date" layoutX="1.0" layoutY="1.0" onAction="#onAppointmentDateButtonClick" prefHeight="26.0" prefWidth="263.0" styleClass="v30_3" />
+               </children>
+            </Group>
+          </Pane>
+      </children>
+   </Group>
 
     <!-- Navigation Menu -->
     <Group layoutX="395.8999938964844" layoutY="30.899999618530273">
@@ -133,4 +172,32 @@
             </Button>
         </children>
     </Group>
+   <Group layoutX="58.0" layoutY="461.0">
+      <children>
+          <Button fx:id="button7" layoutX="7.099998474121094" layoutY="2.100006103515625" prefHeight="94.0" prefWidth="292.0" styleClass="button-7" text="Next Service Due" />
+         <Button fx:id="button71" layoutX="7.099998474121094" layoutY="130.10000610351562" prefHeight="94.0" prefWidth="292.0" styleClass="button-7" text="Service History" />
+         <Button fx:id="button711" layoutX="7.099998474121094" layoutY="260.1000061035156" prefHeight="94.0" prefWidth="292.0" styleClass="button-7" text="Current Coupons" />
+         <Button fx:id="button7111" layoutX="7.099998474121094" layoutY="390.1000061035156" prefHeight="94.0" prefWidth="292.0" styleClass="button-7" text="Button 7" />
+      </children>
+   </Group>
+   <Group layoutX="15.899999618530273" layoutY="222.89999389648438">
+      <children>
+          <Region fx:id="speedometerRegion" layoutX="4.100000381469727" layoutY="3.100006103515625" prefHeight="200.0" prefWidth="375.0" />
+         <ImageView fitHeight="200.0" fitWidth="375.0" layoutX="4.100000381469727" layoutY="3.100006103515625">
+            <image>
+               <Image url="@../../../../../../../../OneDrive/Documents/School/FSC%20R02153849/CSC_311/Capstone/Pictures/Speedometer3.jpg" />
+            </image>
+         </ImageView>
+      </children>
+   </Group>
+   <Group layoutX="1044.0" layoutY="265.0">
+      <children>
+         <Region prefHeight="689.0" prefWidth="375.0" />
+         <ImageView fitHeight="689.0" fitWidth="375.0">
+            <image>
+               <Image url="@../../../../../../../../OneDrive/Documents/School/FSC%20R02153849/CSC_311/Capstone/Pictures/Painting%20bumper.jpg" />
+            </image>
+         </ImageView>
+      </children>
+   </Group>
 </AnchorPane>
