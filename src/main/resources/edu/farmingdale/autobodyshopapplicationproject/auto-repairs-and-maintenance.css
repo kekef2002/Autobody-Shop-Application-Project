@@ -68,3 +68,17 @@
     -fx-background-position: center center;
     -fx-background-size: cover;
 }
+
+.v13_27 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 24px;
+    -fx-text-alignment: center;
+}
+
+.v14_19 {
+    -fx-background-color: rgba(0,0,0,0.64);
+    -fx-background-radius: 8px;
+    -fx-padding: 14px 24px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 1, 0.5, 0, 1);
+}
