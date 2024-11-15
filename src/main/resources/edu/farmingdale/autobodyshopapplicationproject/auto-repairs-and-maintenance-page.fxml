@@ -59,6 +59,15 @@
             </Button>
         </children>
     </Group>
+    <Button fx:id="schedule_an_appointment_button" layoutX="719.0" layoutY="716.0" mnemonicParsing="false" onAction="#onApptointmentButtonClick" prefHeight="58.0" prefWidth="295.0" text="Schedule an Appointment" textAlignment="CENTER" textFill="#c7d10a36">
+        <font>
+            <Font name="System Bold" size="20.0" />
+        </font>
+        <styleClass>
+            <String fx:value="v14_20" />
+            <String fx:value="v14_19" />
+        </styleClass>
+    </Button>
     
     <!-- Main Content -->
     <Label alignment="BOTTOM_CENTER" layoutX="480.0" layoutY="144.0" prefHeight="85.0" prefWidth="821.0" text="Auto Body and Maintenance" textAlignment="CENTER" textFill="WHITE">
