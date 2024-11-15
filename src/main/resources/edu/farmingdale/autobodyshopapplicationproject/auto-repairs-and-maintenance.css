@@ -1,0 +1,70 @@
+* {
+    -fx-box-sizing: border-box;
+}
+
+.v15_66 {
+    -fx-background-color: rgba(30,29,29,1);
+}
+
+.v15_67 {
+    /* In your styles.css */
+    -fx-image: url("/edu/farmingdale/autobodyshopapplicationproject/images/v15_67.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+
+.v15_68 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 24px;
+    -fx-text-alignment: center;
+}
+
+.v15_69, .v15_71, .v15_73, .v15_75, .v15_77 {
+    -fx-background-color: rgba(31,29,29,1);
+    -fx-background-radius: 50px;
+}
+
+.v15_70, .v15_72, .v15_74, .v15_76, .v15_78 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 36px;
+}
+
+.v94_12 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-weight: medium;
+    -fx-font-size: 22px;
+    -fx-text-alignment: center;
+}
+
+.v95_13 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-weight: medium;
+    -fx-font-size: 20px;
+    -fx-text-alignment: center;
+}
+
+.v96_16 {
+    -fx-text-fill: white;
+    -fx-font-family: "Roboto";
+    -fx-font-size: 32px;
+    -fx-text-alignment: center;
+}
+
+.v99_2 {
+    -fx-text-fill: white;
+    -fx-font-family: "Roboto";
+    -fx-font-size: 20px;
+    -fx-text-alignment: center;
+}
+
+.v164_30, .v164_31, .v164_32 {
+    -fx-image: url("edu/farmingdale/autobodyshopapplicationproject/images/v164_30.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
