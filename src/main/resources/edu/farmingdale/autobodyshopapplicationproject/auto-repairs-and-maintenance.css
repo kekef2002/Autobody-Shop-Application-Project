@@ -7,7 +7,8 @@
 }
 
 .v15_67 {
-    -fx-image: url("/Users/cmaradiaga/IdeaProjects/Autobody-Shop-Application-Project/src/main/resources/edu/farmingdale/autobodyshopapplicationproject/images/v15_67.png"); /* Ensure the image is in the correct resources directory */
+    /* In your styles.css */
+    -fx-image: url("/edu/farmingdale/autobodyshopapplicationproject/images/v15_67.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
     -fx-background-size: cover;
@@ -48,20 +49,21 @@
 }
 
 .v96_16 {
-    -fx-text-fill: black;
+    -fx-text-fill: white;
     -fx-font-family: "Roboto";
     -fx-font-size: 32px;
     -fx-text-alignment: center;
 }
 
 .v99_2 {
-    -fx-text-fill: black;
+    -fx-text-fill: white;
     -fx-font-family: "Roboto";
     -fx-font-size: 20px;
     -fx-text-alignment: center;
 }
 
 .v164_30, .v164_31, .v164_32 {
+    -fx-image: url("edu/farmingdale/autobodyshopapplicationproject/images/v164_30.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
     -fx-background-size: cover;
