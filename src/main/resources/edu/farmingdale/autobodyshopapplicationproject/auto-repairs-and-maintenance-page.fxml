@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="2555.0" prefWidth="1440.0" styleClass="v15_66" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="2555.0" prefWidth="1440.0" styleClass="v15_66" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="edu.farmingdale.autobodyshopapplicationproject.AutoRepairsAndMaintenanceController">
     <ImageView fx:id="v15_67" fitHeight="270" fitWidth="315" layoutX="33" layoutY="33" styleClass="v15_67" />
 
 
