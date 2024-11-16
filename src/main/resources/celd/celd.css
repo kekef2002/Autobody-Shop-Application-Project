@@ -1,0 +1,79 @@
+* {
+    -fx-box-sizing: border-box;
+}
+
+.v15_82 {
+    -fx-background-color: rgb(30,30,30,12);
+}
+
+.v15_83 {
+    -fx-image: url("v15_83.png"); /* Ensure the image is in the correct resources directory */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+
+.v15_84 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 24px;
+    -fx-text-alignment: center;
+}
+
+.v15_85, .v15_87, .v15_89, .v15_91, .v15_93 {
+    -fx-background-color: rgba(31,29,29,1);
+    -fx-background-radius: 50px;
+}
+
+.v15_86, .v15_88, .v15_90, .v15_92, .v15_94 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 36px;
+}
+
+.v130_4 {
+    -fx-text-fill: white;
+    -fx-font-family: "Roboto";
+    -fx-font-size: 48px;
+}
+
+.v130_6 {
+    -fx-text-fill: white;
+    -fx-font-family: "Roboto";
+    -fx-font-size: 24px;
+}
+
+.v130_7 {
+    -fx-background-color: white;
+}
+
+.v130_8 {
+    -fx-text-fill: black;
+    -fx-font-family: "Roboto";
+    -fx-font-size: 36px;
+    -fx-text-alignment: center;
+}
+
+.v130_9 {
+    -fx-text-fill: black;
+    -fx-font-family: "Inter";
+    -fx-font-size: 20px;
+    -fx-font-weight: medium;
+    -fx-text-alignment: center;
+}
+
+.v130_14 {
+    -fx-image: url("images/v130_14.png"); /* Ensure this image is in the resources directory */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+.ButtonBox > Button{
+	-fx-background-color: #1c1c1c;
+	-fx-text-fill: white;
+	-fx-font-size: 36px;
+}
+.apptBtn{
+	-fx-background-color: #0066FF;
+	-fx-text-fill: white;
+}
