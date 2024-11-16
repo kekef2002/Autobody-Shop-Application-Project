@@ -6,10 +6,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="v150_6" prefHeight="1024" prefWidth="1440.0" styleClass="v150_6" stylesheets="@gallery.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22">
+<AnchorPane id="v150_6" prefHeight="1024" prefWidth="1440.0" styleClass="v150_6" stylesheets="@gallery.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.GalleryController">
     <ImageView fx:id="v150_7" fitHeight="270.0" fitWidth="315.0" layoutX="33" layoutY="33" styleClass="v150_7">
       <image>
          <Image url="@images/v150_7.png" />
@@ -45,35 +46,35 @@
    </HBox>
 
     <!-- Gallery Images -->
-    <ImageView fx:id="v193_18" fitHeight="175" fitWidth="272" layoutX="76" layoutY="678" styleClass="v193_18">
+    <ImageView fx:id="v193_18" fitHeight="175" fitWidth="272" layoutX="76" layoutY="678" onMouseClicked="#onImageViewClicked" styleClass="v193_18">
       <image>
          <Image url="@images/v193_18.png" />
       </image></ImageView>
-    <ImageView fx:id="v193_21" fitHeight="175" fitWidth="258" layoutX="782" layoutY="450" styleClass="v193_21">
+    <ImageView fx:id="v193_21" fitHeight="175" fitWidth="258" layoutX="782" layoutY="450" onMouseClicked="#onImageViewClicked" styleClass="v193_21">
       <image>
          <Image url="@images/v193_21.png" />
       </image></ImageView>
-    <ImageView fx:id="v201_24" fitHeight="175" fitWidth="277" layoutX="389" layoutY="450" styleClass="v201_24">
+    <ImageView fx:id="v201_24" fitHeight="175" fitWidth="277" layoutX="389" layoutY="450" onMouseClicked="#onImageViewClicked" styleClass="v201_24">
       <image>
          <Image url="@images/v201_24.png" />
       </image></ImageView>
-    <ImageView fx:id="v201_27" fitHeight="175" fitWidth="277" layoutX="1103" layoutY="450" styleClass="v201_27">
+    <ImageView fx:id="v201_27" fitHeight="175" fitWidth="277" layoutX="1103" layoutY="450" onMouseClicked="#onImageViewClicked" styleClass="v201_27">
       <image>
          <Image url="@images/v201_27.png" />
       </image></ImageView>
-    <ImageView fx:id="v201_30" fitHeight="175" fitWidth="277" layoutX="393" layoutY="678" styleClass="v201_30">
+    <ImageView fx:id="v201_30" fitHeight="175" fitWidth="277" layoutX="393" layoutY="678" onMouseClicked="#onImageViewClicked" styleClass="v201_30">
       <image>
          <Image url="@images/v201_30.png" />
       </image></ImageView>
-    <ImageView fx:id="v201_33" fitHeight="175" fitWidth="277" layoutX="763" layoutY="678" styleClass="v201_33">
+    <ImageView fx:id="v201_33" fitHeight="175" fitWidth="277" layoutX="763" layoutY="678" onMouseClicked="#onImageViewClicked" styleClass="v201_33">
       <image>
          <Image url="@images/v201_33.png" />
       </image></ImageView>
-    <ImageView fx:id="v201_36" fitHeight="175" fitWidth="277" layoutX="1103" layoutY="678" styleClass="v201_36">
+    <ImageView fx:id="v201_36" fitHeight="175" fitWidth="277" layoutX="1103" layoutY="678" onMouseClicked="#onImageViewClicked" styleClass="v201_36">
       <image>
          <Image url="@images/v201_36.png" />
       </image></ImageView>
-    <ImageView fx:id="v201_39" fitHeight="175" fitWidth="277" layoutX="71" layoutY="447" styleClass="v201_39">
+    <ImageView fx:id="v201_39" fitHeight="175" fitWidth="277" layoutX="71" layoutY="447" onMouseClicked="#onImageViewClicked" styleClass="v201_39">
       <image>
          <Image url="@images/v201_39.png" />
       </image></ImageView>
@@ -115,4 +116,10 @@
          </Label>
       </children>
    </VBox>
+   <StackPane fx:id="blurPane" focusTraversable="true" layoutY="-2.0" mouseTransparent="true" onMouseClicked="#onClickOutsideZoom" opacity="0.0" prefHeight="1027.0" prefWidth="1440.0" style="-fx-background-color: black;" />
+   <ImageView fx:id="zoomInImage" disable="true" fitHeight="976.0" fitWidth="890.0" layoutX="285.0" layoutY="60.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@images/v150_7.png" />
+      </image>
+   </ImageView>
 </AnchorPane>
