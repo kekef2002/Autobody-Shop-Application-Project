@@ -1,0 +1,41 @@
+* {
+    -fx-box-sizing: border-box;
+}
+
+.v15_194 {
+    -fx-background-color: rgba(30,29,29,1);
+}
+
+.v15_195 {
+    -fx-image: url("v15_195.png"); /* Ensure the image is in the correct resources directory */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+
+.v60_192, .v60_195 {
+    -fx-background-color: white;
+}
+
+.v60_194, .v60_196 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+    -fx-text-alignment: center;
+}
+
+.v60_199, .v116_42, .v60_203 {
+    -fx-background-color: rgba(149,143,143,1);
+    -fx-background-radius: 8px;
+    -fx-padding: 14px 24px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 1, 0.5, 0, 1);
+}
+
+.v60_202, .v116_43, .v60_206 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-text-alignment: center;
+}
