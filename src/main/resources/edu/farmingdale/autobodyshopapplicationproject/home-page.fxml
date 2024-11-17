@@ -28,10 +28,10 @@
       <children>
          <MenuButton layoutX="207.0" layoutY="2.0" minHeight="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="202.0" styleClass="v14_19" text="Services" textAlignment="CENTER" textFill="#fffbfb">
            <items>
-             <MenuItem fx:id="collision_repairs_button" mnemonicParsing="false" onAction="#onCollisionRepairsButtonClick" text="Collision Repairs" />
-             <MenuItem fx:id="auto_repairs_maintenance_button" mnemonicParsing="false" onAction="#onAutoRepairsMaintenanceButtonClick" text="Auto Repairs and Maintenance" />
-               <MenuItem fx:id="celd_button" mnemonicParsing="false" onAction="#onCELDButtonClick" text="CELD" />
-               <MenuItem fx:id="auto_glass_replacement_button" mnemonicParsing="false" onAction="#onAutoGlassReplacementButtonClick" text="Auto Glass Replacement" />
+             <MenuItem fx:id="collision_repairs" mnemonicParsing="false" onAction="#onCollisionRepairsClick" text="Collision Repairs" />
+             <MenuItem fx:id="auto_repairs_maintenance" mnemonicParsing="false" onAction="#onAutoRepairsMaintenanceClick" text="Auto Repairs and Maintenance" />
+               <MenuItem fx:id="celd" mnemonicParsing="false" onAction="#onCELDClick" text="CELD" />
+               <MenuItem fx:id="auto_glass_replacement" mnemonicParsing="false" onAction="#onAutoGlassReplacementClick" text="Auto Glass Replacement" />
            </items>
             <font>
                <Font size="24.0" />
