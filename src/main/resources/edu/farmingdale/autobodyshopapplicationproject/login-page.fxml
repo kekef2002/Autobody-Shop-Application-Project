@@ -9,27 +9,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1024.0" prefWidth="1440.0" styleClass="v15_194" stylesheets="@login.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+<AnchorPane prefHeight="1024.0" prefWidth="1440.0" styleClass="v15_194" stylesheets="@login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.LoginController">
    <ImageView fitHeight="270.0" fitWidth="270.0" layoutX="595.0">
       <image>
          <Image url="@v13_14.png" />
       </image>
    </ImageView>
-    
-    <TextField layoutX="536" layoutY="339" prefHeight="49" prefWidth="368" styleClass="v60_192" />
+
+    <TextField fx:id="emailTextField" layoutX="536" layoutY="339" prefHeight="49" prefWidth="368" styleClass="v60_192" />
     <Label layoutX="536" layoutY="279" styleClass="v60_194" text="Email" textFill="WHITE">
       <font>
          <Font size="30.0" />
       </font></Label>
     
-    <PasswordField layoutX="536" layoutY="516" prefHeight="49" prefWidth="368" styleClass="v60_195" />
+    <PasswordField fx:id="passwordTextField" layoutX="536" layoutY="516" prefHeight="49" prefWidth="368" styleClass="v60_195" />
     <Label layoutX="536" layoutY="450" styleClass="v60_196" text="Password" textFill="WHITE" />
-   <Button fx:id="loginbutton" layoutX="601.0" layoutY="633.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="238.0" styleClass="v60_199" text="Login" textFill="WHITE">
+   <Button fx:id="loginButton" layoutX="601.0" layoutY="633.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="86.0" prefWidth="238.0" styleClass="v60_199" text="Login" textFill="WHITE">
       <font>
          <Font size="24.0" />
       </font>
    </Button>
-   <Button alignment="CENTER" contentDisplay="CENTER" layoutX="602.0" layoutY="787.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="238.0" styleClass="v60_203" text="Sign up" textFill="WHITE">
+   <Button fx:id="signUpButton" alignment="CENTER" contentDisplay="CENTER" layoutX="602.0" layoutY="787.0" mnemonicParsing="false" onAction="#onSignUpButtonClick" prefHeight="86.0" prefWidth="238.0" styleClass="v60_203" text="Sign up" textFill="WHITE">
       <font>
          <Font size="24.0" />
       </font>
