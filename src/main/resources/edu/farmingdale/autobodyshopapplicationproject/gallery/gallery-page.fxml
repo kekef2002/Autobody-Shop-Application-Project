@@ -85,7 +85,7 @@
    </ImageView>
    <VBox alignment="CENTER" layoutX="370.0" layoutY="225.0" prefHeight="200.0" prefWidth="860.0">
       <children>
-         <Label alignment="TOP_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="At Shirley Auto Body, we take immense pride in our craftsmanship and the exceptional quality of our work. With a rich history spanning two generations and fifty years, we have honed our skills to deliver outstanding results to our valued customers. Explore our gallery to witness the artistry and dedication that sets us apart." textAlignment="CENTER" textFill="WHITE" wrapText="true" VBox.vgrow="ALWAYS">
+         <Label alignment="TOP_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="At Solution Auto Body, we take immense pride in our craftsmanship and the exceptional quality of our work. With a rich history spanning two generations and fifty years, we have honed our skills to deliver outstanding results to our valued customers. Explore our gallery to witness the artistry and dedication that sets us apart." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" VBox.vgrow="ALWAYS">
             <font>
                <Font size="21.0" />
             </font>

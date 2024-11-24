@@ -35,7 +35,7 @@
 .v94_12 {
     -fx-text-fill: white;
     -fx-font-family: "Inter";
-    -fx-font-weight: medium;
+    -fx-font-weight: bold;
     -fx-font-size: 22px;
     -fx-text-alignment: center;
 }
@@ -43,7 +43,7 @@
 .v95_13 {
     -fx-text-fill: white;
     -fx-font-family: "Inter";
-    -fx-font-weight: medium;
+    -fx-font-weight: bold;
     -fx-font-size: 20px;
     -fx-text-alignment: center;
 }
