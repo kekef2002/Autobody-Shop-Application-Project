@@ -50,17 +50,17 @@ public class HomeController {
 
     @FXML
     void onAboutUsButtonClick(ActionEvent event) {
-        try {
-            // Load Appointment Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("about-us-page.fxml"));
-            Scene aboutUsScene = new Scene(loader.load(), 1440, 1024);
-
-            // Get the Stage from the Event Source
-            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-            stage.setScene(aboutUsScene);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            // Load Appointment Page
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("about-us-page.fxml"));
+//            Scene aboutUsScene = new Scene(loader.load(), 1440, 1024);
+//
+//            // Get the Stage from the Event Source
+//            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+//            stage.setScene(aboutUsScene);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     @FXML
@@ -82,7 +82,7 @@ public class HomeController {
     void onAutoGlassReplacementClick(ActionEvent event) {
         try {
             // Load the FXML for the target page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-repairs-and-maintenance-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-glass-replacement-page.fxml"));
             Scene autoGlassReplacementScene = new Scene(loader.load(), 1440, 1980);
 
             // Get the current stage from the event source (parent scene)
@@ -128,57 +128,57 @@ public class HomeController {
 
     @FXML
     void onCELDClick(ActionEvent event) {
-        try {
-            // Load the FXML for the target page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-repairs-and-maintenance-page.fxml"));
-            Scene CELDScene = new Scene(loader.load(), 1440, 1024);
-
-            // Get the current stage from the event source (parent scene)
-            Stage stage = (Stage) ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
-
-            // Set the new scene
-            stage.setScene(CELDScene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Optionally, you can show an error dialog to the user
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Page Load Error");
-            alert.setContentText("Failed to load the Check Engine Light Diagnostics page.");
-            alert.showAndWait();
-        }
+//        try {
+//            // Load the FXML for the target page
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-repairs-and-maintenance-page.fxml"));
+//            Scene CELDScene = new Scene(loader.load(), 1440, 1024);
+//
+//            // Get the current stage from the event source (parent scene)
+//            Stage stage = (Stage) ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
+//
+//            // Set the new scene
+//            stage.setScene(CELDScene);
+//            stage.show();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            // Optionally, you can show an error dialog to the user
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            alert.setTitle("Error");
+//            alert.setHeaderText("Page Load Error");
+//            alert.setContentText("Failed to load the Check Engine Light Diagnostics page.");
+//            alert.showAndWait();
+//        }
     }
 
     @FXML
     void onCollisionRepairsClick(ActionEvent event) {
-        try {
-            // Load the FXML for the target page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-repairs-and-maintenance-page.fxml"));
-            Scene collisionRepairsScene = new Scene(loader.load(), 1440, 1024);
-
-            // Get the current stage from the event source (parent scene)
-            Stage stage = (Stage) ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
-
-            // Set the new scene
-            stage.setScene(collisionRepairsScene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Optionally, you can show an error dialog to the user
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Page Load Error");
-            alert.setContentText("Failed to load the Collision Repair page.");
-            alert.showAndWait();
-        }
+//        try {
+//            // Load the FXML for the target page
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-repairs-and-maintenance-page.fxml"));
+//            Scene collisionRepairsScene = new Scene(loader.load(), 1440, 1024);
+//
+//            // Get the current stage from the event source (parent scene)
+//            Stage stage = (Stage) ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
+//
+//            // Set the new scene
+//            stage.setScene(collisionRepairsScene);
+//            stage.show();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            // Optionally, you can show an error dialog to the user
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            alert.setTitle("Error");
+//            alert.setHeaderText("Page Load Error");
+//            alert.setContentText("Failed to load the Collision Repair page.");
+//            alert.showAndWait();
+//        }
     }
 
     @FXML
     void onGalleryButtonClick(ActionEvent event) {
         try {
             // Load Appointment Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("gallery/gallery-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("gallery-page.fxml"));
             Scene galleryScene = new Scene(loader.load(), 1440, 1024);
 
             // Get the Stage from the Event Source

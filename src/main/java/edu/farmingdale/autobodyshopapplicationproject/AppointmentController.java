@@ -4,12 +4,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.Region;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
@@ -31,10 +35,7 @@ public class AppointmentController {
     private Label selected_time_label;
 
     @FXML
-    private MenuItem autoglassreplacementbutton, autorepairsmaintenancebutton, celdbutton;
-
-    @FXML
-    private MenuItem collisionrepairsbutton;
+    private MenuItem auto_glass_replacement, auto_repairs_maintenance, collision_repairs, celd;
 
     @FXML
     private TextArea customer_comments;
@@ -50,30 +51,6 @@ public class AppointmentController {
 
     @FXML
     private ImageView v15_227;
-
-
-    @FXML
-    public void initialize() {
-        // Populate appointment_time ChoiceBox with 30-minute intervals
-        ObservableList<String> timeSlots = FXCollections.observableArrayList();
-        LocalTime startTime = LocalTime.of(9, 0); // Start time: 9:00 AM
-        LocalTime endTime = LocalTime.of(17, 0); // End time: 5:00 PM
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm a");
-
-        while (!startTime.isAfter(endTime)) {
-            timeSlots.add(startTime.format(formatter));
-            startTime = startTime.plusMinutes(30);
-        }
-
-        appointment_time.setItems(timeSlots);
-
-        // Set a listener to display the selected time
-        appointment_time.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue != null) {
-                selected_time_label.setText("Selected Time: " + newValue);
-            }
-        });
-    }
 
     @FXML
     void onLicensePlateStateScrolldown(MouseEvent event) {
@@ -101,12 +78,40 @@ public class AppointmentController {
 
     @FXML
     void onAboutUsButtonClick(ActionEvent event) {
-
+        //        try {
+//            // Load Appointment Page
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("about-us-page.fxml"));
+//            Scene aboutUsScene = new Scene(loader.load(), 1440, 1024);
+//
+//            // Get the Stage from the Event Source
+//            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+//            stage.setScene(aboutUsScene);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     @FXML
     void onAppointmenTimeScrolldown(MouseEvent event) {
+        // Populate appointment_time ChoiceBox with 30-minute intervals
+        ObservableList<String> timeSlots = FXCollections.observableArrayList();
+        LocalTime startTime = LocalTime.of(9, 0); // Start time: 9:00 AM
+        LocalTime endTime = LocalTime.of(17, 0); // End time: 5:00 PM
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm a");
 
+        while (!startTime.isAfter(endTime)) {
+            timeSlots.add(startTime.format(formatter));
+            startTime = startTime.plusMinutes(30);
+        }
+
+        appointment_time.setItems(timeSlots);
+
+        // Set a listener to display the selected time
+        appointment_time.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                selected_time_label.setText("Selected Time: " + newValue);
+            }
+        });
     }
 
     @FXML
@@ -115,18 +120,99 @@ public class AppointmentController {
     }
 
     @FXML
-    void onAutoGlassReplacementButtonClick(ActionEvent event) {
-
+    void onCollisionRepairsClick(ActionEvent event) {
+//        try {
+//            // Load the FXML for the target page
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-repairs-and-maintenance-page.fxml"));
+//            Scene collisionRepairsScene = new Scene(loader.load(), 1440, 1024);
+//
+//            // Get the current stage from the event source (parent scene)
+//            Stage stage = (Stage) ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
+//
+//            // Set the new scene
+//            stage.setScene(collisionRepairsScene);
+//            stage.show();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            // Optionally, you can show an error dialog to the user
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            alert.setTitle("Error");
+//            alert.setHeaderText("Page Load Error");
+//            alert.setContentText("Failed to load the Collision Repair page.");
+//            alert.showAndWait();
+//        }
     }
 
     @FXML
-    void onAutoRepairsMaintenanceButtonClick(ActionEvent event) {
+    void onAutoGlassReplacementClick(ActionEvent event) {
+        try {
+            // Load the FXML for the target page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-glass-replacement-page.fxml"));
+            Scene autoGlassReplacementScene = new Scene(loader.load(), 1440, 1980);
 
+            // Get the current stage from the event source (parent scene)
+            Stage stage = (Stage) ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
+
+            // Set the new scene
+            stage.setScene(autoGlassReplacementScene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Optionally, you can show an error dialog to the user
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Page Load Error");
+            alert.setContentText("Failed to load the Auto Glass Repair page.");
+            alert.showAndWait();
+        }
     }
 
     @FXML
-    void onCELDButtonClick(ActionEvent event) {
+    void onAutoRepairsMaintenanceClick(ActionEvent event) {
+        try {
+            // Load the FXML for the target page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-repairs-and-maintenance-page.fxml"));
+            Scene autoRepairScene = new Scene(loader.load(), 1440, 2555);
 
+            // Get the current stage from the event source (parent scene)
+            Stage stage = (Stage) ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
+
+            // Set the new scene
+            stage.setScene(autoRepairScene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Optionally, you can show an error dialog to the user
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Page Load Error");
+            alert.setContentText("Failed to load the Auto Repairs and Maintenance page.");
+            alert.showAndWait();
+        }
+    }
+
+    @FXML
+    void onCELDClick(ActionEvent event) {
+//        try {
+//            // Load the FXML for the target page
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-repairs-and-maintenance-page.fxml"));
+//            Scene CELDScene = new Scene(loader.load(), 1440, 1024);
+//
+//            // Get the current stage from the event source (parent scene)
+//            Stage stage = (Stage) ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
+//
+//            // Set the new scene
+//            stage.setScene(CELDScene);
+//            stage.show();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            // Optionally, you can show an error dialog to the user
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            alert.setTitle("Error");
+//            alert.setHeaderText("Page Load Error");
+//            alert.setContentText("Failed to load the Check Engine Light Diagnostics page.");
+//            alert.showAndWait();
+//        }
     }
 
     @FXML
@@ -144,11 +230,6 @@ public class AppointmentController {
     }
 
     @FXML
-    void onCollisionRepairsButtonClick(ActionEvent event) {
-
-    }
-
-    @FXML
     void onCurrentCouponsButtonClick(ActionEvent event) {
 
     }
@@ -160,17 +241,47 @@ public class AppointmentController {
 
     @FXML
     void onGalleryButtonClick(ActionEvent event) {
+        try {
+            // Load Appointment Page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("gallery-page.fxml"));
+            Scene galleryScene = new Scene(loader.load(), 1440, 1024);
 
+            // Get the Stage from the Event Source
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(galleryScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void onHomeButtonClick(ActionEvent event) {
+        try {
+            // Load Appointment Page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("home-page.fxml"));
+            Scene homeScene = new Scene(loader.load(), 1440, 1024);
 
+            // Get the Stage from the Event Source
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(homeScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void onHomeLoginButtonClick(ActionEvent event) {
+        try {
+            // Load Appointment Page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("login-page.fxml"));
+            Scene homeLoginScene = new Scene(loader.load(), 1440, 1024);
 
+            // Get the Stage from the Event Source
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(homeLoginScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

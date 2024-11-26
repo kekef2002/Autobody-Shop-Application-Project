@@ -92,22 +92,22 @@
     <ImageView fx:id="v164_32" fitHeight="445" fitWidth="1024" layoutX="-30.0" layoutY="1786.0" styleClass="v164_32" />
    <ImageView fitHeight="293.0" fitWidth="317.0" layoutX="10.0" layoutY="10.0">
       <image>
-         <Image url="@images/v15_67.png" />
+         <Image url="@v15_67.png" />
       </image>
    </ImageView>
    <ImageView fitHeight="537.0" fitWidth="1897.0" layoutY="795.0">
       <image>
-         <Image url="@images/v164_31.png" />
+         <Image url="@v164_31.png" />
       </image>
    </ImageView>
    <ImageView fitHeight="485.0" fitWidth="1909.0" layoutX="-12.0" layoutY="1332.0">
       <image>
-         <Image url="@images/v164_30.png" />
+         <Image url="@v164_30.png" />
       </image>
    </ImageView>
    <ImageView fitHeight="537.0" fitWidth="1916.0" layoutX="-18.0" layoutY="1814.0">
       <image>
-         <Image url="@images/v164_32.png" />
+         <Image url="@v164_32.png" />
       </image>
    </ImageView>
 

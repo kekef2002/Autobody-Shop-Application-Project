@@ -61,17 +61,17 @@
     <Label layoutX="593.0" layoutY="1833.0" prefHeight="120.0" prefWidth="253.0" styleClass="v250_65" text="1 Wyandanch Ave., Wyandanch, NY 11978 (631) 253-4335" wrapText="true" />
    <ImageView fitHeight="270.0" fitWidth="315.0" layoutX="33.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@images/v15_131.png" />
+         <Image url="@v15_131.png" />
       </image>
    </ImageView>
    <ImageView fitHeight="497.0" fitWidth="655.0" layoutX="742.0" layoutY="626.0" pickOnBounds="true" preserveRatio="true" style="fx-border-radius: 40;">
       <image>
-         <Image url="@images/v235_15.png" />
+         <Image url="@v235_15.png" />
       </image>
    </ImageView>
    <ImageView fitHeight="425.0" fitWidth="520.0" layoutX="53.0" layoutY="1259.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@images/v250_32.png" />
+         <Image url="@v250_32.png" />
       </image>
    </ImageView>
 </AnchorPane>
