@@ -30,7 +30,7 @@ public class MainApplication extends Application {
             try {
                 // Load Home Page
                 FXMLLoader homeLoader = new FXMLLoader(MainApplication.class.getResource("home-page.fxml"));
-                Scene homeScene = new Scene(homeLoader.load(), 900, 1200);
+                Scene homeScene = new Scene(homeLoader.load(), 1024, 1440);
                 stage.setScene(homeScene);
             } catch (IOException e) {
                 e.printStackTrace();
