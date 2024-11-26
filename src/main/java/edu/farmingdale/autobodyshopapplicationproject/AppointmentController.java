@@ -1,64 +1,37 @@
 package edu.farmingdale.autobodyshopapplicationproject;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.Region;
+
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class AppointmentController {
 
     @FXML
-    private Button about_us_button;
+    private Button about_us_button, clearbutton, current_coupons, customerfeedback, gallery_button, home_button, home_login_button, next_service_due, service_history, submitbutton;
 
     @FXML
-    private TextField address_text_field;
+    private TextField address_text_field, appointment_time_dropdown, apt_text_field, city_text_field, email_text_field, first_name_text_field, last_name_text_field, license_plate_text_field, make_text_field, mi_text_field, mileage_text_field, model_text_field, telephone_text_field, year_text_field, zip_code_text_field;
 
     @FXML
     private DatePicker appointment_date;
 
     @FXML
-    private TextField appointment_time_dropdown;
+    private ChoiceBox<String> appointment_time;
 
     @FXML
-    private TextField apt_text_field;
+    private Label selected_time_label;
 
     @FXML
-    private MenuItem autoglassreplacementbutton;
-
-    @FXML
-    private MenuItem autorepairsmaintenancebutton;
-
-    @FXML
-    private Button button7;
-
-    @FXML
-    private Button button71;
-
-    @FXML
-    private Button button711;
-
-    @FXML
-    private Button button7111;
-
-    @FXML
-    private MenuItem celdbutton;
-
-    @FXML
-    private TextField city_text_field;
-
-    @FXML
-    private Button clearbutton;
-
-    @FXML
-    private Button clearbutton1;
+    private MenuItem autoglassreplacementbutton, autorepairsmaintenancebutton, celdbutton;
 
     @FXML
     private MenuItem collisionrepairsbutton;
@@ -67,67 +40,64 @@ public class AppointmentController {
     private TextArea customer_comments;
 
     @FXML
-    private TextField email_text_field;
-
-    @FXML
-    private TextField first_name_text_field;
-
-    @FXML
-    private Button gallery_button;
-
-    @FXML
-    private Button home_button;
-
-    @FXML
-    private Button home_login_button;
-
-    @FXML
-    private TextField last_name_text_field;
-
-    @FXML
-    private TextField license_plate_state_text_field;
-
-    @FXML
-    private TextField license_plate_text_field;
-
-    @FXML
-    private TextField make_text_field;
-
-    @FXML
-    private TextField mi_text_field;
-
-    @FXML
-    private TextField mileage_text_field;
-
-    @FXML
-    private TextField model_text_field;
-
-    @FXML
-    private ChoiceBox<?> preferred_contact_dropdown;
-
-    @FXML
-    private ComboBox<?> select_transport_needs_dropdown;
-
-    @FXML
-    private ComboBox<?> service_request_dropdown;
+    private ComboBox<String> license_plate_state_dropdown, select_transport_needs_dropdown, service_request_dropdown, preferred_contact_dropdown;
 
     @FXML
     private Region speedometerRegion;
 
     @FXML
-    private ComboBox<?> state_text_dropdown;
-
-    @FXML
-    private TextField telephone_text_field;
+    private ComboBox<String> state_dropdown;
 
     @FXML
     private ImageView v15_227;
 
-    @FXML
-    private TextField year_text_field;
 
     @FXML
-    private TextField zip_code_text_field;
+    public void initialize() {
+        // Populate appointment_time ChoiceBox with 30-minute intervals
+        ObservableList<String> timeSlots = FXCollections.observableArrayList();
+        LocalTime startTime = LocalTime.of(9, 0); // Start time: 9:00 AM
+        LocalTime endTime = LocalTime.of(17, 0); // End time: 5:00 PM
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm a");
+
+        while (!startTime.isAfter(endTime)) {
+            timeSlots.add(startTime.format(formatter));
+            startTime = startTime.plusMinutes(30);
+        }
+
+        appointment_time.setItems(timeSlots);
+
+        // Set a listener to display the selected time
+        appointment_time.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                selected_time_label.setText("Selected Time: " + newValue);
+            }
+        });
+    }
+
+    @FXML
+    void onLicensePlateStateScrolldown(MouseEvent event) {
+        // Populate states in the dropdown
+        ObservableList<String> usStates = FXCollections.observableArrayList(
+                "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN",
+                "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV",
+                "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN",
+                "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
+        );
+
+        license_plate_state_dropdown.setItems(usStates);
+
+        // Optional: Set a default placeholder or selection
+        license_plate_state_dropdown.setPromptText("Select State");
+
+        // Listener for selected state
+        license_plate_state_dropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                System.out.println("Selected State: " + newValue);
+            }
+        });
+
+    }
 
     @FXML
     void onAboutUsButtonClick(ActionEvent event) {
@@ -135,7 +105,7 @@ public class AppointmentController {
     }
 
     @FXML
-    void onAppointmenTimeScrolldown(ScrollEvent event) {
+    void onAppointmenTimeScrolldown(MouseEvent event) {
 
     }
 
@@ -161,11 +131,30 @@ public class AppointmentController {
 
     @FXML
     void onClearButtonClick(ActionEvent event) {
+        if (validateFields()) {
+            // Proceed with clearing fields or submitting data
+        }
+    }
 
+    @FXML
+    void onSubmitButtonClick(ActionEvent event) {
+        if (validateFields()) {
+            // Proceed with clearing fields or submitting data
+        }
     }
 
     @FXML
     void onCollisionRepairsButtonClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onCurrentCouponsButtonClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onCustomerFeedbackButtonClick(ActionEvent event) {
 
     }
 
@@ -185,23 +174,154 @@ public class AppointmentController {
     }
 
     @FXML
-    void onPreferredContactScrolldown(ScrollEvent event) {
+    void onNextServiceDueButtonClick(ActionEvent event) {
 
     }
 
     @FXML
-    void onSelectTransportNeedsScrolldown(ScrollEvent event) {
+    void onPreferredContactScrolldown(MouseEvent event) {
+        // Populate preferred_contact_dropdown
+        ObservableList<String> contactMethods = FXCollections.observableArrayList(
+                "Email",
+                "Telephone",
+                "Text"
+        );
+        preferred_contact_dropdown.setItems(contactMethods);
+        preferred_contact_dropdown.setPromptText("Select Preferred Contact");
+    }
+
+    @FXML
+    void onSelectTransportNeedsScrolldown(MouseEvent event) {
+        // Populate select_transport_needs_dropdown
+        ObservableList<String> transportNeeds = FXCollections.observableArrayList(
+                "I'll be Dropping my vehicle off",
+                "I'd like a courtesy loaner vehicle during my service",
+                "I'd like to wait for my service"
+        );
+        select_transport_needs_dropdown.setItems(transportNeeds);
+        select_transport_needs_dropdown.setPromptText("Select Transportation Needs");
+    }
+
+    @FXML
+    void onServiceHistoryButtonClick(ActionEvent event) {
 
     }
 
     @FXML
-    void onServiceRequestScrolldown(ScrollEvent event) {
-
+    void onServiceRequestScrolldown(MouseEvent event) {
+        // Populate service_request_dropdown
+        ObservableList<String> serviceRequests = FXCollections.observableArrayList(
+                "Collision Repairs",
+                "Auto Repair and Maintenance",
+                "CELD",
+                "Auto Glass Replacement"
+        );
+        service_request_dropdown.setItems(serviceRequests);
+        service_request_dropdown.setPromptText("Select a Service Request");
     }
 
-    @FXML
-    void onStateScrolldown(ScrollEvent event) {
+        @FXML
+    void onStateScrolldown(MouseEvent event) {
+            // Populate states in the dropdown
+            ObservableList<String> usStates = FXCollections.observableArrayList(
+                    "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN",
+                    "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV",
+                    "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN",
+                    "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
+            );
 
+            state_dropdown.setItems(usStates);
+
+            // Optional: Set a default placeholder or selection
+            state_dropdown.setPromptText("Select State");
+
+            // Listener for selected state
+            state_dropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+                if (newValue != null) {
+                    System.out.println("Selected State: " + newValue);
+                }
+            });
+    }
+
+
+    public boolean validateFields() {
+        StringBuilder errors = new StringBuilder();
+
+        if (address_text_field.getText().isEmpty()) {
+            errors.append("Address cannot be empty.\n");
+        }
+
+        if (apt_text_field.getText().length() > 10) { // Example constraint
+            errors.append("Apt/Unit field must be less than 10 characters.\n");
+        }
+
+        if (city_text_field.getText().isEmpty()) {
+            errors.append("City cannot be empty.\n");
+        }
+
+        if (!email_text_field.getText().matches("^\\S+@\\S+\\.\\S+$")) {
+            errors.append("Invalid email address format.\n");
+        }
+
+        if (first_name_text_field.getText().isEmpty()) {
+            errors.append("First Name cannot be empty.\n");
+        }
+
+        if (last_name_text_field.getText().isEmpty()) {
+            errors.append("Last Name cannot be empty.\n");
+        }
+
+        if (!license_plate_text_field.getText().matches("^[A-Za-z0-9]{1,7}$")) {
+            errors.append("License Plate must be alphanumeric and up to 7 characters.\n");
+        }
+
+        if (make_text_field.getText().isEmpty()) {
+            errors.append("Make cannot be empty.\n");
+        }
+
+        if (!mi_text_field.getText().matches("^[A-Za-z]$")) {
+            errors.append("M.I must be a single letter.\n");
+        }
+
+        if (!mileage_text_field.getText().matches("^\\d+$")) {
+            errors.append("Mileage must be a number.\n");
+        }
+
+        if (model_text_field.getText().isEmpty()) {
+            errors.append("Model cannot be empty.\n");
+        }
+
+        if (!telephone_text_field.getText().matches("^\\d{10}$")) {
+            errors.append("Telephone must be a 10-digit number.\n");
+        }
+
+        if (!year_text_field.getText().matches("^\\d{4}$")) {
+            errors.append("Year must be a 4-digit number.\n");
+        }
+
+        if (!zip_code_text_field.getText().matches("^\\d{5}$")) {
+            errors.append("Zip Code must be a 5-digit number.\n");
+        }
+
+        if (state_dropdown.getValue() == null) {
+            errors.append("Please select a state.\n");
+        }
+
+        if (license_plate_state_dropdown.getValue() == null) {
+            errors.append("Please select a state.\n");
+        }
+
+        if (errors.length() > 0) {
+            // Show error messages in an alert dialog
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Validation Errors");
+            alert.setHeaderText("Please fix the following errors:");
+            alert.setContentText(errors.toString());
+            alert.showAndWait();
+            return false;
+        }
+
+        return true;
     }
 
 }
