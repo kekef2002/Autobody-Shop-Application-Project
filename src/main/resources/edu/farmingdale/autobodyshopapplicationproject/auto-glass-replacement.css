@@ -20,14 +20,14 @@
 .v250_23 {
     -fx-font-family: "Inter";
     -fx-font-size: 48px;
-    -fx-font-weight: Semi-Bold;
+    -fx-font-weight: Bold;
     -fx-text-fill: rgba(0, 0, 0, 1);
 }
 
 .v250_24 {
     -fx-font-family: "Inter";
     -fx-font-size: 32px;
-    -fx-font-weight: Regular;
+    -fx-font-weight: normal;
     -fx-text-fill: rgba(0, 0, 0, 1);
 }
 
@@ -58,35 +58,35 @@
 .v235_13 {
     -fx-font-family: "Inter";
     -fx-font-size: 48px;
-    -fx-font-weight: Semi-Bold;
+    -fx-font-weight: Bold;
     -fx-text-fill: rgba(255, 255, 255, 1);
 }
 
 .v235_19 {
     -fx-font-family: "Inter";
     -fx-font-size: 32px;
-    -fx-font-weight: Regular;
+    -fx-font-weight: normal;
     -fx-text-fill: rgba(255, 255, 255, 1);
 }
 
 .v249_11 {
     -fx-font-family: "Inter";
     -fx-font-size: 48px;
-    -fx-font-weight: Semi-Bold;
+    -fx-font-weight: Bold;
     -fx-text-fill: rgba(0, 0, 0, 1);
 }
 
 .v249_14 {
     -fx-font-family: "Inter";
     -fx-font-size: 32px;
-    -fx-font-weight: Regular;
+    -fx-font-weight: normal;
     -fx-text-fill: rgba(0, 0, 0, 1);
 }
 
 .v250_65 {
     -fx-font-family: "Inter";
     -fx-font-size: 24px;
-    -fx-font-weight: Regular;
+    -fx-font-weight: normal;
     -fx-text-fill: rgba(255, 255, 255, 1);
     -fx-text-alignment: center;
 }
@@ -103,4 +103,19 @@
     -fx-background-radius: 8px;
     -fx-padding: 14px 24px;
     -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 1, 0.5, 0, 1);
+}
+
+.v14_19 {
+    -fx-background-color: rgba(0,0,0,0.64);
+    -fx-background-radius: 8px;
+    -fx-padding: 14px 24px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 1, 0.5, 0, 1);
+}
+
+.v14_20 {
+    -fx-text-fill: rgba(197,211,8,0.99);
+    -fx-font-family: "Inter";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
 }

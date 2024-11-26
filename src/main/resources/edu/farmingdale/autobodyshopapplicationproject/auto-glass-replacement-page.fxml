@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.Group?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
-<?import java.lang.String?>
-<AnchorPane prefHeight="1980.0" prefWidth="1440.0" styleClass="v15_130" stylesheets="@auto-glass-replacement.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
-   <Pane layoutY="1179.0" prefHeight="656.0" prefWidth="1440.0" style="-fx-background-color: grey;" />
+<AnchorPane prefHeight="1980.0" prefWidth="1440.0" styleClass="v15_130" stylesheets="@auto-glass-replacement.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <Pane layoutY="1179.0" prefHeight="656.0" prefWidth="1440.0" style="-fx-background-color: grey;">
+      <children>
+      
+         <Button fx:id="schedule_an_appointment_button" layoutX="573.0" layoutY="533.0" mnemonicParsing="false" onAction="#onApptointmentButtonClick" prefHeight="58.0" prefWidth="295.0" text="Schedule an Appointment" textAlignment="CENTER" textFill="#c7d10a36">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+            <styleClass>
+               <String fx:value="v14_20" />
+               <String fx:value="v14_19" />
+            </styleClass>
+         </Button>
+      </children></Pane>
    <Pane layoutY="551.0" prefHeight="628.0" prefWidth="1440.0" style="-fx-background-color: white;" />
    <Group layoutX="395.8999938964844" layoutY="30.899999618530273">
       <children>
@@ -59,15 +70,14 @@
     <!-- Appointment Section -->
     <Label layoutX="651.0" layoutY="1259.0" style="-fx-font-weight: bold;" styleClass="v250_23" text="Schedule an appointment" />
     <Label layoutX="651.0" layoutY="1352.0" prefHeight="370.0" prefWidth="753.0" styleClass="v250_24" text="We value your time and strive to make the appointment scheduling process as convenient as possible. With our easy-to-use online scheduling system, you can book an appointment at your convenience. Simply fill out the requested information, and our team will get back to you." wrapText="true" />
-
     <!-- Main Heading -->
-    <Label layoutX="416" layoutY="168" style="-fx-font-weight: bold;" styleClass="v235_13" text="Auto Glass Replacement">
+    <Label layoutX="568.0" layoutY="175.0" style="-fx-font-weight: bold;" styleClass="v235_13" text="Auto Glass Replacement">
       <font>
          <Font name="System Bold" size="12.0" />
       </font></Label>
 
     <!-- Supporting Texts -->
-    <Label layoutX="419.0" layoutY="257.0" prefHeight="335.0" prefWidth="981.0" styleClass="v235_19" text="At Solution Auto Body, we understand the importance of maintaining a clean and safe windshield for your vehicle. That’s why we offer comprehensive auto glass replacement services to keep you driving safely and confidently." wrapText="true" AnchorPane.bottomAnchor="1394.0" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="161.0" />
+    <Label layoutX="419.0" layoutY="285.0" prefHeight="236.0" prefWidth="825.0" styleClass="v235_19" text="At Solution Auto Body, we understand the importance of maintaining a clean and safe windshield for your vehicle. That’s why we offer comprehensive auto glass replacement services to keep you driving safely and confidently." textAlignment="JUSTIFY" wrapText="true" AnchorPane.bottomAnchor="1459.0" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="285.0" />
     <Label layoutX="79" layoutY="626" prefHeight="145.0" prefWidth="589.0" style="-fx-font-weight: bold;" styleClass="v249_11" text="Expert Windshield Replacements" wrapText="true" />
     <Label layoutX="79.0" layoutY="781.0" prefHeight="331.0" prefWidth="574.0" styleClass="v249_14" text="A damaged windshield can compromise your safety on the road and may lead to a ticket. Our team of professionals is skilled in providing efficient and reliable windshield replacements." wrapText="true" />
 
