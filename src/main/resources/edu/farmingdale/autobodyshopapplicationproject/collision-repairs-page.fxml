@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="2014.0" prefWidth="1388.0" style="-fx-background-color: Black;" styleClass="v14_47" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+<AnchorPane prefHeight="2014.0" prefWidth="1388.0" style="-fx-background-color: Black;" styleClass="v14_47" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="edu.farmingdale.autobodyshopapplicationproject.CollisonRepairController">
     <ImageView fx:id="v14_48" fitHeight="270" fitWidth="315" layoutX="22.0" layoutY="24.0" styleClass="v14_48" />
     
     <Label layoutX="469.0" layoutY="1821.0" prefHeight="72.0" prefWidth="337.0" styleClass="v14_49" text="1 Wyandanch Ave., Wyandanch, NY 11978 (631) 253-4335" textFill="WHITE" />
