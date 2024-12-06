@@ -1,50 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" prefWidth="1024" prefHeight="1847" styleClass="v14_47">
-    <ImageView fx:id="v14_48" fitWidth="315" fitHeight="270" layoutX="33" layoutY="33" styleClass="v14_48"/>
+<AnchorPane prefHeight="2014.0" prefWidth="1388.0" style="-fx-background-color: Black;" styleClass="v14_47" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+    <ImageView fx:id="v14_48" fitHeight="270" fitWidth="315" layoutX="22.0" layoutY="24.0" styleClass="v14_48" />
     
-    <Label layoutX="594" layoutY="1734" styleClass="v14_49" text="1 Wyandanch Ave., Wyandanch, NY 11978 (631) 253-4335"/>
+    <Label layoutX="469.0" layoutY="1821.0" prefHeight="72.0" prefWidth="337.0" styleClass="v14_49" text="1 Wyandanch Ave., Wyandanch, NY 11978 (631) 253-4335" textFill="WHITE" />
     
     <!-- Navigation Buttons -->
-    <Pane layoutX="389" layoutY="33" prefWidth="132" prefHeight="70" styleClass="v14_53">
-        <Label layoutX="16" layoutY="13" styleClass="v14_54" text="Home"/>
+    <Pane layoutX="389" layoutY="33" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: white;" styleClass="v14_53">
+        <Label layoutX="16" layoutY="13" prefHeight="17.0" prefWidth="46.0" styleClass="v14_54" text="Home" />
     </Pane>
-    <Pane layoutX="549" layoutY="33" prefWidth="205" prefHeight="70" styleClass="v14_55">
-        <Label layoutX="12" layoutY="13" styleClass="v14_56" text="Services +"/>
+    <Pane layoutX="549" layoutY="33" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: white;" styleClass="v14_55">
+        <Label layoutX="12" layoutY="13" styleClass="v14_56" text="Services +" />
     </Pane>
-    <Pane layoutX="960" layoutY="34" prefWidth="183" prefHeight="70" styleClass="v14_57">
-        <Label layoutX="13" layoutY="13" styleClass="v14_58" text="About Us"/>
+    <Pane layoutX="938.0" layoutY="34.0" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: white;" styleClass="v14_57">
+        <Label layoutX="13" layoutY="13" styleClass="v14_58" text="About Us" />
     </Pane>
-    <Pane layoutX="782" layoutY="34" prefWidth="150" prefHeight="70" styleClass="v14_59">
-        <Label layoutX="15" layoutY="13" styleClass="v14_60" text="Gallery"/>
+    <Pane layoutX="739.0" layoutY="34.0" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: White;" styleClass="v14_59">
+        <Label layoutX="15" layoutY="13" styleClass="v14_60" text="Gallery" />
     </Pane>
-    <Pane layoutX="1171" layoutY="34" prefWidth="210" prefHeight="70" styleClass="v14_61">
-        <Label layoutX="58" layoutY="13" styleClass="v14_62" text="Login"/>
+    <Pane layoutX="1171" layoutY="34" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: white;" styleClass="v14_61">
+        <Label layoutX="29.0" layoutY="10.0" styleClass="v14_62" text="Login" />
     </Pane>
     
     <!-- Main Content -->
-    <Label layoutX="383" layoutY="146" styleClass="v86_2" text="Collision Repairs"/>
-    <Label layoutX="426" layoutY="278" styleClass="v86_3" text="Accidents happen, and when they do, you need a reliable and professional auto body shop to handle the repairs..."/>
+    <Label layoutX="383" layoutY="146" styleClass="v86_2" text="Collision Repairs" textFill="WHITE" wrapText="true">
+      <font>
+         <Font size="46.0" />
+      </font></Label>
+    <Label layoutX="382.0" layoutY="191.0" prefHeight="159.0" prefWidth="702.0" styleClass="v86_3" text="Accidents happen, and when they do, you need a reliable and professional auto body shop to handle the repairs. At Solution Auto Body, we specialize in providing high-quality collision repair services to get your vehicle back on the road, looking and performing as well as new. Our expert technicians are trained in the latest repair techniques and use state-of-the-art equipment to ensure that your vehicle receives the best possible care." textFill="WHITE" wrapText="true" />
     
     <!-- Additional Sections -->
-    <ImageView fx:id="v87_5" fitWidth="625" fitHeight="377" layoutX="698" layoutY="512" styleClass="v87_5"/>
-    <Pane layoutX="86" layoutY="512" prefWidth="612" prefHeight="377" styleClass="v88_8">
-        <Label layoutX="123" layoutY="533" styleClass="v90_10" text="Collision Repair Services"/>
-        <Label layoutX="126" layoutY="595" styleClass="v92_11" text="No matter the extent of the damage, our skilled technicians will meticulously assess your vehicle..."/>
+    <ImageView fx:id="v87_5" fitHeight="377" fitWidth="625" layoutX="633.0" layoutY="508.0" styleClass="v87_5">
+      <image>
+         <Image url="@v87_5.png" />
+      </image></ImageView>
+    <Pane layoutX="11.0" layoutY="506.0" prefHeight="380.0" prefWidth="627.0" style="-fx-background-color: #0094FF;" styleClass="v88_8">
+      <Label layoutX="21.0" layoutY="82.0" prefHeight="262.0" prefWidth="534.0" text="No matter the extent of the damage, our skilled technicians will meticulously assess your vehicle and provide a detailed repair plan tailored to its specific needs. Our comprehensive range of collision repair services includes:Frame and unibody straighteningDent and scratch removalBumper and fender repairsPaint-less dent repair (PDR)Glass replacement and repairCustom paint matching and refinishingSuspension and alignment repairsDiagnostic and mechanical repairs related to the collisionOur Italian made – fully heated down draft paint spray boothTop of the line paint – Spies Hecker Automotive PaintComputerize Chief frame / unibody measuring and repair equipment." textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="28.0" prefHeight="47.0" prefWidth="295.0" text="Collison Repairs" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
     </Pane>
     
     <!-- Schedule Section -->
-    <Pane layoutX="0" layoutY="968" prefWidth="1024" prefHeight="699" styleClass="v208_8">
-        <Label layoutX="83" layoutY="1054" styleClass="v208_9" text="Schedule an appointment"/>
-        <Label layoutX="26" layoutY="1074" styleClass="v208_10" text="We value your time and strive to make the appointment scheduling process as convenient as possible..."/>
-        <Pane layoutX="61" layoutY="1470" prefWidth="99" prefHeight="99" styleClass="v208_11">
-            <Pane layoutX="20" layoutY="4" prefWidth="57" prefHeight="90" styleClass="v208_12"/>
+    <Pane layoutX="0" layoutY="968" prefHeight="741.0" prefWidth="1388.0" style="-fx-background-color: White;" styleClass="v208_8">
+        <Pane layoutX="61" layoutY="1470" prefHeight="99" prefWidth="99" styleClass="v208_11">
+            <Pane layoutX="20" layoutY="4" prefHeight="90" prefWidth="57" styleClass="v208_12" />
         </Pane>
-        <Label layoutX="97" layoutY="1488" styleClass="v208_14" text="(631) 253-4335"/>
-        <ImageView fx:id="v208_15" fitWidth="526" fitHeight="334" layoutX="869" layoutY="1137" styleClass="v208_15"/>
+        <Label layoutX="215.0" layoutY="568.0" styleClass="v208_14" text="(631) 253-4335">
+         <font>
+            <Font size="37.0" />
+         </font></Label>
+        <ImageView fx:id="v208_15" fitHeight="334" fitWidth="526" layoutX="869" layoutY="1137" styleClass="v208_15" />
+      <Label layoutX="105.0" layoutY="136.0" text="Schedule an appointment">
+         <font>
+            <Font size="52.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="210.0" prefHeight="350.0" prefWidth="569.0" text="We value your time and strive to make the appointment scheduling process as convenient as possible. With our easy-to-use online scheduling system, you can book an appointment at your convenience. Simply fill out the requested information, and our team will get back to you." wrapText="true">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="406.0" fitWidth="626.0" layoutX="751.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@v208_15.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="67.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@phone_iphone_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" />
+         </image>
+      </ImageView>
     </Pane>
+   <ImageView fitHeight="243.0" fitWidth="342.0" layoutX="22.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@v14_48.png" />
+      </image>
+   </ImageView>
 </AnchorPane>
