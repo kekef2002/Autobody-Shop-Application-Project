@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.image.Image?>
-<AnchorPane prefHeight="2744" prefWidth="1024" styleClass="v15_146" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" stylesheets="about-us.css">
+<AnchorPane prefHeight="2744" prefWidth="1024" styleClass="v15_146" stylesheets="about-us.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <ImageView fx:id="v15_147" fitHeight="270" fitWidth="315" layoutX="33" layoutY="33" styleClass="v15_147" />
 
     <Label layoutX="594" layoutY="2631" styleClass="v15_148" text="1 Wyandanch Ave., Wyandanch, NY 11978 (631) 253-4335" />
@@ -35,7 +35,7 @@
          <Font size="37.0" />
       </font></Label>
     <Label layoutX="349" layoutY="268" prefHeight="215.0" prefWidth="807.0" styleClass="v166_34" text="Solution Auto Body is a trusted family-owned business with a rich history spanning two generations and fifty years. Throughout our journey, we have remained committed to our core values of customer service, community, and delivering dependable work. As a leading automotive service provider, we take pride in our comprehensive range of services, our strong ties to the community, and our unwavering responsibility to our customers." wrapText="true" />
-    <ImageView fx:id="aboutImageView" fitHeight="150.0" fitWidth="250.0" styleClass="about-image" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="aboutImageView" fitHeight="230.0" fitWidth="299.0" layoutX="929.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" styleClass="about-image">
         <image>
             <Image url="@../autobodyshopapplicationproject/v169_10.png" />
         </image>
@@ -67,7 +67,7 @@
    <Label layoutX="313.0" layoutY="1254.0" prefHeight="96.0" prefWidth="587.0" text="-Dent Removal: With our advanced dent removal techniques, we can effectively eliminate dents and dings, restoring the original shape of your vehicle without the need for major repairs or paintwork." wrapText="true" />
    <Label layoutX="316.0" layoutY="1326.0" prefHeight="89.0" prefWidth="547.0" text="-Mechanical Repairs: Our skilled mechanics are adept at diagnosing and repairing various mechanical issues, from engine troubles to suspension problems. We utilize the latest diagnostic tools and genuine parts to ensure the highest quality repairs." wrapText="true" />
 
-    <ImageView fx:id="ServiceImageView" fitHeight="400.0" fitWidth="400.0" styleClass="about-image" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="ServiceImageView" fitHeight="712.0" fitWidth="1444.0" layoutX="-6.0" layoutY="1549.0" pickOnBounds="true" preserveRatio="true" styleClass="about-image">
         <image>
             <Image url="@../autobodyshopapplicationproject/v172_33.png" />
         </image>
