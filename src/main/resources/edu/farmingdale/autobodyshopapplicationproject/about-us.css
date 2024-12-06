@@ -1,0 +1,80 @@
+* {
+    -fx-box-sizing: border-box;
+}
+
+.v15_146 {
+    -fx-background-color: rgba(30,29,29,1);
+}
+
+.v15_147 {
+    -fx-image: url("v15_147.png"); /* Ensure the image is in the correct resources directory */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+
+.v15_148 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 24px;
+    -fx-text-alignment: center;
+}
+
+.v15_149, .v15_151, .v15_153, .v15_155, .v15_157 {
+    -fx-background-color: rgba(31,29,29,1);
+    -fx-background-radius: 50px;
+}
+
+.v15_150, .v15_152, .v15_154, .v15_156, .v15_158 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 36px;
+}
+
+.v166_33, .v166_34 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+
+.v166_33 {
+    -fx-font-size: 32px;
+}
+
+.v166_34 {
+    -fx-font-size: 20px;
+}
+
+.v169_12 {
+    -fx-text-fill: black;
+    -fx-font-family: "Roboto";
+    -fx-font-size: 57px;
+    -fx-text-alignment: center;
+}
+
+.v171_21, .v171_30, .v171_33 {
+    -fx-background-color: rgba(63,107,255,1);
+}
+
+.v171_22, .v171_32, .v171_35 {
+    -fx-text-fill: white;
+    -fx-font-family: "Roboto";
+    -fx-font-size: 16px;
+    -fx-text-alignment: center;
+}
+
+.v171_36, .v172_8 {
+    -fx-text-fill: black;
+    -fx-font-family: "Roboto";
+    -fx-font-size: 57px;
+    -fx-text-alignment: center;
+}
+
+.v172_21 {
+    -fx-text-fill: black;
+    -fx-font-family: "Roboto";
+    -fx-font-weight: medium;
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+}

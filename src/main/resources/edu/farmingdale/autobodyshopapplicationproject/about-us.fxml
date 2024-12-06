@@ -4,6 +4,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 
+<?import javafx.scene.control.Label?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml" prefWidth="1024" prefHeight="2744" styleClass="v15_146">
     <ImageView fx:id="v15_147" fitWidth="315" fitHeight="270" layoutX="33" layoutY="33" styleClass="v15_147"/>
 
