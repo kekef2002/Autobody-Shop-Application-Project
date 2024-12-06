@@ -7,69 +7,74 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="2744" prefWidth="1024" styleClass="v15_146" stylesheets="about-us.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="2533.0" prefWidth="1415.0" style="-fx-background-color: black;" styleClass="v15_146" stylesheets="about-us.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <ImageView fx:id="v15_147" fitHeight="270" fitWidth="315" layoutX="33" layoutY="33" styleClass="v15_147" />
 
-    <Label layoutX="594" layoutY="2631" styleClass="v15_148" text="1 Wyandanch Ave., Wyandanch, NY 11978 (631) 253-4335" />
+    <Label layoutX="507.0" layoutY="2397.0" styleClass="v15_148" text="1 Wyandanch Ave., Wyandanch, NY 11978 (631) 253-4335" textFill="WHITE" />
 
     <!-- Navigation Buttons -->
     <Pane layoutX="389" layoutY="33" prefHeight="70" prefWidth="132" styleClass="v15_149">
-        <Label layoutX="16" layoutY="13" styleClass="v15_150" text="Home" />
+        <Label layoutX="16" layoutY="13" styleClass="v15_150" text="Home" textFill="WHITE" />
     </Pane>
     <Pane layoutX="549" layoutY="33" prefHeight="70" prefWidth="205" styleClass="v15_151">
-        <Label layoutX="12" layoutY="13" styleClass="v15_152" text="Services +" />
+        <Label layoutX="12" layoutY="13" styleClass="v15_152" text="Services +" textFill="WHITE" />
     </Pane>
     <Pane layoutX="960" layoutY="34" prefHeight="70" prefWidth="183" styleClass="v15_153">
-        <Label layoutX="13" layoutY="13" styleClass="v15_154" text="About Us" />
+        <Label layoutX="13" layoutY="13" styleClass="v15_154" text="About Us" textFill="WHITE" />
     </Pane>
     <Pane layoutX="782" layoutY="34" prefHeight="70" prefWidth="150" styleClass="v15_155">
-        <Label layoutX="15" layoutY="13" styleClass="v15_156" text="Gallery" />
+        <Label layoutX="15" layoutY="13" styleClass="v15_156" text="Gallery" textFill="WHITE" />
     </Pane>
     <Pane layoutX="1171" layoutY="34" prefHeight="70" prefWidth="210" styleClass="v15_157">
-        <Label layoutX="58" layoutY="13" styleClass="v15_158" text="Login" />
+        <Label layoutX="58" layoutY="13" styleClass="v15_158" text="Login" textFill="WHITE" />
     </Pane>
 
     <!-- Main Content -->
-    <Label layoutX="348" layoutY="193" styleClass="v166_33" text="Serving Long Island since 1973">
+    <Label layoutX="348" layoutY="193" styleClass="v166_33" text="Serving Long Island since 1973" textFill="WHITE">
       <font>
          <Font size="37.0" />
       </font></Label>
-    <Label layoutX="349" layoutY="268" prefHeight="215.0" prefWidth="807.0" styleClass="v166_34" text="Solution Auto Body is a trusted family-owned business with a rich history spanning two generations and fifty years. Throughout our journey, we have remained committed to our core values of customer service, community, and delivering dependable work. As a leading automotive service provider, we take pride in our comprehensive range of services, our strong ties to the community, and our unwavering responsibility to our customers." wrapText="true" />
-    <ImageView fx:id="aboutImageView" fitHeight="230.0" fitWidth="299.0" layoutX="929.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" styleClass="about-image">
+    <Label layoutX="349" layoutY="268" prefHeight="215.0" prefWidth="807.0" styleClass="v166_34" text="Solution Auto Body is a trusted family-owned business with a rich history spanning two generations and fifty years. Throughout our journey, we have remained committed to our core values of customer service, community, and delivering dependable work. As a leading automotive service provider, we take pride in our comprehensive range of services, our strong ties to the community, and our unwavering responsibility to our customers." textFill="WHITE" wrapText="true" />
+    <ImageView fx:id="aboutImageView" fitHeight="218.0" fitWidth="366.0" layoutX="860.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" styleClass="about-image">
         <image>
             <Image url="@../autobodyshopapplicationproject/v169_10.png" />
         </image>
     </ImageView>
     <!-- Testimonials Section -->
-    <Label layoutX="332.0" layoutY="670.0" styleClass="v169_12" text="Testimonials">
+    <Label layoutX="332.0" layoutY="670.0" styleClass="v169_12" text="Testimonials" textFill="WHITE">
       <font>
          <Font size="44.0" />
       </font></Label>
 
     <Pane layoutX="97" layoutY="953" prefHeight="192" prefWidth="349" styleClass="v171_21" />
     <Pane layoutX="670.0" layoutY="704.0" prefHeight="192" prefWidth="424.0" styleClass="v171_30">
-        <Label layoutX="16" layoutY="31" prefHeight="155.0" prefWidth="393.0" styleClass="v171_32" text="Never have an issue I’ve been going here for my repairs, tires and oil changes since 1999. I wouldn’t trust my cars with anyone else." wrapText="true" />
+        <Label layoutX="-2.0" layoutY="30.0" prefHeight="169.0" prefWidth="315.0" style="-fx-background-color: #3F6CFF;" styleClass="v171_32" text="Never have an issue I’ve been going here for my repairs, tires and oil changes since 1999. I wouldn’t trust my cars with anyone else." textFill="WHITE" wrapText="true" />
     </Pane>
     <Pane layoutX="1055" layoutY="952" prefHeight="192" prefWidth="349" styleClass="v171_33" />
 
     <!-- Additional Information Section -->
-    <Label layoutX="306.0" layoutY="992.0" styleClass="v171_36" text="Comprehensive Services for All Your Needs">
+    <Label layoutX="306.0" layoutY="992.0" styleClass="v171_36" text="Comprehensive Services for All Your Needs" textFill="WHITE">
       <font>
          <Font size="46.0" />
       </font></Label>
-    <Label layoutX="285.0" layoutY="1030.0" prefHeight="159.0" prefWidth="990.0" styleClass="v172_8" text="At Solution Auto Body, we understand that your vehicle is more than just a mode of transportation. It’s a valuable asset that deserves the utmost care and attention. That’s why we offer a wide array of automotive services to address all your needs under one roof." wrapText="true">
+    <Label layoutX="285.0" layoutY="1030.0" prefHeight="159.0" prefWidth="990.0" styleClass="v172_8" text="At Solution Auto Body, we understand that your vehicle is more than just a mode of transportation. It’s a valuable asset that deserves the utmost care and attention. That’s why we offer a wide array of automotive services to address all your needs under one roof." textFill="WHITE" wrapText="true">
       <font>
          <Font size="26.0" />
       </font></Label>
-     <Label layoutX="296.0" layoutY="733.0" prefHeight="169.0" prefWidth="315.0" styleClass="v171_22" text="As always Shirley auto body delivers professionalism with speed. They were kind and respectful to me as well as to my suv. Great prices Great people Great work!" wrapText="true" />
-     <Label layoutX="1084.0" layoutY="754.0" prefHeight="134.0" prefWidth="324.0" styleClass="v171_35" text="Never a bad surprise! Everything is right on the money over and over. It’s consistently wonderful here." wrapText="true" />
-   <Label layoutX="313.0" layoutY="1187.0" prefHeight="125.0" prefWidth="778.0" text="-Collision Repair: Our skilled technicians are equipped to handle collision repairs of all magnitudes. From minor fender benders to extensive structural damage, we utilize advanced techniques and state-of-the-art equipment to restore your vehicle to its pre-accident condition." wrapText="true" />
-   <Label layoutX="313.0" layoutY="1254.0" prefHeight="96.0" prefWidth="587.0" text="-Dent Removal: With our advanced dent removal techniques, we can effectively eliminate dents and dings, restoring the original shape of your vehicle without the need for major repairs or paintwork." wrapText="true" />
-   <Label layoutX="316.0" layoutY="1326.0" prefHeight="89.0" prefWidth="547.0" text="-Mechanical Repairs: Our skilled mechanics are adept at diagnosing and repairing various mechanical issues, from engine troubles to suspension problems. We utilize the latest diagnostic tools and genuine parts to ensure the highest quality repairs." wrapText="true" />
+     <Label layoutX="296.0" layoutY="733.0" prefHeight="169.0" prefWidth="315.0" style="-fx-background-color: #3F6CFF;" styleClass="v171_22" text="As always Shirley auto body delivers professionalism with speed. They were kind and respectful to me as well as to my suv. Great prices Great people Great work!" textFill="WHITE" wrapText="true" />
+     <Label layoutX="1020.0" layoutY="730.0" prefHeight="169.0" prefWidth="315.0" style="-fx-background-color: #3F6CFF;" styleClass="v171_35" text="Never a bad surprise! Everything is right on the money over and over. It’s consistently wonderful here." textFill="WHITE" wrapText="true" />
+   <Label layoutX="313.0" layoutY="1187.0" prefHeight="125.0" prefWidth="778.0" text="-Collision Repair: Our skilled technicians are equipped to handle collision repairs of all magnitudes. From minor fender benders to extensive structural damage, we utilize advanced techniques and state-of-the-art equipment to restore your vehicle to its pre-accident condition." textFill="WHITE" wrapText="true" />
+   <Label layoutX="313.0" layoutY="1254.0" prefHeight="96.0" prefWidth="587.0" text="-Dent Removal: With our advanced dent removal techniques, we can effectively eliminate dents and dings, restoring the original shape of your vehicle without the need for major repairs or paintwork." textFill="WHITE" wrapText="true" />
+   <Label layoutX="316.0" layoutY="1326.0" prefHeight="89.0" prefWidth="547.0" text="-Mechanical Repairs: Our skilled mechanics are adept at diagnosing and repairing various mechanical issues, from engine troubles to suspension problems. We utilize the latest diagnostic tools and genuine parts to ensure the highest quality repairs." textFill="WHITE" wrapText="true" />
 
-    <ImageView fx:id="ServiceImageView" fitHeight="712.0" fitWidth="1444.0" layoutX="-6.0" layoutY="1549.0" pickOnBounds="true" preserveRatio="true" styleClass="about-image">
+    <ImageView fx:id="ServiceImageView" fitHeight="711.0" fitWidth="1908.0" layoutX="1.0" layoutY="1511.0" pickOnBounds="true" preserveRatio="true" styleClass="about-image">
         <image>
             <Image url="@../autobodyshopapplicationproject/v172_33.png" />
         </image>
     </ImageView>
+   <ImageView fitHeight="257.0" fitWidth="236.0" layoutX="11.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@v14_48.png" />
+      </image>
+   </ImageView>
 </AnchorPane>
