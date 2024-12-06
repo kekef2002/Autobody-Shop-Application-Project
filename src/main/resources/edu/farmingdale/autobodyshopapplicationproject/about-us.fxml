@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" prefWidth="1024" prefHeight="2744" styleClass="v15_146">
+    <ImageView fx:id="v15_147" fitWidth="315" fitHeight="270" layoutX="33" layoutY="33" styleClass="v15_147"/>
+
+    <Label layoutX="594" layoutY="2631" styleClass="v15_148" text="1 Wyandanch Ave., Wyandanch, NY 11978 (631) 253-4335"/>
+
+    <!-- Navigation Buttons -->
+    <Pane layoutX="389" layoutY="33" prefWidth="132" prefHeight="70" styleClass="v15_149">
+        <Label layoutX="16" layoutY="13" styleClass="v15_150" text="Home"/>
+    </Pane>
+    <Pane layoutX="549" layoutY="33" prefWidth="205" prefHeight="70" styleClass="v15_151">
+        <Label layoutX="12" layoutY="13" styleClass="v15_152" text="Services +"/>
+    </Pane>
+    <Pane layoutX="960" layoutY="34" prefWidth="183" prefHeight="70" styleClass="v15_153">
+        <Label layoutX="13" layoutY="13" styleClass="v15_154" text="About Us"/>
+    </Pane>
+    <Pane layoutX="782" layoutY="34" prefWidth="150" prefHeight="70" styleClass="v15_155">
+        <Label layoutX="15" layoutY="13" styleClass="v15_156" text="Gallery"/>
+    </Pane>
+    <Pane layoutX="1171" layoutY="34" prefWidth="210" prefHeight="70" styleClass="v15_157">
+        <Label layoutX="58" layoutY="13" styleClass="v15_158" text="Login"/>
+    </Pane>
+
+    <!-- Main Content -->
+    <Label layoutX="348" layoutY="193" styleClass="v166_33" text="Serving Long Island since 1973"/>
+    <Label layoutX="349" layoutY="268" styleClass="v166_34" text="Solution Auto Body is a trusted family-owned business with a rich history spanning two generations and fifty years. Throughout our journey, we have remained committed to our core values of customer service, community, and delivering dependable work. As a leading automotive service provider, we take pride in our comprehensive range of services, our strong ties to the community, and our unwavering responsibility to our customers."/>
+
+    <!-- Testimonials Section -->
+    <Label layoutX="76" layoutY="775" styleClass="v169_12" text="Testimonials"/>
+
+    <Pane layoutX="97" layoutY="953" prefWidth="349" prefHeight="192" styleClass="v171_21">
+        <Label layoutX="16" layoutY="10" styleClass="v171_22" text="As always Shirley auto body delivers professionalism with speed. They were kind and respectful to me as well as to my suv. Great prices Great people Great work!"/>
+    </Pane>
+    <Pane layoutX="576" layoutY="952" prefWidth="349" prefHeight="192" styleClass="v171_30">
+        <Label layoutX="16" layoutY="31" styleClass="v171_32" text="Never have an issue I’ve been going here for my repairs, tires & oil changes since 1999. I wouldn’t trust my cars with anyone else."/>
+    </Pane>
+    <Pane layoutX="1055" layoutY="952" prefWidth="349" prefHeight="192" styleClass="v171_33">
+        <Label layoutX="16" layoutY="37" styleClass="v171_35" text="Never a bad surprise! Everything is right on the money over and over. It’s consistently wonderful here."/>
+    </Pane>
+
+    <!-- Additional Information Section -->
+    <Label layoutX="89" layoutY="1268" styleClass="v171_36" text="Comprehensive Services for All Your Needs"/>
+    <Label layoutX="89" layoutY="1412" styleClass="v172_8" text="At Solution Auto Body, we understand that your vehicle is more than just a mode of transportation. It’s a valuable asset that deserves the utmost care and attention. That’s why we offer a wide array of automotive services to address all your needs under one roof."/>
+
+    <Label layoutX="75" layoutY="1485" styleClass="v172_21" text="Collision Repair: Our skilled technicians are equipped to handle collision repairs of all magnitudes. From minor fender benders to extensive structural damage, we utilize advanced techniques and state-of-the-art equipment to restore your vehicle to its pre-accident condition.
+    Dent Removal: With our advanced dent removal techniques, we can effectively eliminate dents and dings, restoring the original shape of your vehicle without the need for major repairs or paintwork.
+    Mechanical Repairs: Our skilled mechanics are adept at diagnosing and repairing various mechanical issues, from engine troubles to suspension problems. We utilize the latest diagnostic tools and genuine parts to ensure the highest quality repairs."/>
+</AnchorPane>
