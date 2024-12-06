@@ -1,0 +1,113 @@
+* {
+    -fx-box-sizing: border-box;
+}
+
+.v14_47 {
+    -fx-background-color: rgba(30,29,29,1);
+}
+
+.v14_48 {
+    -fx-image: url("v14_48.png"); /* Ensure the image is in the correct resources directory */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+
+.v14_49 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 24px;
+    -fx-text-alignment: center;
+}
+
+.v14_53, .v14_55, .v14_57, .v14_59, .v14_61 {
+    -fx-background-color: rgba(31,29,29,1);
+    -fx-background-radius: 50px;
+}
+
+.v14_54, .v14_56, .v14_58, .v14_60, .v14_62 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 36px;
+}
+
+.v86_2 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-weight: medium;
+    -fx-font-size: 32px;
+    -fx-text-alignment: center;
+}
+
+.v86_3 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-weight: medium;
+    -fx-font-size: 22px;
+    -fx-text-alignment: center;
+}
+
+.v87_5 {
+    -fx-image: url("v87_5.png"); /* Ensure the image is in the correct resources directory */
+    -fx-background-size: cover;
+}
+
+.v88_8 {
+    -fx-background-color: rgba(0,148,255,1);
+}
+
+.v90_10, .v92_11 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-weight: medium;
+    -fx-text-alignment: center;
+}
+
+.v90_10 {
+    -fx-font-size: 20px;
+}
+
+.v92_11 {
+    -fx-font-size: 14px;
+}
+
+.v208_8 {
+    -fx-background-color: white;
+}
+
+.v208_9 {
+    -fx-text-fill: black;
+    -fx-font-family: "Inter";
+    -fx-font-weight: bold;
+    -fx-font-size: 48px;
+    -fx-text-alignment: center;
+}
+
+.v208_10 {
+    -fx-text-fill: black;
+    -fx-font-family: "Inter";
+    -fx-font-weight: medium;
+    -fx-font-size: 32px;
+    -fx-text-alignment: center;
+}
+
+.v208_11 {
+    -fx-background-color: white;
+}
+
+.v208_12 {
+    -fx-background-color: black;
+}
+
+.v208_14 {
+    -fx-text-fill: black;
+    -fx-font-family: "Inter";
+    -fx-font-weight: medium;
+    -fx-font-size: 32px;
+    -fx-text-alignment: center;
+}
+
+.v208_15 {
+    -fx-image: url("v208_15.png"); /* Ensure the image is in the correct resources directory */
+    -fx-background-size: cover;
+}
