@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="2555.0" prefWidth="1440.0" styleClass="v15_66" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="edu.farmingdale.autobodyshopapplicationproject.AutoRepairsAndMaintenanceController">
+<AnchorPane prefHeight="2555.0" prefWidth="1440.0" styleClass="v15_66" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.AutoRepairsAndMaintenanceController">
     <ImageView fx:id="v15_67" fitHeight="270" fitWidth="315" layoutX="33" layoutY="33" styleClass="v15_67" />
 
 
@@ -20,14 +20,14 @@
     <Label layoutX="743.0" layoutY="2400.0" styleClass="v15_68" text="1 Wyandanch Ave., &#10;Wyandanch, NY 11978 &#10;(631) 253-4335" textAlignment="JUSTIFY" />
     
     <!-- Navigation Buttons -->
-    <Group layoutX="402.0" layoutY="31.0">
+    <Group layoutX="395.8999938964844" layoutY="30.899999618530273">
         <children>
             <MenuButton layoutX="207.0" layoutY="2.0" minHeight="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="202.0" styleClass="v14_19" text="Services" textAlignment="CENTER" textFill="#fffbfb">
                 <items>
-                    <MenuItem fx:id="collision_repairs_button" mnemonicParsing="false" onAction="#onCollisionRepairsButtonClick" text="Collision Repairs" />
-                    <MenuItem fx:id="auto_repairs_maintenance_button" mnemonicParsing="false" onAction="#onAutoRepairsMaintenanceButtonClick" text="Auto Repairs and Maintenance" />
-                    <MenuItem fx:id="celd_button" mnemonicParsing="false" onAction="#onCELDButtonClick" text="CELD" />
-                    <MenuItem fx:id="auto_glass_replacement_button" mnemonicParsing="false" onAction="#onAutoGlassReplacementButtonClick" text="Auto Glass Replacement" />
+                    <MenuItem fx:id="collision_repairs" mnemonicParsing="false" onAction="#onCollisionRepairsClick" text="Collision Repairs" />
+                    <MenuItem fx:id="auto_repairs_maintenance" mnemonicParsing="false" onAction="#onAutoRepairsMaintenanceClick" text="Auto Repairs and Maintenance" />
+                    <MenuItem fx:id="celd" mnemonicParsing="false" onAction="#onCELDClick" text="CELD" />
+                    <MenuItem fx:id="auto_glass_replacement" mnemonicParsing="false" onAction="#onAutoGlassReplacementClick" text="Auto Glass Replacement" />
                 </items>
                 <font>
                     <Font size="24.0" />
@@ -88,26 +88,26 @@
     
     <!-- Background Images -->
     <ImageView fx:id="v164_30" fitHeight="449" fitWidth="1024" layoutX="2" layoutY="1352" styleClass="v164_30" />
-    <ImageView fx:id="v164_31" fitHeight="470" fitWidth="1757.0" layoutX="12.0" layoutY="781.0" styleClass="v164_31" />
+    <ImageView fx:id="v164_31" fitHeight="470" fitWidth="1897.0" layoutX="2.0" layoutY="795.0" styleClass="v164_31" />
     <ImageView fx:id="v164_32" fitHeight="445" fitWidth="1024" layoutX="-30.0" layoutY="1786.0" styleClass="v164_32" />
    <ImageView fitHeight="293.0" fitWidth="317.0" layoutX="10.0" layoutY="10.0">
       <image>
-         <Image url="@images/v15_67.png" />
+         <Image url="@v15_67.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="537.0" fitWidth="1897.0" layoutY="795.0">
+   <ImageView fitHeight="537.0" fitWidth="1899.0" layoutY="795.0">
       <image>
-         <Image url="@images/v164_31.png" />
+         <Image url="@v164_31.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="485.0" fitWidth="1909.0" layoutX="-12.0" layoutY="1332.0">
+   <ImageView fitHeight="485.0" fitWidth="1911.0" layoutX="-12.0" layoutY="1332.0">
       <image>
-         <Image url="@images/v164_30.png" />
+         <Image url="@v164_30.png" />
       </image>
    </ImageView>
-   <ImageView fitHeight="537.0" fitWidth="1916.0" layoutX="-18.0" layoutY="1814.0">
+   <ImageView fitHeight="537.0" fitWidth="1899.0" layoutX="-1.0" layoutY="1814.0">
       <image>
-         <Image url="@images/v164_32.png" />
+         <Image url="@v164_32.png" />
       </image>
    </ImageView>
 

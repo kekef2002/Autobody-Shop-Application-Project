@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1811.0" prefWidth="1440.0" styleClass="v14_47" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.CollisonRepairController">
+    <stylesheets>
+        <URL value="@collision-repairs.css" />
+    </stylesheets>
+    <ImageView fx:id="v14_48" fitHeight="270" fitWidth="315" layoutX="22.0" layoutY="24.0" styleClass="v14_48" />
+    
+    <Label layoutX="614.0" layoutY="1660.0" prefHeight="107.0" prefWidth="253.0" text="1 Wyandanch Ave., &#10;Wyandanch, NY 11978 &#10;(631) 253-4335" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font size="24.0" />
+      </font></Label>
+    
+    <!-- Navigation Buttons -->
+    <Group layoutX="395.8999938964844" layoutY="30.899999618530273">
+        <children>
+            <MenuButton layoutX="207.0" layoutY="2.0" minHeight="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="202.0" styleClass="v14_19" text="Services" textAlignment="CENTER" textFill="#fffbfb">
+                <items>
+                    <MenuItem fx:id="collision_repairs" mnemonicParsing="false" onAction="#onCollisionRepairsClick" text="Collision Repairs" />
+                    <MenuItem fx:id="auto_repairs_maintenance" mnemonicParsing="false" onAction="#onAutoRepairsMaintenanceClick" text="Auto Repairs and Maintenance" />
+                    <MenuItem fx:id="celd" mnemonicParsing="false" onAction="#onCELDClick" text="CELD" />
+                    <MenuItem fx:id="auto_glass_replacement" mnemonicParsing="false" onAction="#onAutoGlassReplacementClick" text="Auto Glass Replacement" />
+                </items>
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </MenuButton>
+            <Button fx:id="home_button" alignment="CENTER" layoutX="49.0" layoutY="2.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="70.0" prefWidth="132.0" text="Home" textAlignment="CENTER">
+                <styleClass>
+                    <String fx:value="v13_27" />
+                    <String fx:value="v14_19" />
+                </styleClass>
+            </Button>
+            <Button fx:id="gallery_button" alignment="CENTER" layoutX="433.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onGalleryButtonClick" prefHeight="70.0" prefWidth="168.0" text="Gallery" textAlignment="CENTER">
+                <styleClass>
+                    <String fx:value="v13_27" />
+                    <String fx:value="v14_19" />
+                </styleClass>
+            </Button>
+            <Button fx:id="about_us_button" alignment="CENTER" layoutX="623.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onAboutUsButtonClick" prefHeight="70.0" prefWidth="168.0" text="About Us" textAlignment="CENTER">
+                <styleClass>
+                    <String fx:value="v13_27" />
+                    <String fx:value="v14_19" />
+                </styleClass>
+            </Button>
+            <Button fx:id="home_login_button" alignment="CENTER" layoutX="814.0" layoutY="3.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeLoginButtonClick" prefHeight="70.0" prefWidth="114.0" text="Login" textAlignment="CENTER">
+                <styleClass>
+                    <String fx:value="v13_27" />
+                    <String fx:value="v14_19" />
+                </styleClass>
+            </Button>
+        </children>
+    </Group>
+    
+    <!-- Main Content -->
+    <Label alignment="CENTER" layoutX="790.0" layoutY="170.0" prefHeight="47.0" prefWidth="254.0" styleClass="v86_2" text="Collision Repairs" textFill="WHITE" wrapText="true">
+      <font>
+         <Font size="46.0" />
+      </font></Label>
+    <Label layoutX="442.0" layoutY="210.0" prefHeight="187.0" prefWidth="885.0" text="Accidents happen, and when they do, you need a reliable and professional auto body shop to handle the repairs. At Solution Auto Body, we specialize in providing high-quality collision repair services to get your vehicle back on the road, looking and performing as well as new. Our expert technicians are trained in the latest repair techniques and use state-of-the-art equipment to ensure that your vehicle receives the best possible care." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+      <font>
+         <Font size="22.0" />
+      </font></Label>
+   <HBox layoutX="11.0" layoutY="430.0" prefHeight="519.0" prefWidth="1427.0">
+      <children>
+          <Pane prefHeight="519.0" prefWidth="734.0" style="-fx-background-color: #0094FF;" styleClass="v88_8">
+            <Group layoutX="21.0" layoutY="28.0">
+               <children>
+                  <Label layoutY="54.0" prefHeight="433.0" prefWidth="724.0" text="No matter the extent of the damage, our skilled technicians will meticulously assess your vehicle and provide a detailed repair plan tailored to its specific needs. Our comprehensive range of collision repair services includes:&#10;•&#9;Frame and unibody straightening&#10;•&#9;Dent and scratch removal&#10;•&#9;Bumper and fender repairs&#10;•&#9;Paint-less dent repair (PDR)&#10;•&#9;Glass replacement and repair&#10;•&#9;Custom paint matching and refinishing&#10;•&#9;Suspension and alignment repairs&#10;•&#9;Diagnostic and mechanical repairs related to the collision&#10;•&#9;Our Italian made – fully heated down draft paint spray booth&#10;•&#9;Top of the line paint – Spies Hecker Automotive Paint&#10;•&#9;Computerize Chief frame / unibody measuring and repair equipment." textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="161.0" prefHeight="55.0" prefWidth="414.0" styleClass="v86_2" text="Collison Repairs Services" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+          </Pane>
+          
+                <!-- Additional Sections -->
+          <ImageView fx:id="v87_5" fitHeight="517.0" fitWidth="719.0" styleClass="v87_5">
+            <image>
+               <Image url="@v87_5.png" />
+            </image>
+         </ImageView>
+      </children>
+   </HBox>
+    
+    <!-- Schedule Section -->
+    <Pane layoutY="968.0" prefHeight="627.0" prefWidth="1449.0" style="-fx-background-color: White;" styleClass="v208_8">
+        <Label layoutX="192.0" layoutY="408.0" styleClass="v208_14" text="(631) 253-4335">
+         <font>
+            <Font size="37.0" />
+         </font></Label>
+      <Label layoutX="26.0" layoutY="67.0" prefHeight="261.0" prefWidth="676.0" text="We value your time and strive to make the appointment scheduling process as convenient as possible. With our easy-to-use online scheduling system, you can book an appointment at your convenience. Simply fill out the requested information, and our team will get back to you." textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="443.0" fitWidth="625.0" layoutX="751.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@v208_15.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="59.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@phone_iphone_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" />
+         </image>
+      </ImageView>
+   
+       <Button fx:id="schedule_an_appointment_button" layoutX="277.0" layoutY="514.0" mnemonicParsing="false" onAction="#onApptointmentButtonClick" prefHeight="58.0" prefWidth="295.0" text="Schedule an Appointment" textAlignment="CENTER" textFill="#c7d10a36">
+           <font>
+               <Font name="System Bold" size="20.0" />
+           </font>
+           <styleClass>
+               <String fx:value="v14_20" />
+               <String fx:value="v14_19" />
+           </styleClass>
+       </Button>
+    </Pane>
+</AnchorPane>
