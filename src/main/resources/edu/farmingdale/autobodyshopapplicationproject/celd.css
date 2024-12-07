@@ -63,7 +63,7 @@
 }
 
 .v130_14 {
-    -fx-image: url("images/v130_14.png"); /* Ensure this image is in the resources directory */
+    -fx-image: url("v130_14.png"); /* Ensure this image is in the resources directory */
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
     -fx-background-size: cover;
@@ -76,4 +76,33 @@
 .apptBtn{
 	-fx-background-color: #0066FF;
 	-fx-text-fill: white;
+}
+
+.v13_27 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 24px;
+    -fx-text-alignment: center;
+}
+
+.v14_19 {
+    -fx-background-color: rgba(0,0,0,0.64);
+    -fx-background-radius: 8px;
+    -fx-padding: 14px 24px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 1, 0.5, 0, 1);
+}
+
+.v14_19 {
+    -fx-background-color: rgba(0,0,0,0.64);
+    -fx-background-radius: 8px;
+    -fx-padding: 14px 24px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 1, 0.5, 0, 1);
+}
+
+.v14_20 {
+    -fx-text-fill: rgba(197,211,8,0.99);
+    -fx-font-family: "Inter";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
 }
