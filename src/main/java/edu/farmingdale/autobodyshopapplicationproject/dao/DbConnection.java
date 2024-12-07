@@ -178,7 +178,7 @@ public class DbConnection {
         try {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             PreparedStatement preparedStatement = conn.prepareStatement(query);
-            preparedStatement.setString(10, email);
+            preparedStatement.setString(1, email);
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {
@@ -195,6 +195,9 @@ public class DbConnection {
                 person.setAppointmentTime(rs.getString("appointment_time"));
                 person.setCustomerComments(rs.getString("customer_comments"));
                 person.setNextAppointmentDate(rs.getDate("next_appointment_date"));
+
+                preparedStatement.close();
+                conn.close();
             }
         } catch (SQLException e) {
             e.printStackTrace();

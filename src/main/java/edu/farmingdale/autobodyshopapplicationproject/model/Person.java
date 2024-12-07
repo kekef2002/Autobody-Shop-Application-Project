@@ -61,10 +61,6 @@ public class Person {
         this.nextAppointmentDate = nextAppointmentDate;
     }
 
-//                   String transportationNeeds, String serviceRequested, Date appointmentDate,
-//                  String appointmentTime, String customerComments, Date nextAppointmentDate
-
-
     // Getters and Setters for all fields
     public String getFirstName() {
         return firstName;
