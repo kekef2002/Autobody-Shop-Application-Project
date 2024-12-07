@@ -81,6 +81,7 @@ public class DbConnection {
 
 
     public ObservableList<Person> getData() {
+        ObservableList<Person> data = FXCollections.observableArrayList();
         connectToDatabase();
         try {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
@@ -113,9 +114,9 @@ public class DbConnection {
                 String customerComments = resultSet.getString("customer_comments");
                 Date nextAppointmentDate = resultSet.getDate("next_appointment_date");
 
-//                data.add(new Person(id, firstName, middleInitial, lastName, address, aptUnit, city, state, zipCode, preferredContactMethod, email
-//                        ,telephone, licensePlate, licensePlateState, mileage, year, make, model, transportationNeeds, serviceRequested
-//                        ,appointmentDate, appointmentTime, customerComments, nextAppointmentDate));
+                data.add(new Person(id, firstName, middleInitial, lastName, address, aptUnit, city, state, zipCode, preferredContactMethod, email
+                        ,telephone, licensePlate, licensePlateState, mileage, year, make, model, transportationNeeds, serviceRequested
+                        ,appointmentDate, appointmentTime, customerComments, nextAppointmentDate));
 
                 System.out.println("ID: " + id);
                 System.out.println("Name: " + firstName + " " + middleInitial + " " + lastName);
@@ -127,8 +128,7 @@ public class DbConnection {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
-        //return data;
+        return data;
     }
 
     // Insert a new Person into the database
@@ -137,7 +137,7 @@ public class DbConnection {
         String sql = "INSERT INTO persons (first_name, middle_initial, last_name, address, apt_unit, city, state, zip_code, " +
                 "preferred_contact_method, email, telephone, license_plate, license_plate_state, mileage, year, make, model, " +
                 "transportation_needs, service_requested, appointment_date, appointment_time, customer_comments, next_appointment_date) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
