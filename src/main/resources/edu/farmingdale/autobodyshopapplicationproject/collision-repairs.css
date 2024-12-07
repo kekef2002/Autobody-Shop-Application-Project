@@ -34,7 +34,7 @@
 .v86_2 {
     -fx-text-fill: white;
     -fx-font-family: "Inter";
-    -fx-font-weight: medium;
+    -fx-font-weight: bold;
     -fx-font-size: 32px;
     -fx-text-alignment: center;
 }
@@ -110,4 +110,33 @@
 .v208_15 {
     -fx-image: url("v208_15.png"); /* Ensure the image is in the correct resources directory */
     -fx-background-size: cover;
+}
+
+.v13_27 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 24px;
+    -fx-text-alignment: center;
+}
+
+.v14_19 {
+    -fx-background-color: rgba(0,0,0,0.64);
+    -fx-background-radius: 8px;
+    -fx-padding: 14px 24px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 1, 0.5, 0, 1);
+}
+
+.v14_19 {
+    -fx-background-color: rgba(0,0,0,0.64);
+    -fx-background-radius: 8px;
+    -fx-padding: 14px 24px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 1, 0.5, 0, 1);
+}
+
+.v14_20 {
+    -fx-text-fill: rgba(197,211,8,0.99);
+    -fx-font-family: "Inter";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
 }
