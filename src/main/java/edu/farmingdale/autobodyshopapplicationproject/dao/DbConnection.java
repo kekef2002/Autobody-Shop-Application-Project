@@ -32,8 +32,7 @@ public class DbConnection {
             //Second, connect to the database and create the table "users" if not created
             conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             statement = conn.createStatement();
-            String sql = "CREATE TABLE IF NOT EXISTS users (" + "id INT( 10 ) NOT NULL PRIMARY KEY AUTO_INCREMENT,"
-                    + "first_name VARCHAR(200) NOT NULL,"
+            String sql = "CREATE TABLE IF NOT EXISTS users (" + "first_name VARCHAR(200) NOT NULL,"
                     + "middle_initial CHAR(1), "
                     + "last_name VARCHAR(200) NOT NULL, "
                     + "address VARCHAR(200) NOT NULL, "
@@ -42,7 +41,7 @@ public class DbConnection {
                     + "state VARCHAR(2) NOT NULL, "
                     + "zip_code VARCHAR(10) NOT NULL, "
                     + "preferred_contact_method VARCHAR(50) NOT NULL, "
-                    + "email VARCHAR(200) NOT NULL UNIQUE, "
+                    + "email VARCHAR(200) NOT NULL PRIMARY KEY, "
                     + "telephone VARCHAR(15) NOT NULL, "
                     + "license_plate VARCHAR(20) NOT NULL UNIQUE, "
                     + "license_plate_state VARCHAR(2) NOT NULL, "
@@ -89,7 +88,6 @@ public class DbConnection {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                int id = resultSet.getInt("id");
                 String firstName = resultSet.getString("first_name");
                 String middleInitial = resultSet.getString("middle_initial");
                 String lastName = resultSet.getString("last_name");
@@ -114,11 +112,10 @@ public class DbConnection {
                 String customerComments = resultSet.getString("customer_comments");
                 Date nextAppointmentDate = resultSet.getDate("next_appointment_date");
 
-                data.add(new Person(id, firstName, middleInitial, lastName, address, aptUnit, city, state, zipCode, preferredContactMethod, email
+                data.add(new Person(firstName, middleInitial, lastName, address, aptUnit, city, state, zipCode, preferredContactMethod, email
                         ,telephone, licensePlate, licensePlateState, mileage, year, make, model, transportationNeeds, serviceRequested
                         ,appointmentDate, appointmentTime, customerComments, nextAppointmentDate));
 
-                System.out.println("ID: " + id);
                 System.out.println("Name: " + firstName + " " + middleInitial + " " + lastName);
                 System.out.println("Address: " + address + ", " + aptUnit + ", " + city + ", " + state + " " + zipCode);
                 System.out.println("Next Appointment Date: " + nextAppointmentDate);
@@ -173,4 +170,34 @@ public class DbConnection {
         }
     }
 
+    // Retrieve a Person from the database by email
+    public Person getPerson(String email) {
+        String query = "SELECT * FROM persons WHERE email = ?";
+        Person person = null;
+
+        try {Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+             PreparedStatement preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setString(10, email);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs.next()) {
+                person = new Person();
+                person.setFirstName(rs.getString("first_name"));
+                person.setLastName(rs.getString("last_name"));
+                person.setEmail(rs.getString("email"));
+                person.setTelephone(rs.getString("telephone"));
+                person.setMake(rs.getString("make"));
+                person.setModel(rs.getString("model"));
+                person.setTransportationNeeds(rs.getString("transportation_needs"));
+                person.setServiceRequested(rs.getString("service_requested"));
+                person.setAppointmentDate(rs.getDate("appointment_date"));
+                person.setAppointmentTime(rs.getString("appointment_time"));
+                person.setCustomerComments(rs.getString("customer_comments"));
+                person.setNextAppointmentDate(rs.getDate("next_appointment_date"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return person;
+    }
 }

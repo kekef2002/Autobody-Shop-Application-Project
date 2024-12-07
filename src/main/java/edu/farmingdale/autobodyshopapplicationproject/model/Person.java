@@ -5,7 +5,6 @@ import java.util.Date;
 
 public class Person {
 
-    private int id;
     private String firstName;
     private String middleInitial;
     private String lastName;
@@ -33,11 +32,10 @@ public class Person {
     public Person() {
     }
 
-    public Person(int id, String firstName, String middleInitial, String lastName, String address, String aptUnit, String city, String state,
+    public Person(String firstName, String middleInitial, String lastName, String address, String aptUnit, String city, String state,
                   String zipCode, String preferredContactMethod, String email, String telephone, String licensePlate, String licensePlateState,
                   int mileage, int year, String make, String model, String transportationNeeds, String serviceRequested, Date appointmentDate,
                   String appointmentTime, String customerComments, Date nextAppointmentDate) {
-        this.id = id;
         this.firstName = firstName;
         this.middleInitial = middleInitial;
         this.lastName = lastName;
@@ -63,15 +61,11 @@ public class Person {
         this.nextAppointmentDate = nextAppointmentDate;
     }
 
+//                   String transportationNeeds, String serviceRequested, Date appointmentDate,
+//                  String appointmentTime, String customerComments, Date nextAppointmentDate
+
+
     // Getters and Setters for all fields
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getFirstName() {
         return firstName;
     }
@@ -259,7 +253,6 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "id = " + id +
                 ", firstName = '" + firstName + '\'' +
                 ", middleInitial = '" + middleInitial + '\'' +
                 ", lastName = '" + lastName + '\'' +
