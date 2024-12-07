@@ -1,5 +1,6 @@
 package edu.farmingdale.autobodyshopapplicationproject;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,75 +8,69 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HomeController {
+public class GalleryController {
 
     @FXML
-    private Button about_us_button;
+    ImageView zoomInImage;
 
     @FXML
-    private MenuItem auto_glass_replacement;
+    StackPane blurPane;
 
     @FXML
-    private MenuItem auto_repairs_maintenance;
+    private MenuItem auto_glass_replacement, auto_repairs_maintenance, collision_repairs, celd;
 
     @FXML
-    private MenuItem celd;
+    private Button gallery_button, home_button, home_login_button, schedule_an_appointment_button;
 
     @FXML
-    private MenuItem collision_repairs;
-
-
-    @FXML
-    private Button gallery_button;
-
-    @FXML
-    private Button home_button;
-
-    @FXML
-    private Button home_login_button;
-
-    @FXML
-    private Button schedule_an_appointment_button;
-
-    @FXML
-    private ImageView v13_14;
-
-    @FXML
-    private ImageView v13_28;
-
-    @FXML
-    void onAboutUsButtonClick(ActionEvent event) {
-//        try {
-//            // Load Appointment Page
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("about-us-page.fxml"));
-//            Scene aboutUsScene = new Scene(loader.load(), 1440, 1024);
-//
-//            // Get the Stage from the Event Source
-//            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-//            stage.setScene(aboutUsScene);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+    private void onImageViewClicked(MouseEvent event){
+        System.out.println("It works");
+        ImageView clickedImageView = (ImageView) event.getSource();
+        Image image = clickedImageView.getImage();
+        zoomInImage.setImage(image);
+        zoomInImage.setOpacity(1);
+        blurPane.setMouseTransparent(false);
+        blurPane.setOpacity(.5);
     }
 
     @FXML
-    void onApptointmentButtonClick(ActionEvent event) {
-        try {
-            // Load Appointment Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("appointment-page.fxml"));
-            Scene appointmentScene = new Scene(loader.load(), 1440, 1024);
+    private void onClickOutsideZoom(MouseEvent event){
+        System.out.println("It works part 2");
+        zoomInImage.setOpacity(0);
+        blurPane.setOpacity(0);
+        blurPane.setMouseTransparent(true);
+    }
 
-            // Get the Stage from the Event Source
-            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-            stage.setScene(appointmentScene);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    @FXML
+    void onCollisionRepairsClick(ActionEvent event) {
+//        try {
+//            // Load the FXML for the target page
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-repairs-and-maintenance-page.fxml"));
+//            Scene collisionRepairsScene = new Scene(loader.load(), 1440, 1024);
+//
+//            // Get the current stage from the event source (parent scene)
+//            Stage stage = (Stage) ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
+//
+//            // Set the new scene
+//            stage.setScene(collisionRepairsScene);
+//            stage.show();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            // Optionally, you can show an error dialog to the user
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            alert.setTitle("Error");
+//            alert.setHeaderText("Page Load Error");
+//            alert.setContentText("Failed to load the Collision Repair page.");
+//            alert.showAndWait();
+//        }
     }
 
     @FXML
@@ -150,28 +145,33 @@ public class HomeController {
 //        }
     }
 
-    @FXML
-    void onCollisionRepairsClick(ActionEvent event) {
+    void onAboutUsButtonClick(ActionEvent event) {
 //        try {
-//            // Load the FXML for the target page
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-repairs-and-maintenance-page.fxml"));
-//            Scene collisionRepairsScene = new Scene(loader.load(), 1440, 1024);
+//            // Load Appointment Page
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("about-us-page.fxml"));
+//            Scene aboutUsScene = new Scene(loader.load(), 1440, 1024);
 //
-//            // Get the current stage from the event source (parent scene)
-//            Stage stage = (Stage) ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
-//
-//            // Set the new scene
-//            stage.setScene(collisionRepairsScene);
-//            stage.show();
+//            // Get the Stage from the Event Source
+//            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+//            stage.setScene(aboutUsScene);
 //        } catch (IOException e) {
 //            e.printStackTrace();
-//            // Optionally, you can show an error dialog to the user
-//            Alert alert = new Alert(Alert.AlertType.ERROR);
-//            alert.setTitle("Error");
-//            alert.setHeaderText("Page Load Error");
-//            alert.setContentText("Failed to load the Collision Repair page.");
-//            alert.showAndWait();
 //        }
+    }
+
+    @FXML
+    void onApptointmentButtonClick(ActionEvent event) {
+        try {
+            // Load Appointment Page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("appointment-page.fxml"));
+            Scene appointmentScene = new Scene(loader.load(), 1440, 1024);
+
+            // Get the Stage from the Event Source
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(appointmentScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

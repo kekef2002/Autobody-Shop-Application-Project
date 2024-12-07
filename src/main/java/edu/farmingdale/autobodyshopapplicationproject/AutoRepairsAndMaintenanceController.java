@@ -2,11 +2,18 @@ package edu.farmingdale.autobodyshopapplicationproject;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class AutoRepairsAndMaintenanceController {
+
+
 
     @FXML
     private Button about_us_button;
@@ -49,11 +56,33 @@ public class AutoRepairsAndMaintenanceController {
 
     @FXML
     void onAboutUsButtonClick(ActionEvent event) {
+        try {
+            // Load Appointment Page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("about-us.fxml"));
+            Scene homeLoginScene = new Scene(loader.load(), 1440, 1024);
+
+            // Get the Stage from the Event Source
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(homeLoginScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @FXML
     void onApptointmentButtonClick(ActionEvent event) {
+        try {
+            // Load Appointment Page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("appointment-page.fxml"));
+            Scene appointmentScene = new Scene(loader.load(), 1440, 1024);
+
+            // Get the Stage from the Event Source
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(appointmentScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -79,16 +108,47 @@ public class AutoRepairsAndMaintenanceController {
 
     @FXML
     void onGalleryButtonClick(ActionEvent event) {
+        try {
+            // Load Appointment Page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("gallery-page.fxml"));
+            Scene galleryScene = new Scene(loader.load(), 1440, 1024);
+
+            // Get the Stage from the Event Source
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(galleryScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @FXML
     void onHomeButtonClick(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("home-page.fxml"));
+            Scene homeScene = new Scene(loader.load(), 1440, 1024);
+
+            // Get the Stage from the Event Source
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(homeScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @FXML
     void onHomeLoginButtonClick(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("login-page.fxml"));
+            Scene homeLoginScene = new Scene(loader.load(), 1440, 1024);
+
+            // Get the Stage from the Event Source
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(homeLoginScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
