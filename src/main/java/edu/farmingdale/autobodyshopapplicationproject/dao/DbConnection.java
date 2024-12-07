@@ -175,8 +175,9 @@ public class DbConnection {
         String query = "SELECT * FROM persons WHERE email = ?";
         Person person = null;
 
-        try {Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-             PreparedStatement preparedStatement = conn.prepareStatement(query);
+        try {
+            Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            PreparedStatement preparedStatement = conn.prepareStatement(query);
             preparedStatement.setString(10, email);
             ResultSet rs = preparedStatement.executeQuery();
 
