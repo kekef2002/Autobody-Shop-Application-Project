@@ -15,7 +15,7 @@
     -fx-text-alignment: center;
 }
 
-.v166_33, .v166_34 {
+.v166_33 {
     -fx-text-fill: white;
     -fx-font-family: "Inter";
     -fx-font-weight: bold;
@@ -44,7 +44,7 @@
 
 /* Testimonials Section */
 .v169_12 {
-    -fx-text-fill: black;
+    -fx-text-fill: white;
     -fx-font-family: "Roboto";
     -fx-font-size: 57px;
     -fx-text-alignment: center;
@@ -58,13 +58,13 @@
 .v171_22, .v171_32, .v171_35 {
     -fx-text-fill: white;
     -fx-font-family: "Roboto";
-    -fx-font-size: 16px;
-    -fx-text-alignment: center;
+    -fx-font-size: 20px;
+    -fx-text-alignment: justify;
 }
 
 /* Large Header Text */
 .v171_36, .v172_8 {
-    -fx-text-fill: black;
+    -fx-text-fill: white;
     -fx-font-family: "Roboto";
     -fx-font-size: 46px;
     -fx-text-alignment: center;
@@ -82,4 +82,33 @@
 .about-image {
     -fx-border-radius: 10px;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 8, 0.0, 2, 2);
+}
+
+.v13_27 {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 24px;
+    -fx-text-alignment: center;
+}
+
+.v14_19 {
+    -fx-background-color: rgba(0,0,0,0.64);
+    -fx-background-radius: 8px;
+    -fx-padding: 14px 24px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 1, 0.5, 0, 1);
+}
+
+.v14_19 {
+    -fx-background-color: rgba(0,0,0,0.64);
+    -fx-background-radius: 8px;
+    -fx-padding: 14px 24px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.05), 1, 0.5, 0, 1);
+}
+
+.v14_20 {
+    -fx-text-fill: rgba(197,211,8,0.99);
+    -fx-font-family: "Inter";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
 }
