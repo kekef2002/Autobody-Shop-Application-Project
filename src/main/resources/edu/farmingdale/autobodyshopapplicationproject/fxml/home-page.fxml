@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1024" prefWidth="1440" styleClass="v13_13" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.HomeController">
+<AnchorPane prefHeight="1024" prefWidth="1440" styleClass="v13_13" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.HomeController">
     <stylesheets>
-        <URL value="@home.css" />
+        <URL value="@../css/home.css" />
     </stylesheets>
     <ImageView fx:id="v13_14" fitHeight="270" fitWidth="315" layoutX="33" layoutY="33" styleClass="v13_14" />
 

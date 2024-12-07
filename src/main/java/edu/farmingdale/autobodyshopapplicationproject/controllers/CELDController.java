@@ -1,4 +1,4 @@
-package edu.farmingdale.autobodyshopapplicationproject;
+package edu.farmingdale.autobodyshopapplicationproject.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,13 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 
-public class AboutUsController {
-
-    @FXML
-    private ImageView ServiceImageView;
-
-    @FXML
-    private ImageView aboutImageView;
+public class CELDController {
 
     @FXML
     private Button about_us_button;
@@ -42,7 +36,10 @@ public class AboutUsController {
     private Button schedule_an_appointment_button;
 
     @FXML
-    private ImageView v15_147;
+    private ImageView v130_14;
+
+    @FXML
+    private ImageView v15_83;
 
     @FXML
     void onAboutUsButtonClick(ActionEvent event) {

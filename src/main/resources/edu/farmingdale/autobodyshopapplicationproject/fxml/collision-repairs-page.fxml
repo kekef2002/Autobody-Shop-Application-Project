@@ -14,9 +14,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1811.0" prefWidth="1440.0" styleClass="v14_47" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.CollisonRepairController">
+<AnchorPane prefHeight="1811.0" prefWidth="1440.0" styleClass="v14_47" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.CollisonRepairController">
     <stylesheets>
-        <URL value="@collision-repairs.css" />
+        <URL value="@../css/collision-repairs.css" />
     </stylesheets>
     <ImageView fx:id="v14_48" fitHeight="270" fitWidth="315" layoutX="22.0" layoutY="24.0" styleClass="v14_48" />
     
@@ -97,7 +97,7 @@
                 <!-- Additional Sections -->
           <ImageView fx:id="v87_5" fitHeight="517.0" fitWidth="719.0" styleClass="v87_5">
             <image>
-               <Image url="@v87_5.png" />
+               <Image url="@../images/v87_5.png" />
             </image>
          </ImageView>
       </children>
@@ -116,12 +116,12 @@
       </Label>
       <ImageView fitHeight="443.0" fitWidth="625.0" layoutX="751.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@v208_15.png" />
+            <Image url="@../images/v208_15.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="59.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@phone_iphone_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" />
+            <Image url="@../images/phone_iphone_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" />
          </image>
       </ImageView>
    

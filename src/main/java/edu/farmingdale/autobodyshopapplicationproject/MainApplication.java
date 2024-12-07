@@ -10,11 +10,11 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class MainApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader splashLoader = new FXMLLoader(HelloApplication.class.getResource("splashscreen-page.fxml"));
+        FXMLLoader splashLoader = new FXMLLoader(MainApplication.class.getResource("splashscreen-page.fxml"));
         Pane splashPane = splashLoader.load();
 
         Scene splashScene = new Scene(splashPane, 650, 650);
@@ -29,7 +29,7 @@ public class HelloApplication extends Application {
         fadeTransition.setOnFinished(event -> {
             try {
                 // Load Home Page
-                FXMLLoader homeLoader = new FXMLLoader(HelloApplication.class.getResource("home-page.fxml"));
+                FXMLLoader homeLoader = new FXMLLoader(MainApplication.class.getResource("home-page.fxml"));
                 Scene homeScene = new Scene(homeLoader.load(), 1024, 1440);
                 stage.setScene(homeScene);
             } catch (IOException e) {

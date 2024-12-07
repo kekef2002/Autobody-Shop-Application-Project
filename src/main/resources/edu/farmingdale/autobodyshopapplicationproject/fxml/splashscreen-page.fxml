@@ -7,7 +7,7 @@
 <AnchorPane prefHeight="650.0" prefWidth="650.0" styleClass="v15_210" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <ImageView fitHeight="650.0" fitWidth="650.0">
       <image>
-         <Image url="@v13_14.png" />
+         <Image url="@../images/v13_14.png" />
       </image>
    </ImageView>
 </AnchorPane>

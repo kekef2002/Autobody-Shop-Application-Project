@@ -1,4 +1,4 @@
-package edu.farmingdale.autobodyshopapplicationproject;
+package edu.farmingdale.autobodyshopapplicationproject.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

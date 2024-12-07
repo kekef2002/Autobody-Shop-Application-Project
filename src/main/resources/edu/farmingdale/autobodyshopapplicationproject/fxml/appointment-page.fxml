@@ -19,9 +19,9 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1024" prefWidth="1440" styleClass="v15_226" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.AppointmentController">
+<AnchorPane prefHeight="1024" prefWidth="1440" styleClass="v15_226" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.AppointmentController">
     <stylesheets>
-        <URL value="@appointment.css" />
+        <URL value="@../css/appointment.css" />
     </stylesheets>
     <ImageView fx:id="v15_227" fitHeight="154" fitWidth="202" layoutX="33" layoutY="33" styleClass="v15_227" />
 
@@ -187,7 +187,7 @@
           <Region fx:id="speedometerRegion" layoutX="4.100000381469727" layoutY="3.100006103515625" prefHeight="200.0" prefWidth="375.0" />
          <ImageView fitHeight="200.0" fitWidth="375.0" layoutX="4.100000381469727" layoutY="3.100006103515625">
             <image>
-               <Image url="@Speedometer3.jpg" />
+               <Image url="@../images/Speedometer3.jpg" />
             </image>
          </ImageView>
       </children>
@@ -197,7 +197,7 @@
          <Region prefHeight="689.0" prefWidth="375.0" />
          <ImageView fitHeight="689.0" fitWidth="375.0">
             <image>
-               <Image url="@PaintingBumper.jpg" />
+               <Image url="@../images/PaintingBumper.jpg" />
             </image>
          </ImageView>
       </children>
