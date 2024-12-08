@@ -42,7 +42,7 @@
 .v86_3 {
     -fx-text-fill: white;
     -fx-font-family: "Inter";
-    -fx-font-weight: medium;
+    -fx-font-weight: bold;
     -fx-font-size: 22px;
     -fx-text-alignment: center;
 }
@@ -59,7 +59,7 @@
 .v90_10, .v92_11 {
     -fx-text-fill: white;
     -fx-font-family: "Inter";
-    -fx-font-weight: medium;
+    -fx-font-weight: bold;
     -fx-text-alignment: center;
 }
 
@@ -86,7 +86,7 @@
 .v208_10 {
     -fx-text-fill: black;
     -fx-font-family: "Inter";
-    -fx-font-weight: medium;
+    -fx-font-weight: bold;
     -fx-font-size: 32px;
     -fx-text-alignment: center;
 }
@@ -102,7 +102,7 @@
 .v208_14 {
     -fx-text-fill: black;
     -fx-font-family: "Inter";
-    -fx-font-weight: medium;
+    -fx-font-weight: bold;
     -fx-font-size: 32px;
     -fx-text-alignment: center;
 }

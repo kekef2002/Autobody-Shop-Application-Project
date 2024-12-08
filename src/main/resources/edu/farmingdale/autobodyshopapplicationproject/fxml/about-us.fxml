@@ -7,6 +7,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,142 +15,152 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="2462.0" prefWidth="1440.0" styleClass="v15_146" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.AboutUsController">
-    <stylesheets>
-        <URL value="@../css/about-us.css" />
-    </stylesheets>
-    <ImageView fx:id="v15_147" fitHeight="270" fitWidth="315" layoutX="33" layoutY="33" styleClass="v15_147" />
 
-    <Label layoutX="603.0" layoutY="2275.0" prefHeight="129.0" prefWidth="253.0" styleClass="v15_148" text="1 Wyandanch Ave.,&#10;Wyandanch, NY 11978&#10;(631) 253-4335" textAlignment="CENTER" textFill="WHITE">
-      <font>
-         <Font size="24.0" />
-      </font></Label>
-    <Group layoutX="395.8999938964844" layoutY="30.899999618530273">
-        <children>
-            <MenuButton layoutX="207.0" layoutY="2.0" minHeight="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="202.0" styleClass="v14_19" text="Services" textAlignment="CENTER" textFill="#fffbfb">
-                <items>
-                    <MenuItem fx:id="collision_repairs" mnemonicParsing="false" onAction="#onCollisionRepairsClick" text="Collision Repairs" />
-                    <MenuItem fx:id="auto_repairs_maintenance" mnemonicParsing="false" onAction="#onAutoRepairsMaintenanceClick" text="Auto Repairs and Maintenance" />
-                    <MenuItem fx:id="celd" mnemonicParsing="false" onAction="#onCELDClick" text="CELD" />
-                    <MenuItem fx:id="auto_glass_replacement" mnemonicParsing="false" onAction="#onAutoGlassReplacementClick" text="Auto Glass Replacement" />
-                </items>
-                <font>
-                    <Font size="24.0" />
-                </font>
-            </MenuButton>
-            <Button fx:id="home_button" alignment="CENTER" layoutX="49.0" layoutY="2.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="70.0" prefWidth="132.0" text="Home" textAlignment="CENTER">
-                <styleClass>
-                    <String fx:value="v13_27" />
-                    <String fx:value="v14_19" />
-                </styleClass>
-            </Button>
-            <Button fx:id="gallery_button" alignment="CENTER" layoutX="433.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onGalleryButtonClick" prefHeight="70.0" prefWidth="168.0" text="Gallery" textAlignment="CENTER">
-                <styleClass>
-                    <String fx:value="v13_27" />
-                    <String fx:value="v14_19" />
-                </styleClass>
-            </Button>
-            <Button fx:id="about_us_button" alignment="CENTER" layoutX="623.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onAboutUsButtonClick" prefHeight="70.0" prefWidth="168.0" text="About Us" textAlignment="CENTER">
-                <styleClass>
-                    <String fx:value="v13_27" />
-                    <String fx:value="v14_19" />
-                </styleClass>
-            </Button>
-            <Button fx:id="home_login_button" alignment="CENTER" layoutX="814.0" layoutY="3.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeLoginButtonClick" prefHeight="70.0" prefWidth="114.0" text="Login" textAlignment="CENTER">
-                <styleClass>
-                    <String fx:value="v13_27" />
-                    <String fx:value="v14_19" />
-                </styleClass>
-            </Button>
-        </children>
-    </Group>
-    <Button fx:id="schedule_an_appointment_button" layoutX="483.0" layoutY="554.0" mnemonicParsing="false" onAction="#onApptointmentButtonClick" prefHeight="58.0" prefWidth="295.0" text="Schedule an Appointment" textAlignment="CENTER" textFill="#c7d10a36">
-        <font>
-            <Font name="System Bold" size="20.0" />
-        </font>
-        <styleClass>
-            <String fx:value="v14_20" />
-            <String fx:value="v14_19" />
-        </styleClass>
-    </Button>
-
-    <!-- Main Content -->
-    <Label alignment="CENTER" layoutX="294.0" layoutY="229.0" prefWidth="528.0" styleClass="v166_33" text="Serving Long Island since 1995" textFill="WHITE">
-      <font>
-         <Font size="37.0" />
-      </font></Label>
-    <Label layoutX="209.0" layoutY="268" prefHeight="264.0" prefWidth="668.0" styleClass="v166_34" text="Solution Auto Body is a trusted family-owned business with a rich history spanning two generations and fifty years. Throughout our journey, we have remained committed to our core values of customer service, community, and delivering dependable work. As a leading automotive service provider, we take pride in our comprehensive range of services, our strong ties to the community, and our unwavering responsibility to our customers." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
-      <font>
-         <Font size="20.0" />
-      </font></Label>
-    <ImageView fx:id="aboutImageView" fitHeight="386.0" fitWidth="515.0" layoutX="893.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" styleClass="about-image">
-        <image>
-            <Image url="@../images/v169_10.png" />
-        </image>
-    </ImageView>
-    <!-- Testimonials Section -->
-    <Label layoutX="550.0" layoutY="666.0" styleClass="v169_12" text="Testimonials" textFill="WHITE">
-      <font>
-         <Font size="44.0" />
-      </font></Label>
-
-    <!-- Additional Information Section -->
-    <Label alignment="CENTER" layoutX="298.0" layoutY="974.0" styleClass="v171_36" text="Comprehensive Services for All Your Needs" textAlignment="JUSTIFY" textFill="WHITE">
-      <font>
-         <Font size="37.0" />
-      </font></Label>
-
-    <ImageView fx:id="ServiceImageView" fitHeight="711.0" fitWidth="1452.0" layoutX="14.0" layoutY="1511.0" pickOnBounds="true" preserveRatio="true" styleClass="about-image">
-        <image>
-            <Image url="@../images/v172_33.png" />
-        </image>
-    </ImageView>
-   <ImageView fitHeight="257.0" fitWidth="236.0" layoutX="11.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-         <Image url="@../images/v14_48.png" />
-      </image>
-   </ImageView>
-   <HBox layoutX="77.0" layoutY="768.0" prefHeight="170.0" prefWidth="1291.0" spacing="150.0">
-      <children>
-           <Label prefHeight="169.0" prefWidth="330.0" style="-fx-background-color: #3F6CFF;" styleClass="v171_22" text="As always Shirley auto body delivers professionalism with speed. They were kind and respectful to me as well as to my suv. Great prices Great people Great work!" textFill="WHITE" wrapText="true">
+<ScrollPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.AboutUsController">
+   <content>
+      <AnchorPane prefHeight="2462.0" prefWidth="1440.0" styleClass="v15_146">
+          <stylesheets>
+              <URL value="@../css/about-us.css" />
+          </stylesheets>
+          <ImageView fx:id="v15_147" fitHeight="270" fitWidth="315" layoutX="33" layoutY="33" styleClass="v15_147" />
+      
+          <Label layoutX="603.0" layoutY="2275.0" prefHeight="129.0" prefWidth="253.0" styleClass="v15_148" text="1 Wyandanch Ave.,&#10;Wyandanch, NY 11978&#10;(631) 253-4335" textAlignment="CENTER" textFill="WHITE">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+          <Group layoutX="395.8999938964844" layoutY="30.899999618530273">
+              <children>
+                  <MenuButton layoutX="207.0" layoutY="2.0" minHeight="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="202.0" styleClass="v14_19" text="Services" textAlignment="CENTER" textFill="#fffbfb">
+                      <items>
+                          <MenuItem fx:id="collision_repairs" mnemonicParsing="false" onAction="#onCollisionRepairsClick" text="Collision Repairs" />
+                          <MenuItem fx:id="auto_repairs_maintenance" mnemonicParsing="false" onAction="#onAutoRepairsMaintenanceClick" text="Auto Repairs and Maintenance" />
+                          <MenuItem fx:id="celd" mnemonicParsing="false" onAction="#onCELDClick" text="CELD" />
+                          <MenuItem fx:id="auto_glass_replacement" mnemonicParsing="false" onAction="#onAutoGlassReplacementClick" text="Auto Glass Replacement" />
+                      </items>
+                      <font>
+                          <Font size="24.0" />
+                      </font>
+                  </MenuButton>
+                  <Button fx:id="home_button" alignment="CENTER" layoutX="49.0" layoutY="2.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="70.0" prefWidth="132.0" text="Home" textAlignment="CENTER">
+                      <styleClass>
+                          <String fx:value="v13_27" />
+                          <String fx:value="v14_19" />
+                      </styleClass>
+                  </Button>
+                  <Button fx:id="gallery_button" alignment="CENTER" layoutX="433.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onGalleryButtonClick" prefHeight="70.0" prefWidth="168.0" text="Gallery" textAlignment="CENTER">
+                      <styleClass>
+                          <String fx:value="v13_27" />
+                          <String fx:value="v14_19" />
+                      </styleClass>
+                  </Button>
+                  <Button fx:id="about_us_button" alignment="CENTER" layoutX="623.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onAboutUsButtonClick" prefHeight="70.0" prefWidth="168.0" text="About Us" textAlignment="CENTER">
+                      <styleClass>
+                          <String fx:value="v13_27" />
+                          <String fx:value="v14_19" />
+                      </styleClass>
+                  </Button>
+                  <Button fx:id="home_login_button" alignment="CENTER" layoutX="814.0" layoutY="3.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeLoginButtonClick" prefHeight="70.0" prefWidth="114.0" text="Login" textAlignment="CENTER">
+                      <styleClass>
+                          <String fx:value="v13_27" />
+                          <String fx:value="v14_19" />
+                      </styleClass>
+                  </Button>
+              </children>
+          </Group>
+          <Button fx:id="schedule_an_appointment_button" layoutX="483.0" layoutY="554.0" mnemonicParsing="false" onAction="#onApptointmentButtonClick" prefHeight="58.0" prefWidth="295.0" text="Schedule an Appointment" textAlignment="CENTER" textFill="#c7d10a36">
+              <font>
+                  <Font name="System Bold" size="20.0" />
+              </font>
+              <styleClass>
+                  <String fx:value="v14_20" />
+                  <String fx:value="v14_19" />
+              </styleClass>
+          </Button>
+      
+          <!-- Main Content -->
+          <Label alignment="CENTER" layoutX="294.0" layoutY="229.0" prefWidth="528.0" styleClass="v166_33" text="Serving Long Island since 1995" textFill="WHITE">
+            <font>
+               <Font size="37.0" />
+            </font>
+         </Label>
+          <Label layoutX="209.0" layoutY="268" prefHeight="264.0" prefWidth="668.0" styleClass="v166_34" text="Solution Auto Body is a trusted family-owned business with a rich history spanning two generations and fifty years. Throughout our journey, we have remained committed to our core values of customer service, community, and delivering dependable work. As a leading automotive service provider, we take pride in our comprehensive range of services, our strong ties to the community, and our unwavering responsibility to our customers." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
             <font>
                <Font size="20.0" />
             </font>
          </Label>
-           <Label prefHeight="169.0" prefWidth="330.0" style="-fx-background-color: #3F6CFF;" styleClass="v171_32" text="Never have an issue I’ve been going here for my repairs, tires and oil changes since 1999. I wouldn’t trust my cars with anyone else." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+          <ImageView fx:id="aboutImageView" fitHeight="386.0" fitWidth="515.0" layoutX="893.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" styleClass="about-image">
+              <image>
+                  <Image url="@../images/v169_10.png" />
+              </image>
+          </ImageView>
+          <!-- Testimonials Section -->
+          <Label layoutX="550.0" layoutY="666.0" styleClass="v169_12" text="Testimonials" textFill="WHITE">
             <font>
-               <Font size="20.0" />
+               <Font size="44.0" />
             </font>
          </Label>
-           <Label prefHeight="169.0" prefWidth="330.0" style="-fx-background-color: #3F6CFF;" styleClass="v171_35" text="Never a bad surprise! Everything is right on the money over and over. It’s consistently wonderful here." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+      
+          <!-- Additional Information Section -->
+          <Label alignment="CENTER" layoutX="298.0" layoutY="974.0" styleClass="v171_36" text="Comprehensive Services for All Your Needs" textAlignment="JUSTIFY" textFill="WHITE">
             <font>
-               <Font size="20.0" />
+               <Font size="37.0" />
             </font>
          </Label>
-      </children>
-   </HBox>
-   <VBox layoutX="122.0" layoutY="1049.0" prefHeight="391.0" prefWidth="1200.0">
-      <children>
-          <Label prefHeight="116.0" prefWidth="1200.0" text="At Solution Auto Body, we understand that your vehicle is more than just a mode of transportation. It’s a valuable asset that deserves the utmost care and attention. That’s why we offer a wide array of automotive services to address all your needs under one roof." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
-            <font>
-               <Font size="20.0" />
-            </font>
-         </Label>
-         <Label prefHeight="96.0" prefWidth="1200.0" text="Collision Repair: Our skilled technicians are equipped to handle collision repairs of all magnitudes. From minor fender benders to extensive structural damage, we utilize advanced techniques and state-of-the-art equipment to restore your vehicle to its pre-accident condition." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
-            <font>
-               <Font size="20.0" />
-            </font>
-         </Label>
-         <Label prefHeight="79.0" prefWidth="1200.0" text="Dent Removal: With our advanced dent removal techniques, we can effectively eliminate dents and dings, restoring the original shape of your vehicle without the need for major repairs or paintwork." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
-            <font>
-               <Font size="20.0" />
-            </font>
-         </Label>
-         <Label prefHeight="96.0" prefWidth="1200.0" text="Mechanical Repairs: Our skilled mechanics are adept at diagnosing and repairing various mechanical issues, from engine troubles to suspension problems. We utilize the latest diagnostic tools and genuine parts to ensure the highest quality repairs." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
-            <font>
-               <Font size="20.0" />
-            </font>
-         </Label>
-      </children>
-   </VBox>
-</AnchorPane>
+      
+          <ImageView fx:id="ServiceImageView" fitHeight="711.0" fitWidth="1452.0" layoutX="14.0" layoutY="1511.0" pickOnBounds="true" preserveRatio="true" styleClass="about-image">
+              <image>
+                  <Image url="@../images/v172_33.png" />
+              </image>
+          </ImageView>
+         <ImageView fitHeight="257.0" fitWidth="236.0" layoutX="11.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/v14_48.png" />
+            </image>
+         </ImageView>
+         <HBox layoutX="77.0" layoutY="768.0" prefHeight="170.0" prefWidth="1291.0" spacing="150.0">
+            <children>
+                 <Label prefHeight="169.0" prefWidth="330.0" style="-fx-background-color: #3F6CFF;" styleClass="v171_22" text="As always Shirley auto body delivers professionalism with speed. They were kind and respectful to me as well as to my suv. Great prices Great people Great work!" textFill="WHITE" wrapText="true">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+                 <Label prefHeight="169.0" prefWidth="330.0" style="-fx-background-color: #3F6CFF;" styleClass="v171_32" text="Never have an issue I’ve been going here for my repairs, tires and oil changes since 1999. I wouldn’t trust my cars with anyone else." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+                 <Label prefHeight="169.0" prefWidth="330.0" style="-fx-background-color: #3F6CFF;" styleClass="v171_35" text="Never a bad surprise! Everything is right on the money over and over. It’s consistently wonderful here." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+            </children>
+         </HBox>
+         <VBox layoutX="122.0" layoutY="1049.0" prefHeight="391.0" prefWidth="1200.0">
+            <children>
+                <Label prefHeight="116.0" prefWidth="1200.0" text="At Solution Auto Body, we understand that your vehicle is more than just a mode of transportation. It’s a valuable asset that deserves the utmost care and attention. That’s why we offer a wide array of automotive services to address all your needs under one roof." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="96.0" prefWidth="1200.0" text="Collision Repair: Our skilled technicians are equipped to handle collision repairs of all magnitudes. From minor fender benders to extensive structural damage, we utilize advanced techniques and state-of-the-art equipment to restore your vehicle to its pre-accident condition." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="79.0" prefWidth="1200.0" text="Dent Removal: With our advanced dent removal techniques, we can effectively eliminate dents and dings, restoring the original shape of your vehicle without the need for major repairs or paintwork." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="96.0" prefWidth="1200.0" text="Mechanical Repairs: Our skilled mechanics are adept at diagnosing and repairing various mechanical issues, from engine troubles to suspension problems. We utilize the latest diagnostic tools and genuine parts to ensure the highest quality repairs." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+      </AnchorPane>
+   </content>
+</ScrollPane>
