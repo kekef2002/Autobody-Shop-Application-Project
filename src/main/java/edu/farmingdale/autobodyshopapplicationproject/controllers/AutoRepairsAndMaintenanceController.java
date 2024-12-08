@@ -58,7 +58,7 @@ public class AutoRepairsAndMaintenanceController {
     void onAboutUsButtonClick(ActionEvent event) {
         try {
             // Load Appointment Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("about-us.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/about-us.fxml"));
             Scene homeLoginScene = new Scene(loader.load(), 1440, 1024);
 
             // Get the Stage from the Event Source
@@ -74,7 +74,7 @@ public class AutoRepairsAndMaintenanceController {
     void onApptointmentButtonClick(ActionEvent event) {
         try {
             // Load Appointment Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("appointment-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/appointment-page.fxml"));
             Scene appointmentScene = new Scene(loader.load(), 1440, 1024);
 
             // Get the Stage from the Event Source
@@ -110,7 +110,7 @@ public class AutoRepairsAndMaintenanceController {
     void onGalleryButtonClick(ActionEvent event) {
         try {
             // Load Appointment Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("gallery-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/gallery-page.fxml"));
             Scene galleryScene = new Scene(loader.load(), 1440, 1024);
 
             // Get the Stage from the Event Source
@@ -125,7 +125,7 @@ public class AutoRepairsAndMaintenanceController {
     @FXML
     void onHomeButtonClick(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("home-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/home-page.fxml"));
             Scene homeScene = new Scene(loader.load(), 1440, 1024);
 
             // Get the Stage from the Event Source
@@ -140,7 +140,7 @@ public class AutoRepairsAndMaintenanceController {
     @FXML
     void onHomeLoginButtonClick(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("login-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/login-page.fxml"));
             Scene homeLoginScene = new Scene(loader.load(), 1440, 1024);
 
             // Get the Stage from the Event Source
@@ -152,4 +152,16 @@ public class AutoRepairsAndMaintenanceController {
 
     }
 
+    public void onCollisionRepairsClick(ActionEvent actionEvent) {
+    }
+
+    public void onAutoRepairsMaintenanceClick(ActionEvent actionEvent) {
+    }
+
+    public void onCELDClick(ActionEvent actionEvent) {
+    }
+
+    public void onAutoGlassReplacementClick(ActionEvent actionEvent) {
+
+    }
 }

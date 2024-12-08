@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1811.0" prefWidth="1440.0" styleClass="v14_47" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.CollisonRepairController">
+<AnchorPane prefHeight="1811.0" prefWidth="1440.0" styleClass="v14_47" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.CollisionRepairController">
     <stylesheets>
         <URL value="@../css/collision-repairs.css" />
     </stylesheets>

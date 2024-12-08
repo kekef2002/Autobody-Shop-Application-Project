@@ -14,7 +14,7 @@ public class MainApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader splashLoader = new FXMLLoader(MainApplication.class.getResource("splashscreen-page.fxml"));
+        FXMLLoader splashLoader = new FXMLLoader(MainApplication.class.getResource("/fxml/splashscreen-page.fxml"));
         Pane splashPane = splashLoader.load();
 
         Scene splashScene = new Scene(splashPane, 650, 650);
@@ -29,7 +29,7 @@ public class MainApplication extends Application {
         fadeTransition.setOnFinished(event -> {
             try {
                 // Load Home Page
-                FXMLLoader homeLoader = new FXMLLoader(MainApplication.class.getResource("home-page.fxml"));
+                FXMLLoader homeLoader = new FXMLLoader(MainApplication.class.getResource("/fxml/home-page.fxml"));
                 Scene homeScene = new Scene(homeLoader.load(), 1024, 1440);
                 stage.setScene(homeScene);
             } catch (IOException e) {

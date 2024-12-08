@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1980.0" prefWidth="1440.0" styleClass="v15_130" stylesheets="@../css/auto-glass-replacement.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="1980.0" prefWidth="1440.0" styleClass="v15_130" stylesheets="@../css/auto-glass-replacement.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.AutoGlassReplacementController">
    <Pane layoutY="1179.0" prefHeight="656.0" prefWidth="1440.0" style="-fx-background-color: grey;">
       <children>
       
