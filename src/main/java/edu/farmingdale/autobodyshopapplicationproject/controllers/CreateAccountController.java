@@ -1,4 +1,4 @@
-package edu.farmingdale.autobodyshopapplicationproject;
+package edu.farmingdale.autobodyshopapplicationproject.controllers;
 
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
@@ -153,7 +153,7 @@ public class CreateAccountController {
 
     private void navigateToLogin() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("login-page.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/login-page.fxml"));
             Stage stage = (Stage) create_account_button.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();

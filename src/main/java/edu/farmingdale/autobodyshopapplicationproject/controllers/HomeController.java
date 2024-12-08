@@ -1,4 +1,4 @@
-package edu.farmingdale.autobodyshopapplicationproject;
+package edu.farmingdale.autobodyshopapplicationproject.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -67,7 +67,7 @@ public class HomeController {
     void onApptointmentButtonClick(ActionEvent event) {
         try {
             // Load Appointment Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("appointment-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/appointment-page.fxml"));
             Scene appointmentScene = new Scene(loader.load(), 1440, 1024);
 
             // Get the Stage from the Event Source
@@ -82,7 +82,7 @@ public class HomeController {
     void onAutoGlassReplacementClick(ActionEvent event) {
         try {
             // Load the FXML for the target page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-glass-replacement-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/auto-glass-replacement-page.fxml"));
             Scene autoGlassReplacementScene = new Scene(loader.load(), 1440, 1980);
 
             // Get the current stage from the event source (parent scene)
@@ -106,7 +106,7 @@ public class HomeController {
     void onAutoRepairsMaintenanceClick(ActionEvent event) {
         try {
             // Load the FXML for the target page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("auto-repairs-and-maintenance-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/auto-repairs-and-maintenance-page.fxml"));
             Scene autoRepairScene = new Scene(loader.load(), 1440, 2555);
 
             // Get the current stage from the event source (parent scene)
@@ -178,7 +178,7 @@ public class HomeController {
     void onGalleryButtonClick(ActionEvent event) {
         try {
             // Load Appointment Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("gallery-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/gallery-page.fxml"));
             Scene galleryScene = new Scene(loader.load(), 1440, 1024);
 
             // Get the Stage from the Event Source
@@ -193,7 +193,7 @@ public class HomeController {
     void onHomeButtonClick(ActionEvent event) {
         try {
             // Load Appointment Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("home-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/home-page.fxml"));
             Scene homeScene = new Scene(loader.load(), 1440, 1024);
 
             // Get the Stage from the Event Source
@@ -208,7 +208,7 @@ public class HomeController {
     void onHomeLoginButtonClick(ActionEvent event) {
         try {
             // Load Appointment Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("login-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/login-page.fxml"));
             Scene homeLoginScene = new Scene(loader.load(), 1440, 1024);
 
             // Get the Stage from the Event Source

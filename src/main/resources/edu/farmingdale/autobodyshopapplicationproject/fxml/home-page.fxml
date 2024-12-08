@@ -10,16 +10,25 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
 
-<AnchorPane prefHeight="1024" prefWidth="1440" styleClass="v13_13" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.HomeController">
+<AnchorPane prefHeight="1024" prefWidth="1440" styleClass="v13_13" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.HomeController">
     <stylesheets>
-        <URL value="@home.css" />
+        <URL value="@../css/home.css" />
     </stylesheets>
-    <ImageView fx:id="v13_14" fitHeight="270" fitWidth="315" layoutX="33" layoutY="33" styleClass="v13_14" />
+    <ImageView fx:id="v13_14" fitHeight="270" fitWidth="315" layoutX="33" layoutY="33" >
+        <image>
+            <Image url="@../images/v13_14.png" />
+        </image>
+    </ImageView>
 
     <Label alignment="BOTTOM_CENTER" layoutX="601.0" layoutY="868.0" styleClass="v13_27" text="1 Wyandanch Ave.,&#10;Wyandanch, NY 11978&#10;(631) 253-4335" textAlignment="CENTER" />
 
-    <ImageView fx:id="v13_28" fitHeight="526" fitWidth="820" layoutX="587" layoutY="285" styleClass="v13_28" />
+    <ImageView fx:id="v13_28" fitHeight="526" fitWidth="820" layoutX="587" layoutY="285" >
+    <image>
+        <Image url="@../images/v13_28.png" />
+    </image>
+    </ImageView>
 
     <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="360" prefHeight="222.0" prefWidth="571.0" styleClass="v13_29" text="Your One-Stop Shop&#10;for &#10;Auto Repair and Services" textAlignment="CENTER" wrapText="true" />
 

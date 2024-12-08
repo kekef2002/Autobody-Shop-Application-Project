@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1980.0" prefWidth="1440.0" styleClass="v15_130" stylesheets="@auto-glass-replacement.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="1980.0" prefWidth="1440.0" styleClass="v15_130" stylesheets="@../css/auto-glass-replacement.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.AutoGlassReplacementController">
    <Pane layoutY="1179.0" prefHeight="656.0" prefWidth="1440.0" style="-fx-background-color: grey;">
       <children>
       
@@ -85,17 +85,17 @@
     <Label layoutX="593.0" layoutY="1833.0" prefHeight="120.0" prefWidth="253.0" styleClass="v250_65" text="1 Wyandanch Ave., Wyandanch, NY 11978 (631) 253-4335" wrapText="true" />
    <ImageView fitHeight="270.0" fitWidth="315.0" layoutX="33.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@v15_131.png" />
+         <Image url="@../images/v15_131.png" />
       </image>
    </ImageView>
    <ImageView fitHeight="497.0" fitWidth="655.0" layoutX="742.0" layoutY="626.0" pickOnBounds="true" preserveRatio="true" style="fx-border-radius: 40;">
       <image>
-         <Image url="@v235_15.png" />
+         <Image url="@../images/v235_15.png" />
       </image>
    </ImageView>
    <ImageView fitHeight="425.0" fitWidth="520.0" layoutX="53.0" layoutY="1259.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@v250_32.png" />
+         <Image url="@../images/v250_32.png" />
       </image>
    </ImageView>
 </AnchorPane>

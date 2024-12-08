@@ -1,12 +1,11 @@
-package edu.farmingdale.autobodyshopapplicationproject;
+package edu.farmingdale.autobodyshopapplicationproject.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
-import javafx.scene.image.ImageView;
 
-public class CollisonRepairController {
+public class AutoGlassReplacementController {
 
     @FXML
     private Button about_us_button;
@@ -34,12 +33,6 @@ public class CollisonRepairController {
 
     @FXML
     private Button schedule_an_appointment_button;
-
-    @FXML
-    private ImageView v14_48;
-
-    @FXML
-    private ImageView v87_5;
 
     @FXML
     void onAboutUsButtonClick(ActionEvent event) {

@@ -1,4 +1,4 @@
-package edu.farmingdale.autobodyshopapplicationproject;
+package edu.farmingdale.autobodyshopapplicationproject.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,7 +36,7 @@ public class LoginController {
 
 
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("home-page.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/home-page.fxml"));
             Scene scene = new Scene(root, 1440, 1024);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(scene);
@@ -53,7 +53,7 @@ public class LoginController {
     @FXML
     void onSignUpButtonClick(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("register-page.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/register-page.fxml"));
             Scene scene = new Scene(root, 1440, 1024);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(scene);
