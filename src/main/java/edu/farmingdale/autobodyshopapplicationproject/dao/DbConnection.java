@@ -9,7 +9,7 @@ import java.util.Date;
 
 public class DbConnection {
 
-    final static String DB_NAME = "Autobody Shop";
+    final static String DB_NAME = "Autobody_Shop";
     final static String MYSQL_SERVER_URL = "jdbc:mysql://semcsc311server.mysql.database.azure.com";
     final static String DB_URL = MYSQL_SERVER_URL + "/" + DB_NAME;
     final static String USERNAME = "semadmin";
@@ -25,7 +25,7 @@ public class DbConnection {
             //First, connect to MYSQL server and create the database if not created
             Connection conn = DriverManager.getConnection(MYSQL_SERVER_URL, USERNAME, PASSWORD);
             Statement statement = conn.createStatement();
-            statement.executeUpdate("CREATE DATABASE IF NOT EXISTS " + DB_NAME);
+            statement.executeUpdate("CREATE DATABASE IF NOT EXISTS `" + DB_NAME + "`");
             statement.close();
             conn.close();
 

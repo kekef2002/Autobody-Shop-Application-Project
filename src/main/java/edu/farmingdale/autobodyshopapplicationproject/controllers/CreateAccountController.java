@@ -59,35 +59,15 @@ public class CreateAccountController {
     public void initialize() {
         create_account_button.setDisable(true);
 
-        first_name_text_field.focusedProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue) validateField(first_name_text_field, NAME_PATTERN);
-            enableCreateAccountButton();
-        });
+        first_name_text_field.textProperty().addListener((observable, oldValue, newValue) -> enableCreateAccountButton());
+        last_name_text_field.textProperty().addListener((observable, oldValue, newValue) -> enableCreateAccountButton());
+        email_text_field.textProperty().addListener((observable, oldValue, newValue) -> enableCreateAccountButton());
+        password_text_field.textProperty().addListener((observable, oldValue, newValue) -> enableCreateAccountButton());
+        confirm_email_text_field.textProperty().addListener((observable, oldValue, newValue) -> enableCreateAccountButton());
+        confirrm_password_text_field.textProperty().addListener((observable, oldValue, newValue) -> enableCreateAccountButton());
 
-        last_name_text_field.focusedProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue) validateField(last_name_text_field, NAME_PATTERN);
-            enableCreateAccountButton();
-        });
-
-        email_text_field.focusedProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue) validateField(email_text_field, EMAIL_PATTERN);
-            enableCreateAccountButton();
-        });
-        password_text_field.focusedProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue) validateField(password_text_field, PASSWORD_PATTERN);
-            enableCreateAccountButton();
-        });
-
-        // Validation for matching email
-        confirm_email_text_field.focusedProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue) validateMatch(confirm_email_text_field, email_text_field, "Email is not a match");
-        });
-
-        // Validation for matching password
-        confirrm_password_text_field.focusedProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue) validateMatch(confirrm_password_text_field, password_text_field, "Password is not a match");
-        });
-
+        // Trigger initial validation
+        enableCreateAccountButton();
     }
 
     /**
@@ -125,12 +105,23 @@ public class CreateAccountController {
      * Enables the register button if all fields are valid, otherwise disables it.
      */
     private void enableCreateAccountButton() {
-        boolean allValid = first_name_text_field.getText().matches(NAME_PATTERN) &&
-                last_name_text_field.getText().matches(NAME_PATTERN) &&
-                email_text_field.getText().matches(EMAIL_PATTERN) &&
-                password_text_field.getText().matches(PASSWORD_PATTERN) &&
-                confirm_email_text_field.getText().equals(email_text_field.getText()) &&
-                confirrm_password_text_field.getText().equals(password_text_field.getText());
+        boolean firstNameValid = first_name_text_field.getText().matches(NAME_PATTERN);
+        boolean lastNameValid = last_name_text_field.getText().matches(NAME_PATTERN);
+        boolean emailValid = email_text_field.getText().matches(EMAIL_PATTERN);
+        boolean emailMatches = confirm_email_text_field.getText().equals(email_text_field.getText());
+        boolean passwordValid = password_text_field.getText().matches(PASSWORD_PATTERN);
+        boolean passwordMatches = confirrm_password_text_field.getText().equals(password_text_field.getText());
+
+        boolean allValid = firstNameValid && lastNameValid && emailValid && emailMatches && passwordValid && passwordMatches;
+
+        // Debugging output
+        System.out.println("First Name Valid: " + firstNameValid);
+        System.out.println("Last Name Valid: " + lastNameValid);
+        System.out.println("Email Valid: " + emailValid);
+        System.out.println("Email Matches: " + emailMatches);
+        System.out.println("Password Valid: " + passwordValid);
+        System.out.println("Password Matches: " + passwordMatches);
+        System.out.println("All Valid: " + allValid);
 
         create_account_button.setDisable(!allValid);
     }
