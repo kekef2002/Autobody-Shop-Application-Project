@@ -12,10 +12,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-
-<ScrollPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.CreateAccountController">
+<ScrollPane prefHeight="1000.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.CreateAccountController">
    <content>
-      <AnchorPane prefHeight="1024" prefWidth="1440.0" styleClass="v15_178">
+      <AnchorPane prefHeight="1000.0" prefWidth="1440.0" styleClass="v15_178">
           <stylesheets>
               <URL value="@../css/create-account.css" />
           </stylesheets>
@@ -25,37 +24,37 @@
               </image>
           </ImageView>
           
-          <!-- First Name -->
+                <!-- First Name -->
           <Pane layoutX="301" layoutY="325" prefHeight="109" prefWidth="368" styleClass="v115_16">
               <TextField fx:id="first_name_text_field" layoutX="0" layoutY="60" prefHeight="49" prefWidth="368" styleClass="v115_5" />
               <Label layoutX="0" layoutY="0" styleClass="v115_7" text="First Name" />
           </Pane>
       
-          <!-- Last Name -->
+                <!-- Last Name -->
           <Pane layoutX="771" layoutY="325" prefHeight="109" prefWidth="368" styleClass="v115_17">
               <TextField fx:id="last_name_text_field" layoutX="0" layoutY="60" prefHeight="49" prefWidth="368" styleClass="v115_18" />
               <Label layoutX="0" layoutY="0" styleClass="v115_19" text="Last Name" />
           </Pane>
       
-          <!-- Email -->
+                <!-- Email -->
           <Pane layoutX="301" layoutY="475" prefHeight="109" prefWidth="368" styleClass="v115_21">
               <TextField fx:id="email_text_field" layoutX="0" layoutY="60" prefHeight="49" prefWidth="368" styleClass="v115_22" />
               <Label layoutX="0" layoutY="0" styleClass="v115_23" text="Email" />
           </Pane>
       
-          <!-- Confirm Email -->
+                <!-- Confirm Email -->
           <Pane layoutX="301" layoutY="643" prefHeight="109" prefWidth="368" styleClass="v115_33">
               <TextField fx:id="confirm_email_text_field" layoutX="0" layoutY="60" prefHeight="49" prefWidth="368" styleClass="v115_34" />
               <Label layoutX="0" layoutY="0" styleClass="v115_35" text="Confirm Email" />
           </Pane>
       
-          <!-- Password -->
+                <!-- Password -->
           <Pane layoutX="771" layoutY="475" prefHeight="109" prefWidth="368" styleClass="v115_25">
               <PasswordField fx:id="password_text_field" layoutX="0" layoutY="60" prefHeight="49" prefWidth="368" styleClass="v115_26" />
               <Label layoutX="0" layoutY="0" styleClass="v115_27" text="Password" />
           </Pane>
       
-          <!-- Confirm Password -->
+                <!-- Confirm Password -->
           <Pane layoutX="771" layoutY="643" prefHeight="109" prefWidth="368" styleClass="v115_37">
               <PasswordField fx:id="confirrm_password_text_field" layoutX="0" layoutY="60" prefHeight="49" prefWidth="368" styleClass="v115_38" />
               <Label layoutX="0" layoutY="0" styleClass="v115_39" text="Confirm Password" />
@@ -67,9 +66,9 @@
             </styleClass>
          </Button>
       
-          <!-- Already have an account text -->
+                <!-- Already have an account text -->
           <Pane layoutX="601" layoutY="915" prefHeight="40" prefWidth="238" styleClass="v116_61">
-              <Label fx:id="alreadyhaveanaccount" layoutX="29.0" layoutY="8.0" onDragDetected="#onAlreadyHaveAnAccountClick" styleClass="v116_56" text="Already have an account?" />
+              <Label fx:id="alreadyhaveanaccount" layoutX="29.0" layoutY="8.0" onMouseClicked="#onAlreadyHaveAnAccountClick" styleClass="v116_56" text="Already have an account?" />
           </Pane>
       </AnchorPane>
    </content>
