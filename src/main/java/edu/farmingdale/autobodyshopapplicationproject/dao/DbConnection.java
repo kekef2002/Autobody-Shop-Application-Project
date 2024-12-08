@@ -78,6 +78,22 @@ public class DbConnection {
         return hasRegisteredUsers;
     }
 
+    // Authenticate a user by email and password
+    public boolean authenticateUser(String email, String password) {
+        String query = "SELECT COUNT(*) FROM users WHERE email = ? AND password = ?";
+        try (Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+             PreparedStatement preparedStatement = conn.prepareStatement(query)) {
+
+            preparedStatement.setString(1, email);
+            preparedStatement.setString(2, password);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            return resultSet.next() && resultSet.getInt(1) > 0; // Return true if user is authenticated
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false; // Return false if authentication fails
+    }
 
     public ObservableList<Person> getData() {
         ObservableList<Person> data = FXCollections.observableArrayList();
@@ -187,6 +203,7 @@ public class DbConnection {
                 person.setLastName(rs.getString("last_name"));
                 person.setEmail(rs.getString("email"));
                 person.setTelephone(rs.getString("telephone"));
+                person.setYear(rs.getInt("year"));
                 person.setMake(rs.getString("make"));
                 person.setModel(rs.getString("model"));
                 person.setTransportationNeeds(rs.getString("transportation_needs"));
