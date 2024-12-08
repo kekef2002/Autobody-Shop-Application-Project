@@ -1,17 +1,25 @@
 package edu.farmingdale.autobodyshopapplicationproject.controllers;
 
+import edu.farmingdale.autobodyshopapplicationproject.dao.DbConnection;
+import edu.farmingdale.autobodyshopapplicationproject.model.Person;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Region;
+
+import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
+import javafx.stage.Stage;
 
 public class AppointmentController extends AbstractController {
 
@@ -119,8 +127,48 @@ public class AppointmentController extends AbstractController {
 
     @FXML
     void onNextAppointmentButtonClick(ActionEvent event) {
+        String userEmail = LoginController.getLoggedInUserEmail(); // Retrieve logged-in user's email
 
+        if (userEmail == null || userEmail.isEmpty()) {
+            // Prompt user to log in
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Login Required");
+            alert.setHeaderText("You must log in first");
+            alert.setContentText("Please log in to view your next appointment.");
+            alert.showAndWait();
+            return;
+        }
+
+        DbConnection dbConnection = new DbConnection();
+        Person person = dbConnection.getPerson(userEmail);
+
+        if (person != null && person.getNextAppointmentDate() != null) {
+            // Load the next appointment view and pass person data
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/farmingdale/autobodyshopapplicationproject/fxml/next-appointment.fxml"));
+                Parent root = loader.load();
+
+                // Pass the person data to the NextAppointmentController
+                NextAppointmentController controller = loader.getController();
+                controller.setPerson(person);
+
+                // Display the next appointment view
+                Stage stage = new Stage();
+                stage.setTitle("Next Appointment Details");
+                stage.setScene(new Scene(root));
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("No Appointment Found");
+            alert.setHeaderText("No Upcoming Appointments");
+            alert.setContentText("No next appointment found for the logged-in user.");
+            alert.showAndWait();
+        }
     }
+
 
     @FXML
     void onCustomerFeedbackButtonClick(ActionEvent event) {
