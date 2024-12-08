@@ -44,6 +44,8 @@ public class AppointmentController {
 
     @FXML
     private Region speedometerRegion;
+    @FXML
+    private Button next_appointment_date;
 
     @FXML
     private ComboBox<String> state_dropdown;
@@ -119,7 +121,7 @@ public class AppointmentController {
     }
 
     @FXML
-    void onCurrentCouponsButtonClick(ActionEvent event) {
+    void onNextAppointmentButtonClick(ActionEvent event) {
 
     }
 
