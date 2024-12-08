@@ -15,6 +15,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
+
 public class CreateAccountController {
 
     @FXML
@@ -135,7 +137,17 @@ public class CreateAccountController {
 
     @FXML
     void onAlreadyHaveAnAccountClick(MouseEvent event) {
-        navigateToLogin();
+        try {
+            // Load Appointment Page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/farmingdale/autobodyshopapplicationproject/fxml/login-page.fxml"));
+            Scene homeLoginScene = new Scene(loader.load(), 1440, 650);
+
+            // Get the Stage from the Event Source
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(homeLoginScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -153,7 +165,7 @@ public class CreateAccountController {
 
     private void navigateToLogin() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/login-page.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/edu/farmingdale/autobodyshopapplicationproject/fxml/login-page.fxml"));
             Stage stage = (Stage) create_account_button.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
