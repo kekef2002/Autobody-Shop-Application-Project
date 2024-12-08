@@ -7,111 +7,120 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="2555.0" prefWidth="1440.0" styleClass="v15_66" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.AutoRepairsAndMaintenanceController">
-    <ImageView fx:id="v15_67" fitHeight="270" fitWidth="315" layoutX="33" layoutY="33" styleClass="v15_67" />
 
-
-    
-    <Label layoutX="743.0" layoutY="2400.0" styleClass="v15_68" text="1 Wyandanch Ave., &#10;Wyandanch, NY 11978 &#10;(631) 253-4335" textAlignment="JUSTIFY" />
-    
-    <!-- Navigation Buttons -->
-    <Group layoutX="395.8999938964844" layoutY="30.899999618530273">
-        <children>
-            <MenuButton layoutX="207.0" layoutY="2.0" minHeight="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="202.0" styleClass="v14_19" text="Services" textAlignment="CENTER" textFill="#fffbfb">
-                <items>
-                    <MenuItem fx:id="collision_repairs" mnemonicParsing="false" onAction="#onCollisionRepairsClick" text="Collision Repairs" />
-                    <MenuItem fx:id="auto_repairs_maintenance" mnemonicParsing="false" onAction="#onAutoRepairsMaintenanceClick" text="Auto Repairs and Maintenance" />
-                    <MenuItem fx:id="celd" mnemonicParsing="false" onAction="#onCELDClick" text="CELD" />
-                    <MenuItem fx:id="auto_glass_replacement" mnemonicParsing="false" onAction="#onAutoGlassReplacementClick" text="Auto Glass Replacement" />
-                </items>
-                <font>
-                    <Font size="24.0" />
-                </font>
-            </MenuButton>
-            <Button fx:id="home_button" alignment="CENTER" layoutX="49.0" layoutY="2.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="70.0" prefWidth="132.0" text="Home" textAlignment="CENTER">
-                <styleClass>
-                    <String fx:value="v13_27" />
-                    <String fx:value="v14_19" />
-                </styleClass>
-            </Button>
-            <Button fx:id="gallery_button" alignment="CENTER" layoutX="433.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onGalleryButtonClick" prefHeight="70.0" prefWidth="168.0" text="Gallery" textAlignment="CENTER">
-                <styleClass>
-                    <String fx:value="v13_27" />
-                    <String fx:value="v14_19" />
-                </styleClass>
-            </Button>
-            <Button fx:id="about_us_button" alignment="CENTER" layoutX="623.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onAboutUsButtonClick" prefHeight="70.0" prefWidth="168.0" text="About Us" textAlignment="CENTER">
-                <styleClass>
-                    <String fx:value="v13_27" />
-                    <String fx:value="v14_19" />
-                </styleClass>
-            </Button>
-            <Button fx:id="home_login_button" alignment="CENTER" layoutX="814.0" layoutY="3.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeLoginButtonClick" prefHeight="70.0" prefWidth="114.0" text="Login" textAlignment="CENTER">
-                <styleClass>
-                    <String fx:value="v13_27" />
-                    <String fx:value="v14_19" />
-                </styleClass>
-            </Button>
-        </children>
-    </Group>
-    <Button fx:id="schedule_an_appointment_button" layoutX="719.0" layoutY="716.0" mnemonicParsing="false" onAction="#onApptointmentButtonClick" prefHeight="58.0" prefWidth="295.0" text="Schedule an Appointment" textAlignment="CENTER" textFill="#c7d10a36">
-        <font>
-            <Font name="System Bold" size="20.0" />
-        </font>
-        <styleClass>
-            <String fx:value="v14_20" />
-            <String fx:value="v14_19" />
-        </styleClass>
-    </Button>
-    
-    <!-- Main Content -->
-    <Label alignment="BOTTOM_CENTER" layoutX="480.0" layoutY="144.0" prefHeight="85.0" prefWidth="821.0" text="Auto Body and Maintenance" textAlignment="CENTER" textFill="WHITE">
-      <font>
-         <Font size="32.0" />
-      </font></Label>
-    <Label layoutX="492.0" layoutY="242.0" prefHeight="123.0" prefWidth="748.0" text="At Solutions Auto Body, we have seen thousands of automobile issues from every&#10;make and model.Our professionally trained technicians are ready to troubleshoot,&#10;diagnose, and fix any issue that may be occurring with your vehicle. Whether your&#10;vehicle's air conditioning is not working properly, or a persistent check engine light,&#10;we can diagnose and repair a variety of comfort and drivability issues. " textAlignment="JUSTIFY" textFill="WHITE">
-      <font>
-         <Font size="20.0" />
-      </font></Label>
-    
-    <!-- Customer Satisfaction Section -->
-    <Label alignment="BOTTOM_CENTER" layoutX="493.0" layoutY="510.0" prefHeight="72.0" prefWidth="698.0" styleClass="v96_16" text="Dedicated to Customer Satisfaction" />
-    <Label alignment="CENTER" layoutX="332.0" layoutY="603.0" prefHeight="102.0" prefWidth="1021.0" text="Our skilled technicians are well-versed in the intricacies of your vehicle’s engine. From air conditioning systems&#10;to fuel pumps, we can diagnose and repair a variety of under-the-hood issues. We utilize advanced computerized &#10;engine diagnostics to accurately identify problems and provide effective solutions." textAlignment="JUSTIFY" textFill="WHITE">
-      <font>
-         <Font size="20.0" />
-      </font></Label>
-    
-    <!-- Background Images -->
-    <ImageView fx:id="v164_30" fitHeight="449" fitWidth="1024" layoutX="2" layoutY="1352" styleClass="v164_30" />
-    <ImageView fx:id="v164_31" fitHeight="470" fitWidth="1897.0" layoutX="2.0" layoutY="795.0" styleClass="v164_31" />
-    <ImageView fx:id="v164_32" fitHeight="445" fitWidth="1024" layoutX="-30.0" layoutY="1786.0" styleClass="v164_32" />
-   <ImageView fitHeight="293.0" fitWidth="317.0" layoutX="10.0" layoutY="10.0">
-      <image>
-         <Image url="@../images/v15_67.png" />
-      </image>
-   </ImageView>
-   <ImageView fitHeight="537.0" fitWidth="1899.0" layoutY="795.0">
-      <image>
-         <Image url="@../images/v164_31.png" />
-      </image>
-   </ImageView>
-   <ImageView fitHeight="485.0" fitWidth="1911.0" layoutX="-12.0" layoutY="1332.0">
-      <image>
-         <Image url="@../images/v164_30.png" />
-      </image>
-   </ImageView>
-   <ImageView fitHeight="537.0" fitWidth="1899.0" layoutX="-1.0" layoutY="1814.0">
-      <image>
-         <Image url="@../images/v164_32.png" />
-      </image>
-   </ImageView>
-
-    <stylesheets>
-        <URL value="@../css/auto-repairs-and-maintenance.css" />
-    </stylesheets>
-</AnchorPane>
+<ScrollPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.AutoRepairsAndMaintenanceController">
+   <content>
+      <AnchorPane prefHeight="2555.0" prefWidth="1440.0" styleClass="v15_66">
+          <ImageView fx:id="v15_67" fitHeight="270" fitWidth="315" layoutX="33" layoutY="33" styleClass="v15_67" />
+      
+      
+          
+          <Label layoutX="743.0" layoutY="2400.0" styleClass="v15_68" text="1 Wyandanch Ave., &#10;Wyandanch, NY 11978 &#10;(631) 253-4335" textAlignment="JUSTIFY" />
+          
+          <!-- Navigation Buttons -->
+          <Group layoutX="395.8999938964844" layoutY="30.899999618530273">
+              <children>
+                  <MenuButton layoutX="207.0" layoutY="2.0" minHeight="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="202.0" styleClass="v14_19" text="Services" textAlignment="CENTER" textFill="#fffbfb">
+                      <items>
+                          <MenuItem fx:id="collision_repairs" mnemonicParsing="false" onAction="#onCollisionRepairsClick" text="Collision Repairs" />
+                          <MenuItem fx:id="auto_repairs_maintenance" mnemonicParsing="false" onAction="#onAutoRepairsMaintenanceClick" text="Auto Repairs and Maintenance" />
+                          <MenuItem fx:id="celd" mnemonicParsing="false" onAction="#onCELDClick" text="CELD" />
+                          <MenuItem fx:id="auto_glass_replacement" mnemonicParsing="false" onAction="#onAutoGlassReplacementClick" text="Auto Glass Replacement" />
+                      </items>
+                      <font>
+                          <Font size="24.0" />
+                      </font>
+                  </MenuButton>
+                  <Button fx:id="home_button" alignment="CENTER" layoutX="49.0" layoutY="2.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="70.0" prefWidth="132.0" text="Home" textAlignment="CENTER">
+                      <styleClass>
+                          <String fx:value="v13_27" />
+                          <String fx:value="v14_19" />
+                      </styleClass>
+                  </Button>
+                  <Button fx:id="gallery_button" alignment="CENTER" layoutX="433.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onGalleryButtonClick" prefHeight="70.0" prefWidth="168.0" text="Gallery" textAlignment="CENTER">
+                      <styleClass>
+                          <String fx:value="v13_27" />
+                          <String fx:value="v14_19" />
+                      </styleClass>
+                  </Button>
+                  <Button fx:id="about_us_button" alignment="CENTER" layoutX="623.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onAboutUsButtonClick" prefHeight="70.0" prefWidth="168.0" text="About Us" textAlignment="CENTER">
+                      <styleClass>
+                          <String fx:value="v13_27" />
+                          <String fx:value="v14_19" />
+                      </styleClass>
+                  </Button>
+                  <Button fx:id="home_login_button" alignment="CENTER" layoutX="814.0" layoutY="3.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeLoginButtonClick" prefHeight="70.0" prefWidth="114.0" text="Login" textAlignment="CENTER">
+                      <styleClass>
+                          <String fx:value="v13_27" />
+                          <String fx:value="v14_19" />
+                      </styleClass>
+                  </Button>
+              </children>
+          </Group>
+          <Button fx:id="schedule_an_appointment_button" layoutX="719.0" layoutY="716.0" mnemonicParsing="false" onAction="#onApptointmentButtonClick" prefHeight="58.0" prefWidth="295.0" text="Schedule an Appointment" textAlignment="CENTER" textFill="#c7d10a36">
+              <font>
+                  <Font name="System Bold" size="20.0" />
+              </font>
+              <styleClass>
+                  <String fx:value="v14_20" />
+                  <String fx:value="v14_19" />
+              </styleClass>
+          </Button>
+          
+          <!-- Main Content -->
+          <Label alignment="BOTTOM_CENTER" layoutX="480.0" layoutY="144.0" prefHeight="85.0" prefWidth="821.0" text="Auto Body and Maintenance" textAlignment="CENTER" textFill="WHITE">
+            <font>
+               <Font size="32.0" />
+            </font>
+         </Label>
+          <Label layoutX="492.0" layoutY="242.0" prefHeight="123.0" prefWidth="748.0" text="At Solutions Auto Body, we have seen thousands of automobile issues from every&#10;make and model.Our professionally trained technicians are ready to troubleshoot,&#10;diagnose, and fix any issue that may be occurring with your vehicle. Whether your&#10;vehicle's air conditioning is not working properly, or a persistent check engine light,&#10;we can diagnose and repair a variety of comfort and drivability issues. " textAlignment="JUSTIFY" textFill="WHITE">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+          
+          <!-- Customer Satisfaction Section -->
+          <Label alignment="BOTTOM_CENTER" layoutX="493.0" layoutY="510.0" prefHeight="72.0" prefWidth="698.0" styleClass="v96_16" text="Dedicated to Customer Satisfaction" />
+          <Label alignment="CENTER" layoutX="332.0" layoutY="603.0" prefHeight="102.0" prefWidth="1021.0" text="Our skilled technicians are well-versed in the intricacies of your vehicle’s engine. From air conditioning systems&#10;to fuel pumps, we can diagnose and repair a variety of under-the-hood issues. We utilize advanced computerized &#10;engine diagnostics to accurately identify problems and provide effective solutions." textAlignment="JUSTIFY" textFill="WHITE">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+          
+          <!-- Background Images -->
+          <ImageView fx:id="v164_30" fitHeight="449" fitWidth="1024" layoutX="2" layoutY="1352" styleClass="v164_30" />
+          <ImageView fx:id="v164_31" fitHeight="470" fitWidth="1897.0" layoutX="2.0" layoutY="795.0" styleClass="v164_31" />
+          <ImageView fx:id="v164_32" fitHeight="445" fitWidth="1024" layoutX="-30.0" layoutY="1786.0" styleClass="v164_32" />
+         <ImageView fitHeight="293.0" fitWidth="317.0" layoutX="10.0" layoutY="10.0">
+            <image>
+               <Image url="@../images/v15_67.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="537.0" fitWidth="1899.0" layoutY="795.0">
+            <image>
+               <Image url="@../images/v164_31.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="485.0" fitWidth="1911.0" layoutX="-12.0" layoutY="1332.0">
+            <image>
+               <Image url="@../images/v164_30.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="537.0" fitWidth="1899.0" layoutX="-1.0" layoutY="1814.0">
+            <image>
+               <Image url="@../images/v164_32.png" />
+            </image>
+         </ImageView>
+      
+          <stylesheets>
+              <URL value="@../css/auto-repairs-and-maintenance.css" />
+          </stylesheets>
+      </AnchorPane>
+   </content>
+</ScrollPane>

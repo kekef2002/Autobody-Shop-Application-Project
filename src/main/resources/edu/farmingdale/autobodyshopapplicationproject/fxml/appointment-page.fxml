@@ -10,6 +10,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -19,187 +20,191 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1024" prefWidth="1440" styleClass="v15_226" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.AppointmentController">
-    <stylesheets>
-        <URL value="@../css/appointment.css" />
-    </stylesheets>
-    <ImageView fx:id="v15_227" fitHeight="154" fitWidth="202" layoutX="33" layoutY="33" styleClass="v15_227" />
-
-    <Label layoutX="1116.0" layoutY="129.0" styleClass="v15_228" text="1 Wyandanch Ave.,&#10;Wyandanch, NY 11978&#10;(631) 253-4335" textAlignment="CENTER" />
-   <Group layoutX="420.0" layoutY="129.0">
-      <children>
+<ScrollPane prefHeight="650.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.autobodyshopapplicationproject.controllers.AppointmentController">
+   <content>
+      <AnchorPane prefHeight="1024" prefWidth="1440" styleClass="v15_226">
+          <stylesheets>
+              <URL value="@../css/appointment.css" />
+          </stylesheets>
+          <ImageView fx:id="v15_227" fitHeight="154" fitWidth="202" layoutX="33" layoutY="33" styleClass="v15_227" />
       
-          <!-- Customer Form Background -->
-          <Pane prefHeight="827" prefWidth="600" styleClass="v15_242">
-              <Label layoutX="27" layoutY="22" styleClass="v16_245" text="First Name" />
-            <Label layoutX="277.0" layoutY="22.0" styleClass="v16_245" text="M.I" />
-              <Label layoutX="335" layoutY="22" styleClass="v16_246" text="Last Name" />
-              <Label layoutX="26" layoutY="84" styleClass="v16_247" text="Address" />
-              <Label layoutX="407" layoutY="84" styleClass="v33_14" text="Apt. # / Unit # (Optional)" />
+          <Label layoutX="1116.0" layoutY="129.0" styleClass="v15_228" text="1 Wyandanch Ave.,&#10;Wyandanch, NY 11978&#10;(631) 253-4335" textAlignment="CENTER" />
+         <Group layoutX="420.0" layoutY="129.0">
+            <children>
+            
+                <!-- Customer Form Background -->
+                <Pane prefHeight="827" prefWidth="600" styleClass="v15_242">
+                    <Label layoutX="27" layoutY="22" styleClass="v16_245" text="First Name" />
+                  <Label layoutX="277.0" layoutY="22.0" styleClass="v16_245" text="M.I" />
+                    <Label layoutX="335" layoutY="22" styleClass="v16_246" text="Last Name" />
+                    <Label layoutX="26" layoutY="84" styleClass="v16_247" text="Address" />
+                    <Label layoutX="407" layoutY="84" styleClass="v33_14" text="Apt. # / Unit # (Optional)" />
+            
+                    <TextField fx:id="first_name_text_field" layoutX="27" layoutY="48" prefHeight="28" prefWidth="240" styleClass="v16_270" />
+                    <TextField fx:id="last_name_text_field" layoutX="334" layoutY="48" prefHeight="28" prefWidth="240" styleClass="v16_271" />
+                    <TextField fx:id="mi_text_field" layoutX="277" layoutY="48" prefHeight="28" prefWidth="46" styleClass="v167_6" />
+            
+                    <TextField fx:id="address_text_field" layoutX="27" layoutY="110" prefHeight="28" prefWidth="364" styleClass="v16_273" />
+            
+                    <Label layoutX="27" layoutY="146" styleClass="v16_248" text="City" />
+                    <TextField fx:id="city_text_field" layoutX="27" layoutY="172" prefHeight="28" prefWidth="168.0" styleClass="v16_275" />
+                    <Label layoutX="221.0" layoutY="146.0" styleClass="v16_249" text="State" />
+                  <Group layoutX="222.0" layoutY="172.0">
+                     <children>
+                          <TextField onScroll="#onStateScrolldown" prefHeight="28" prefWidth="70.0" styleClass="v23_277" />
+                        <ComboBox fx:id="state_dropdown" layoutX="2.0" layoutY="1.0" onMouseClicked="#onStateScrolldown" prefHeight="26.0" prefWidth="66.0" />
+                     </children>
+                  </Group>
+                    <Label layoutX="306" layoutY="146" styleClass="v16_250" text="Zip Code" />
+                    <TextField fx:id="zip_code_text_field" layoutX="306" layoutY="172" prefHeight="28" prefWidth="85" styleClass="v23_279" />
+            
+                    <Label layoutX="27" layoutY="208" styleClass="v16_251" text="Email" />
+                    <TextField fx:id="email_text_field" layoutX="27" layoutY="234" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+                    <Label layoutX="306" layoutY="208" styleClass="v16_253" text="Telephone" />
+                    <TextField fx:id="telephone_text_field" layoutX="306" layoutY="234" prefHeight="28" prefWidth="265" styleClass="v30_4" />
+                  <Button fx:id="clearbutton" layoutX="26.0" layoutY="778.0" minHeight="34.0" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="34.0" prefWidth="122.0" text="Clear" textAlignment="CENTER" textFill="#fffbfb">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="v33_8" />
+                        <String fx:value="v33_9" />
+                     </styleClass>
+                  </Button>
+                  <TextField fx:id="apt_text_field" layoutX="407.0" layoutY="110.0" prefHeight="28" prefWidth="164.0" styleClass="v30_4" />
+                  <Group layoutX="407.0" layoutY="172.0">
+                     <children>
+                        <TextField editable="false" prefHeight="28" prefWidth="164.0" styleClass="v30_4" />
+                        <ComboBox fx:id="preferred_contact_dropdown" layoutX="1.0" layoutY="1.0" onMouseClicked="#onPreferredContactScrolldown" prefHeight="26.0" prefWidth="162.0" styleClass="v30_3" />
+                     </children>
+                  </Group>
+                  <Label layoutX="407.0" layoutY="146.0" styleClass="v16_253" text="Preferred contact method?" />
+                  <TextField fx:id="license_plate_text_field" layoutX="27.0" layoutY="296.0" prefHeight="28" prefWidth="122.0" styleClass="v30_2" />
+                  <TextField fx:id="make_text_field" layoutX="148.0" layoutY="358.0" prefHeight="28" prefWidth="145.0" styleClass="v30_2" />
+                  <TextField fx:id="mileage_text_field" layoutX="306.0" layoutY="296.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+                  <TextField fx:id="year_text_field" layoutX="27.0" layoutY="358.0" prefHeight="28" prefWidth="100.0" styleClass="v30_2" />
+                  <TextField layoutX="179.0" layoutY="296.0" prefHeight="28" prefWidth="114.0" styleClass="v30_2" />
+                  <TextField fx:id="model_text_field" layoutX="306.0" layoutY="358.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+                  <Group layoutX="27.0" layoutY="420.0">
+                     <children>
+                        <TextField editable="false" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+                        <ComboBox fx:id="select_transport_needs_dropdown" layoutX="1.0" layoutY="1.0" onMouseClicked="#onSelectTransportNeedsScrolldown" onScroll="#onSelectTransportNeedsScrolldown" prefHeight="26.0" prefWidth="263.0" styleClass="v30_3" />
+                     </children>
+                  </Group>
+                  <TextField fx:id="appointment_time_dropdown" layoutX="306.0" layoutY="482.0" onScroll="#onAppointmenTimeScrolldown" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+                  <ChoiceBox fx:id="appointment_time" layoutX="439.0" layoutY="483.0" onMouseClicked="#onAppointmenTimeScrolldown" prefHeight="26.0" prefWidth="132.0" />
+                  <Label fx:id="selected_time_label" layoutX="308.0" layoutY="483.0" prefHeight="28.0" prefWidth="133.0" />
+                  <Label layoutX="27.0" layoutY="270.0" styleClass="v16_251" text="License Plate" />
+                  <Label layoutX="179.0" layoutY="270.0" styleClass="v16_251" text="License Plate State" />
+                  <Label layoutX="307.0" layoutY="270.0" styleClass="v16_251" text="Mileage" />
+                  <Label layoutX="27.0" layoutY="332.0" styleClass="v16_251" text="Year" />
+                  <Label layoutX="148.0" layoutY="332.0" styleClass="v16_251" text="Make" />
+                  <Label layoutX="306.0" layoutY="332.0" styleClass="v16_251" text="Model" />
+                  <Label layoutX="27.0" layoutY="394.0" styleClass="v16_251" text="Select Transportation Needs" />
+                  <Label layoutX="306.0" layoutY="394.0" styleClass="v16_251" text="Service Requested" />
+                  <Label layoutX="27.0" layoutY="456.0" styleClass="v16_251" text="Appointment Date" />
+                  <Label layoutX="306.0" layoutY="456.0" styleClass="v16_251" text="Appointment Time" />
+                  <Label layoutX="27.0" layoutY="518.0" styleClass="v16_251" text="Customer Comments / Special Requests" />
+                  <Button fx:id="submitbutton" layoutX="449.0" layoutY="778.0" minHeight="34.0" mnemonicParsing="false" onAction="#onSubmitButtonClick" prefHeight="34.0" prefWidth="122.0" text="Submit" textAlignment="CENTER" textFill="#fffbfb">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="v33_8" />
+                        <String fx:value="v33_9" />
+                     </styleClass>
+                  </Button>
+                  <Group layoutX="28.0" layoutY="543.0">
+                     <children>
+                        <TextField editable="false" prefHeight="212.0" prefWidth="544.0" styleClass="v30_4" />
+                        <TextArea fx:id="customer_comments" layoutX="1.0" layoutY="1.0" prefHeight="210.0" prefWidth="542.0" wrapText="true" />
+                     </children>
+                  </Group>
+                  <Group layoutX="306.0" layoutY="420.0">
+                     <children>
+                        <TextField editable="false" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+                        <ComboBox fx:id="service_request_dropdown" layoutX="1.0" layoutY="1.0" onMouseClicked="#onServiceRequestScrolldown" onScroll="#onServiceRequestScrolldown" prefHeight="26.0" prefWidth="263.0" styleClass="v30_3" />
+                     </children>
+                  </Group>
+                  <Group layoutX="27.0" layoutY="482.0">
+                     <children>
+                        <TextField editable="false" prefHeight="28" prefWidth="265" styleClass="v30_2" />
+                        <DatePicker fx:id="appointment_date" layoutX="1.0" layoutY="1.0" onAction="#onAppointmentDateButtonClick" prefHeight="26.0" prefWidth="263.0" styleClass="v30_3" />
+                     </children>
+                  </Group>
+                  <ComboBox fx:id="license_plate_state_dropdown" layoutX="180.0" layoutY="297.0" onMouseClicked="#onLicensePlateStateScrolldown" prefHeight="26.0" prefWidth="112.0" />
+                </Pane>
+            </children>
+         </Group>
       
-              <TextField fx:id="first_name_text_field" layoutX="27" layoutY="48" prefHeight="28" prefWidth="240" styleClass="v16_270" />
-              <TextField fx:id="last_name_text_field" layoutX="334" layoutY="48" prefHeight="28" prefWidth="240" styleClass="v16_271" />
-              <TextField fx:id="mi_text_field" layoutX="277" layoutY="48" prefHeight="28" prefWidth="46" styleClass="v167_6" />
-      
-              <TextField fx:id="address_text_field" layoutX="27" layoutY="110" prefHeight="28" prefWidth="364" styleClass="v16_273" />
-      
-              <Label layoutX="27" layoutY="146" styleClass="v16_248" text="City" />
-              <TextField fx:id="city_text_field" layoutX="27" layoutY="172" prefHeight="28" prefWidth="168.0" styleClass="v16_275" />
-              <Label layoutX="221.0" layoutY="146.0" styleClass="v16_249" text="State" />
-            <Group layoutX="222.0" layoutY="172.0">
-               <children>
-                    <TextField onScroll="#onStateScrolldown" prefHeight="28" prefWidth="70.0" styleClass="v23_277" />
-                  <ComboBox fx:id="state_dropdown" layoutX="2.0" layoutY="1.0" onMouseClicked="#onStateScrolldown" prefHeight="26.0" prefWidth="66.0" />
-               </children>
-            </Group>
-              <Label layoutX="306" layoutY="146" styleClass="v16_250" text="Zip Code" />
-              <TextField fx:id="zip_code_text_field" layoutX="306" layoutY="172" prefHeight="28" prefWidth="85" styleClass="v23_279" />
-      
-              <Label layoutX="27" layoutY="208" styleClass="v16_251" text="Email" />
-              <TextField fx:id="email_text_field" layoutX="27" layoutY="234" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-              <Label layoutX="306" layoutY="208" styleClass="v16_253" text="Telephone" />
-              <TextField fx:id="telephone_text_field" layoutX="306" layoutY="234" prefHeight="28" prefWidth="265" styleClass="v30_4" />
-            <Button fx:id="clearbutton" layoutX="26.0" layoutY="778.0" minHeight="34.0" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="34.0" prefWidth="122.0" text="Clear" textAlignment="CENTER" textFill="#fffbfb">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <styleClass>
-                  <String fx:value="v33_8" />
-                  <String fx:value="v33_9" />
-               </styleClass>
-            </Button>
-            <TextField fx:id="apt_text_field" layoutX="407.0" layoutY="110.0" prefHeight="28" prefWidth="164.0" styleClass="v30_4" />
-            <Group layoutX="407.0" layoutY="172.0">
-               <children>
-                  <TextField editable="false" prefHeight="28" prefWidth="164.0" styleClass="v30_4" />
-                  <ComboBox fx:id="preferred_contact_dropdown" layoutX="1.0" layoutY="1.0" onMouseClicked="#onPreferredContactScrolldown" prefHeight="26.0" prefWidth="162.0" styleClass="v30_3" />
-               </children>
-            </Group>
-            <Label layoutX="407.0" layoutY="146.0" styleClass="v16_253" text="Preferred contact method?" />
-            <TextField fx:id="license_plate_text_field" layoutX="27.0" layoutY="296.0" prefHeight="28" prefWidth="122.0" styleClass="v30_2" />
-            <TextField fx:id="make_text_field" layoutX="148.0" layoutY="358.0" prefHeight="28" prefWidth="145.0" styleClass="v30_2" />
-            <TextField fx:id="mileage_text_field" layoutX="306.0" layoutY="296.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-            <TextField fx:id="year_text_field" layoutX="27.0" layoutY="358.0" prefHeight="28" prefWidth="100.0" styleClass="v30_2" />
-            <TextField layoutX="179.0" layoutY="296.0" prefHeight="28" prefWidth="114.0" styleClass="v30_2" />
-            <TextField fx:id="model_text_field" layoutX="306.0" layoutY="358.0" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-            <Group layoutX="27.0" layoutY="420.0">
-               <children>
-                  <TextField editable="false" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-                  <ComboBox fx:id="select_transport_needs_dropdown" layoutX="1.0" layoutY="1.0" onMouseClicked="#onSelectTransportNeedsScrolldown" onScroll="#onSelectTransportNeedsScrolldown" prefHeight="26.0" prefWidth="263.0" styleClass="v30_3" />
-               </children>
-            </Group>
-            <TextField fx:id="appointment_time_dropdown" layoutX="306.0" layoutY="482.0" onScroll="#onAppointmenTimeScrolldown" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-            <ChoiceBox fx:id="appointment_time" layoutX="439.0" layoutY="483.0" onMouseClicked="#onAppointmenTimeScrolldown" prefHeight="26.0" prefWidth="132.0" />
-            <Label fx:id="selected_time_label" layoutX="308.0" layoutY="483.0" prefHeight="28.0" prefWidth="133.0" />
-            <Label layoutX="27.0" layoutY="270.0" styleClass="v16_251" text="License Plate" />
-            <Label layoutX="179.0" layoutY="270.0" styleClass="v16_251" text="License Plate State" />
-            <Label layoutX="307.0" layoutY="270.0" styleClass="v16_251" text="Mileage" />
-            <Label layoutX="27.0" layoutY="332.0" styleClass="v16_251" text="Year" />
-            <Label layoutX="148.0" layoutY="332.0" styleClass="v16_251" text="Make" />
-            <Label layoutX="306.0" layoutY="332.0" styleClass="v16_251" text="Model" />
-            <Label layoutX="27.0" layoutY="394.0" styleClass="v16_251" text="Select Transportation Needs" />
-            <Label layoutX="306.0" layoutY="394.0" styleClass="v16_251" text="Service Requested" />
-            <Label layoutX="27.0" layoutY="456.0" styleClass="v16_251" text="Appointment Date" />
-            <Label layoutX="306.0" layoutY="456.0" styleClass="v16_251" text="Appointment Time" />
-            <Label layoutX="27.0" layoutY="518.0" styleClass="v16_251" text="Customer Comments / Special Requests" />
-            <Button fx:id="submitbutton" layoutX="449.0" layoutY="778.0" minHeight="34.0" mnemonicParsing="false" onAction="#onSubmitButtonClick" prefHeight="34.0" prefWidth="122.0" text="Submit" textAlignment="CENTER" textFill="#fffbfb">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <styleClass>
-                  <String fx:value="v33_8" />
-                  <String fx:value="v33_9" />
-               </styleClass>
-            </Button>
-            <Group layoutX="28.0" layoutY="543.0">
-               <children>
-                  <TextField editable="false" prefHeight="212.0" prefWidth="544.0" styleClass="v30_4" />
-                  <TextArea fx:id="customer_comments" layoutX="1.0" layoutY="1.0" prefHeight="210.0" prefWidth="542.0" wrapText="true" />
-               </children>
-            </Group>
-            <Group layoutX="306.0" layoutY="420.0">
-               <children>
-                  <TextField editable="false" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-                  <ComboBox fx:id="service_request_dropdown" layoutX="1.0" layoutY="1.0" onMouseClicked="#onServiceRequestScrolldown" onScroll="#onServiceRequestScrolldown" prefHeight="26.0" prefWidth="263.0" styleClass="v30_3" />
-               </children>
-            </Group>
-            <Group layoutX="27.0" layoutY="482.0">
-               <children>
-                  <TextField editable="false" prefHeight="28" prefWidth="265" styleClass="v30_2" />
-                  <DatePicker fx:id="appointment_date" layoutX="1.0" layoutY="1.0" onAction="#onAppointmentDateButtonClick" prefHeight="26.0" prefWidth="263.0" styleClass="v30_3" />
-               </children>
-            </Group>
-            <ComboBox fx:id="license_plate_state_dropdown" layoutX="180.0" layoutY="297.0" onMouseClicked="#onLicensePlateStateScrolldown" prefHeight="26.0" prefWidth="112.0" />
-          </Pane>
-      </children>
-   </Group>
-
-    <!-- Navigation Menu -->
-    <Group layoutX="395.8999938964844" layoutY="30.899999618530273">
-        <children>
-            <MenuButton layoutX="207.0" layoutY="2.0" minHeight="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="202.0" styleClass="v14_19" text="Services" textAlignment="CENTER" textFill="#fffbfb">
-                <items>
-                    <MenuItem fx:id="collision_repairs" mnemonicParsing="false" onAction="#onCollisionRepairsClick" text="Collision Repairs" />
-                    <MenuItem fx:id="auto_repairs_maintenance" mnemonicParsing="false" onAction="#onAutoRepairsMaintenanceClick" text="Auto Repairs and Maintenance" />
-                    <MenuItem fx:id="celd" mnemonicParsing="false" onAction="#onCELDClick" text="CELD" />
-                    <MenuItem fx:id="auto_glass_replacement" mnemonicParsing="false" onAction="#onAutoGlassReplacementClick" text="Auto Glass Replacement" />
-                </items>
-                <font>
-                    <Font size="24.0" />
-                </font>
-            </MenuButton>
-            <Button fx:id="home_button" alignment="CENTER" layoutX="49.0" layoutY="2.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="70.0" prefWidth="132.0" text="Home" textAlignment="CENTER">
-                <styleClass>
-                    <String fx:value="v13_27" />
-                    <String fx:value="v14_19" />
-                </styleClass>
-            </Button>
-            <Button fx:id="gallery_button" alignment="CENTER" layoutX="433.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onGalleryButtonClick" prefHeight="70.0" prefWidth="168.0" text="Gallery" textAlignment="CENTER">
-                <styleClass>
-                    <String fx:value="v13_27" />
-                    <String fx:value="v14_19" />
-                </styleClass>
-            </Button>
-            <Button fx:id="about_us_button" alignment="CENTER" layoutX="623.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onAboutUsButtonClick" prefHeight="70.0" prefWidth="168.0" text="About Us" textAlignment="CENTER">
-                <styleClass>
-                    <String fx:value="v13_27" />
-                    <String fx:value="v14_19" />
-                </styleClass>
-            </Button>
-            <Button fx:id="home_login_button" alignment="CENTER" layoutX="814.0" layoutY="3.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeLoginButtonClick" prefHeight="70.0" prefWidth="114.0" text="Login" textAlignment="CENTER">
-                <styleClass>
-                    <String fx:value="v13_27" />
-                    <String fx:value="v14_19" />
-                </styleClass>
-            </Button>
-        </children>
-    </Group>
-   <Group layoutX="58.0" layoutY="461.0">
-      <children>
-          <Button fx:id="next_service_due" layoutX="7.099998474121094" layoutY="2.100006103515625" onAction="#onNextServiceDueButtonClick" prefHeight="94.0" prefWidth="292.0" styleClass="button-7" text="Next Service&#10;Due" textAlignment="CENTER" />
-         <Button fx:id="service_history" layoutX="7.099998474121094" layoutY="130.10000610351562" onAction="#onServiceHistoryButtonClick" prefHeight="94.0" prefWidth="292.0" styleClass="button-7" text="Service History" />
-         <Button fx:id="current_coupons" layoutX="7.099998474121094" layoutY="260.1000061035156" onAction="#onCurrentCouponsButtonClick" prefHeight="94.0" prefWidth="292.0" styleClass="button-7" text="Current&#10;Coupons" textAlignment="CENTER" />
-         <Button fx:id="customerfeedback" layoutX="7.099998474121094" layoutY="390.1000061035156" onAction="#onCustomerFeedbackButtonClick" prefHeight="94.0" prefWidth="292.0" styleClass="button-7" text="Customer&#10;Feedback" />
-      </children>
-   </Group>
-   <Group layoutX="15.899999618530273" layoutY="222.89999389648438">
-      <children>
-          <Region fx:id="speedometerRegion" layoutX="4.100000381469727" layoutY="3.100006103515625" prefHeight="200.0" prefWidth="375.0" />
-         <ImageView fitHeight="200.0" fitWidth="375.0" layoutX="4.100000381469727" layoutY="3.100006103515625">
-            <image>
-               <Image url="@../images/Speedometer3.jpg" />
-            </image>
-         </ImageView>
-      </children>
-   </Group>
-   <Group layoutX="1044.0" layoutY="265.0">
-      <children>
-         <Region prefHeight="689.0" prefWidth="375.0" />
-         <ImageView fitHeight="689.0" fitWidth="375.0">
-            <image>
-               <Image url="@../images/PaintingBumper.jpg" />
-            </image>
-         </ImageView>
-      </children>
-   </Group>
-</AnchorPane>
+          <!-- Navigation Menu -->
+          <Group layoutX="395.8999938964844" layoutY="30.899999618530273">
+              <children>
+                  <MenuButton layoutX="207.0" layoutY="2.0" minHeight="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="202.0" styleClass="v14_19" text="Services" textAlignment="CENTER" textFill="#fffbfb">
+                      <items>
+                          <MenuItem fx:id="collision_repairs" mnemonicParsing="false" onAction="#onCollisionRepairsClick" text="Collision Repairs" />
+                          <MenuItem fx:id="auto_repairs_maintenance" mnemonicParsing="false" onAction="#onAutoRepairsMaintenanceClick" text="Auto Repairs and Maintenance" />
+                          <MenuItem fx:id="celd" mnemonicParsing="false" onAction="#onCELDClick" text="CELD" />
+                          <MenuItem fx:id="auto_glass_replacement" mnemonicParsing="false" onAction="#onAutoGlassReplacementClick" text="Auto Glass Replacement" />
+                      </items>
+                      <font>
+                          <Font size="24.0" />
+                      </font>
+                  </MenuButton>
+                  <Button fx:id="home_button" alignment="CENTER" layoutX="49.0" layoutY="2.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="70.0" prefWidth="132.0" text="Home" textAlignment="CENTER">
+                      <styleClass>
+                          <String fx:value="v13_27" />
+                          <String fx:value="v14_19" />
+                      </styleClass>
+                  </Button>
+                  <Button fx:id="gallery_button" alignment="CENTER" layoutX="433.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onGalleryButtonClick" prefHeight="70.0" prefWidth="168.0" text="Gallery" textAlignment="CENTER">
+                      <styleClass>
+                          <String fx:value="v13_27" />
+                          <String fx:value="v14_19" />
+                      </styleClass>
+                  </Button>
+                  <Button fx:id="about_us_button" alignment="CENTER" layoutX="623.1000061035156" layoutY="2.1000003814697266" minHeight="-Infinity" mnemonicParsing="false" onAction="#onAboutUsButtonClick" prefHeight="70.0" prefWidth="168.0" text="About Us" textAlignment="CENTER">
+                      <styleClass>
+                          <String fx:value="v13_27" />
+                          <String fx:value="v14_19" />
+                      </styleClass>
+                  </Button>
+                  <Button fx:id="home_login_button" alignment="CENTER" layoutX="814.0" layoutY="3.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#onHomeLoginButtonClick" prefHeight="70.0" prefWidth="114.0" text="Login" textAlignment="CENTER">
+                      <styleClass>
+                          <String fx:value="v13_27" />
+                          <String fx:value="v14_19" />
+                      </styleClass>
+                  </Button>
+              </children>
+          </Group>
+         <Group layoutX="58.0" layoutY="461.0">
+            <children>
+                <Button fx:id="next_service_due" layoutX="7.099998474121094" layoutY="2.100006103515625" onAction="#onNextServiceDueButtonClick" prefHeight="94.0" prefWidth="292.0" styleClass="button-7" text="Next Service&#10;Due" textAlignment="CENTER" />
+               <Button fx:id="service_history" layoutX="7.099998474121094" layoutY="130.10000610351562" onAction="#onServiceHistoryButtonClick" prefHeight="94.0" prefWidth="292.0" styleClass="button-7" text="Service History" />
+               <Button fx:id="next_appointment_date" layoutX="7.099998474121094" layoutY="260.1000061035156" onAction="#onNextAppointmentButtonClick" prefHeight="94.0" prefWidth="292.0" styleClass="button-7" text="See Next&#10;Appointment" textAlignment="CENTER" />
+               <Button fx:id="customerfeedback" layoutX="7.099998474121094" layoutY="390.1000061035156" onAction="#onCustomerFeedbackButtonClick" prefHeight="94.0" prefWidth="292.0" styleClass="button-7" text="Customer&#10;Feedback" />
+            </children>
+         </Group>
+         <Group layoutX="15.899999618530273" layoutY="222.89999389648438">
+            <children>
+                <Region fx:id="speedometerRegion" layoutX="4.100000381469727" layoutY="3.100006103515625" prefHeight="200.0" prefWidth="375.0" />
+               <ImageView fitHeight="200.0" fitWidth="375.0" layoutX="4.100000381469727" layoutY="3.100006103515625">
+                  <image>
+                     <Image url="@../images/Speedometer3.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+         </Group>
+         <Group layoutX="1044.0" layoutY="265.0">
+            <children>
+               <Region prefHeight="689.0" prefWidth="375.0" />
+               <ImageView fitHeight="689.0" fitWidth="375.0">
+                  <image>
+                     <Image url="@../images/PaintingBumper.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+         </Group>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -23,14 +23,14 @@ public class MainApplication extends Application {
         stage.show();
 
         // Apply Fade Transition
-        FadeTransition fadeTransition = new FadeTransition(Duration.seconds(5), splashPane);
+        FadeTransition fadeTransition = new FadeTransition(Duration.seconds(2), splashPane);
         fadeTransition.setFromValue(1.0);
         fadeTransition.setToValue(0.0);
         fadeTransition.setOnFinished(event -> {
             try {
                 // Load Home Page
                 FXMLLoader homeLoader = new FXMLLoader(MainApplication.class.getResource("/edu/farmingdale/autobodyshopapplicationproject/fxml/home-page.fxml"));
-                Scene homeScene = new Scene(homeLoader.load(), 1024, 1440);
+                Scene homeScene = new Scene(homeLoader.load(), 1440, 650);
                 stage.setScene(homeScene);
             } catch (IOException e) {
                 e.printStackTrace();

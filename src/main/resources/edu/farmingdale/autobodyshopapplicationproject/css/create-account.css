@@ -27,7 +27,7 @@
 .v115_7, .v115_23, .v115_27, .v115_39, .v115_35, .v115_19 {
     -fx-text-fill: white;
     -fx-font-family: "Roboto";
-    -fx-font-weight: medium;
+    -fx-font-weight: bold;
     -fx-font-size: 30px;
     -fx-text-alignment: center;
 }
@@ -55,7 +55,7 @@
 .v116_56 {
     -fx-text-fill: white;
     -fx-font-family: "Inter";
-    -fx-font-weight: light;
+    -fx-font-weight: normal;
     -fx-font-size: 16px;
     -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.25), 4, 0.5, 0, 4);
     -fx-text-alignment: center;
