@@ -9,7 +9,7 @@ import java.util.Date;
 
 public class DbConnection {
 
-    final static String DB_NAME = "autobody_shop";
+    final static String DB_NAME = "AUTOBODY_SHOP";
     final static String MYSQL_SERVER_URL = "jdbc:mysql://semcsc311server.mysql.database.azure.com";
     final static String DB_URL = MYSQL_SERVER_URL + "/" + DB_NAME;
     final static String USERNAME = "semadmin";
@@ -25,7 +25,7 @@ public class DbConnection {
             //First, connect to MYSQL server and create the database if not created
             Connection conn = DriverManager.getConnection(MYSQL_SERVER_URL, USERNAME, PASSWORD);
             Statement statement = conn.createStatement();
-            statement.executeUpdate("CREATE DATABASE IF NOT EXISTS `" + DB_NAME + "`");
+            statement.executeUpdate("CREATE DATABASE IF NOT EXISTS " + DB_NAME);
             statement.close();
             conn.close();
 
@@ -82,6 +82,7 @@ public class DbConnection {
 
     // Authenticate a user by email and password
     public boolean authenticateUser(String email, String password) {
+        connectToDatabase();
         String query = "SELECT password FROM users WHERE email = ?";
         try (Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
              PreparedStatement preparedStatement = conn.prepareStatement(query)) {
@@ -158,12 +159,12 @@ public class DbConnection {
     // Insert a new user into the database
     public void insertUser(Person person) {
         connectToDatabase();
-        String sql = "INSERT INTO users (first_name, middle_initial, last_name, address, apt_unit, city, state, zip_code, " +
-                "preferred_contact_method, email, telephone, license_plate, license_plate_state, mileage, year, make, model, " +
-                "transportation_needs, service_requested, appointment_date, appointment_time, customer_comments, next_appointment_date, password) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            String sql = "INSERT INTO users (first_name, middle_initial, last_name, address, apt_unit, city, state, zip_code, " +
+                    "preferred_contact_method, email, telephone, license_plate, license_plate_state, mileage, year, make, model, " +
+                    "transportation_needs, service_requested, appointment_date, appointment_time, customer_comments, next_appointment_date, password) " +
+                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, person.getFirstName());
             preparedStatement.setString(2, person.getMiddleInitial());
@@ -200,11 +201,12 @@ public class DbConnection {
 
     // Retrieve a user from the database by email
     public Person getPerson(String email) {
-        String query = "SELECT * FROM users WHERE email = ?";
+        connectToDatabase();
         Person person = null;
 
         try {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            String query = "SELECT * FROM users WHERE email = ?";
             PreparedStatement preparedStatement = conn.prepareStatement(query);
             preparedStatement.setString(1, email);
             ResultSet rs = preparedStatement.executeQuery();
