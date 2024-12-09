@@ -9,7 +9,7 @@ import java.util.Date;
 
 public class DbConnection {
 
-    final static String DB_NAME = "Autobody_Shop";
+    final static String DB_NAME = "autobody_shop";
     final static String MYSQL_SERVER_URL = "jdbc:mysql://semcsc311server.mysql.database.azure.com";
     final static String DB_URL = MYSQL_SERVER_URL + "/" + DB_NAME;
     final static String USERNAME = "semadmin";
@@ -32,7 +32,8 @@ public class DbConnection {
             //Second, connect to the database and create the table "users" if not created
             conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             statement = conn.createStatement();
-            String sql = "CREATE TABLE IF NOT EXISTS users (" + "first_name VARCHAR(200) NOT NULL,"
+            String sql = "CREATE TABLE IF NOT EXISTS users (" +
+                    "first_name VARCHAR(200) NOT NULL,"
                     + "middle_initial CHAR(1), "
                     + "last_name VARCHAR(200) NOT NULL, "
                     + "address VARCHAR(200) NOT NULL, "
@@ -54,7 +55,8 @@ public class DbConnection {
                     + "appointment_date DATE NOT NULL, "
                     + "appointment_time TIME NOT NULL, "
                     + "customer_comments TEXT, "
-                    + "next_appointment_date DATE);";
+                    + "next_appointment_date DATE, "
+                    + "password VARCHAR(200) NOT NULL)";
             statement.executeUpdate(sql);
 
             //check if we have users in the table users
@@ -80,15 +82,23 @@ public class DbConnection {
 
     // Authenticate a user by email and password
     public boolean authenticateUser(String email, String password) {
-        String query = "SELECT COUNT(*) FROM users WHERE email = ? AND password = ?";
+        String query = "SELECT password FROM users WHERE email = ?";
         try (Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
              PreparedStatement preparedStatement = conn.prepareStatement(query)) {
 
             preparedStatement.setString(1, email);
-            preparedStatement.setString(2, password);
+
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            return resultSet.next() && resultSet.getInt(1) > 0; // Return true if user is authenticated
+            // Check if user exists
+            if (resultSet.next()) {
+                String storedPassword = resultSet.getString("password");
+
+                // Compare the provided password with the stored password (plain text comparison)
+                if (storedPassword.equals(password)) {
+                    return true; // Password matches, user authenticated
+                }
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -127,10 +137,11 @@ public class DbConnection {
                 String appointmentTime = resultSet.getString("appointment_time");
                 String customerComments = resultSet.getString("customer_comments");
                 Date nextAppointmentDate = resultSet.getDate("next_appointment_date");
+                String password = resultSet.getString("password");
 
                 data.add(new Person(firstName, middleInitial, lastName, address, aptUnit, city, state, zipCode, preferredContactMethod, email
                         ,telephone, licensePlate, licensePlateState, mileage, year, make, model, transportationNeeds, serviceRequested
-                        ,appointmentDate, appointmentTime, customerComments, nextAppointmentDate));
+                        ,appointmentDate, appointmentTime, customerComments, nextAppointmentDate, password));
 
                 System.out.println("Name: " + firstName + " " + middleInitial + " " + lastName);
                 System.out.println("Address: " + address + ", " + aptUnit + ", " + city + ", " + state + " " + zipCode);
@@ -144,13 +155,13 @@ public class DbConnection {
         return data;
     }
 
-    // Insert a new Person into the database
-    public void insertPerson(Person person) {
+    // Insert a new user into the database
+    public void insertUser(Person person) {
         connectToDatabase();
-        String sql = "INSERT INTO persons (first_name, middle_initial, last_name, address, apt_unit, city, state, zip_code, " +
+        String sql = "INSERT INTO users (first_name, middle_initial, last_name, address, apt_unit, city, state, zip_code, " +
                 "preferred_contact_method, email, telephone, license_plate, license_plate_state, mileage, year, make, model, " +
-                "transportation_needs, service_requested, appointment_date, appointment_time, customer_comments, next_appointment_date) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "transportation_needs, service_requested, appointment_date, appointment_time, customer_comments, next_appointment_date, password) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
@@ -177,6 +188,7 @@ public class DbConnection {
             preparedStatement.setString(21, person.getAppointmentTime());
             preparedStatement.setString(22, person.getCustomerComments());
             preparedStatement.setDate(23, new java.sql.Date(person.getNextAppointmentDate().getTime()));
+            preparedStatement.setString(24, person.getPassword());
             preparedStatement.executeUpdate();
 
             preparedStatement.close();
@@ -186,9 +198,9 @@ public class DbConnection {
         }
     }
 
-    // Retrieve a Person from the database by email
+    // Retrieve a user from the database by email
     public Person getPerson(String email) {
-        String query = "SELECT * FROM persons WHERE email = ?";
+        String query = "SELECT * FROM users WHERE email = ?";
         Person person = null;
 
         try {

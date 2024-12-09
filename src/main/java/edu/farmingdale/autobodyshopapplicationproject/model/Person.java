@@ -28,6 +28,7 @@ public class Person {
     private String appointmentTime;
     private String customerComments;
     private Date nextAppointmentDate;
+    private String password;
 
     public Person() {
     }
@@ -35,7 +36,7 @@ public class Person {
     public Person(String firstName, String middleInitial, String lastName, String address, String aptUnit, String city, String state,
                   String zipCode, String preferredContactMethod, String email, String telephone, String licensePlate, String licensePlateState,
                   int mileage, int year, String make, String model, String transportationNeeds, String serviceRequested, Date appointmentDate,
-                  String appointmentTime, String customerComments, Date nextAppointmentDate) {
+                  String appointmentTime, String customerComments, Date nextAppointmentDate, String password) {
         this.firstName = firstName;
         this.middleInitial = middleInitial;
         this.lastName = lastName;
@@ -59,6 +60,7 @@ public class Person {
         this.appointmentTime = appointmentTime;
         this.customerComments = customerComments;
         this.nextAppointmentDate = nextAppointmentDate;
+        this.password = password;
     }
 
     // Getters and Setters for all fields
@@ -246,6 +248,14 @@ public class Person {
         this.nextAppointmentDate = nextAppointmentDate;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -272,6 +282,7 @@ public class Person {
                 ", appointmentTime = '" + appointmentTime + '\'' +
                 ", customerComments = '" + customerComments + '\'' +
                 ", nextAppointmentDate = '" + nextAppointmentDate + '\'' +
+                ", password = '" + password + '\'' +
                 '}';
     }
 }
