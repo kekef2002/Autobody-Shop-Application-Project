@@ -80,32 +80,6 @@ public class DbConnection {
         return hasRegisteredUsers;
     }
 
-    // Authenticate a user by email and password
-    public boolean authenticateUser(String email, String password) {
-        connectToDatabase();
-        String query = "SELECT password FROM users WHERE email = ?";
-        try (Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-             PreparedStatement preparedStatement = conn.prepareStatement(query)) {
-
-            preparedStatement.setString(1, email);
-
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            // Check if user exists
-            if (resultSet.next()) {
-                String storedPassword = resultSet.getString("password");
-
-                // Compare the provided password with the stored password (plain text comparison)
-                if (storedPassword.equals(password)) {
-                    return true; // Password matches, user authenticated
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false; // Return false if authentication fails
-    }
-
     public ObservableList<Person> getData() {
         ObservableList<Person> data = FXCollections.observableArrayList();
         connectToDatabase();
@@ -154,6 +128,53 @@ public class DbConnection {
             e.printStackTrace();
         }
         return data;
+    }
+
+    public boolean registerUser(Person person) {
+        connectToDatabase();
+        try {
+            Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            String query = "INSERT INTO users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)";
+            PreparedStatement preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setString(1, person.getFirstName());
+            preparedStatement.setString(2, person.getLastName());
+            preparedStatement.setString(3, person.getEmail());
+            preparedStatement.setString(4, person.getPassword());
+
+            int result = preparedStatement.executeUpdate();
+            return result > 0;
+
+            }
+         catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    // Authenticate a user by email and password
+    public boolean authenticateUser(String email, String password) {
+        connectToDatabase();
+        String query = "SELECT password FROM users WHERE email = ?";
+        try (Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+             PreparedStatement preparedStatement = conn.prepareStatement(query)) {
+
+            preparedStatement.setString(1, email);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            // Check if user exists
+            if (resultSet.next()) {
+                String storedPassword = resultSet.getString("password");
+
+                // Compare the provided password with the stored password (plain text comparison)
+                if (storedPassword.equals(password)) {
+                    return true; // Password matches, user authenticated
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false; // Return false if authentication fails
     }
 
     // Insert a new user into the database

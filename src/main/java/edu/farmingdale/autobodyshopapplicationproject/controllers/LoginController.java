@@ -58,21 +58,6 @@ public class LoginController {
         }
     }
 
-//        // Authenticate user
-//        if (authenticateUser(email, password)) {
-//            loggedInUserEmail = email; // Store the logged-in user's email
-//            navigateToHomePage(event);
-//        } else {
-//            showAlert(Alert.AlertType.ERROR, "Login Failed", "Invalid email or password.");
-//        }
-//    }
-
-//    private boolean authenticateUser(String email, String password) {
-//        // Dummy authentication logic (replace with actual DB query)
-//        DbConnection dbConnection = new DbConnection();
-//        return dbConnection.authenticateUser(email, password);
-//    }
-
     private void navigateToHomePage(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/edu/farmingdale/autobodyshopapplicationproject/fxml/home-page.fxml"));

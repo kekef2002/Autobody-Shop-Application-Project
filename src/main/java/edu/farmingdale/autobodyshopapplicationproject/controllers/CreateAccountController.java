@@ -1,15 +1,14 @@
 package edu.farmingdale.autobodyshopapplicationproject.controllers;
 
+import edu.farmingdale.autobodyshopapplicationproject.dao.DbConnection;
+import edu.farmingdale.autobodyshopapplicationproject.model.Person;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -45,6 +44,18 @@ public class CreateAccountController {
 
     @FXML
     private ImageView v15_179;
+
+    private static String registeredEmail;
+
+    public static String getRegisteredEmail() {
+        return registeredEmail;
+    }
+
+    private static String registeredPassword;
+
+    public static String getRegisteredPassword() {
+        return registeredPassword;
+    }
 
     // Regex patterns for validation
     private static final String NAME_PATTERN = "^[A-Za-z]{2,25}$";
@@ -148,13 +159,38 @@ public class CreateAccountController {
         confirrm_password_text_field.setStyle("-fx-border-color: green;");
         create_account_button.setText("Create Account successful!");
 
-        // Navigate to login-page.fxml after 5 seconds
-        PauseTransition delay = new PauseTransition(Duration.seconds(5));
-        delay.setOnFinished(e -> navigateToLogin());
-        delay.play();
+        String firstName = first_name_text_field.getText();
+        String lastName = last_name_text_field.getText();
+        String email = email_text_field.getText();
+        String password = password_text_field.getText();
+
+        Person newPerson = new Person();
+        newPerson.setFirstName(firstName);
+        newPerson.setLastName(lastName);
+        newPerson.setEmail(email);
+        newPerson.setPassword(password);
+
+        DbConnection dbConnection = new DbConnection();
+        boolean isRegistered = dbConnection.registerUser(newPerson);
+
+        if (isRegistered) {
+            registeredEmail = email; // Store the registered email
+            registeredPassword = password; // Store the registered password
+            navigateToLogin(event);
+        } else {
+            showAlert(Alert.AlertType.ERROR, "Registration Failed", "Problem inserting registration to database.");
+        }
     }
 
-    private void navigateToLogin() {
+    private void showAlert(Alert.AlertType alertType, String title, String content) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
+    private void navigateToLogin(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/edu/farmingdale/autobodyshopapplicationproject/fxml/login-page.fxml"));
             Stage stage = (Stage) create_account_button.getScene().getWindow();
